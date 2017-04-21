@@ -1,0 +1,26 @@
+<% provide(:title, 'Sign up') %>
+
+<% if @errors.any? %>
+<% @errors.each do |error| %>
+<%=error %> <br>
+  <%end%>
+<%end%>
+
+<h1><center>Sign Up</center></h1>
+<div class="sign-up-form">
+  <%= form_for(@user, url: users_path) do |f| %>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+
+    <%= f.label :password_confirmation, "Confirmation" %>
+    <%= f.password_field :password_confirmation %>
+
+    <%= f.submit "Sign up" %>
+  <% end %>
+</div>
