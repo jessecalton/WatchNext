@@ -2,27 +2,29 @@
 
 <div class="watch-list">
 <h3>Your Movie Watch List:</h3>
-<%current_user.movies.each do |movie| %>
-<%=movie.title%> <br>
-<%end%>
+<% if current_user.movies.length != 0 %>
+  <% current_user.movies.each do |movie| %>
+    <%=movie.title%> <br>
+  <%end%>
 </div>
-<div class="movie-search">
-<h3>How much time do you have?</h3>
-  <form action="/users/:id" method="POST">
-    <input type="text" name="runtime" placeholder="Minutes">
-    <br><br>
-    <input type="submit" class="btn btn-danger" value="search">
-  </form>
-</div>
-<div class="displayed-movies">
-<% if @movie_array %>
-  <% if @movie_array == [] %>
-  Your search returned no movies. Sad Panda.
-  <% else %>
-  <h3>These movies are shorter than <%=@searched_params %> minutes</h3>
-  <% @movie_array.each do |movie| %>
-  <%= movie %><br>
+
+  <div class="movie-search">
+  <h3>How much time do you have?</h3>
+    <!-- Search time here -->
+  </div>
+
+  <div class="displayed-movies">
+  <% if @movie_array %>
+    <% if @movie_array == [] %>
+      Your search returned no movies. Sad Panda.
+    <% else %>
+      <h3>These movies are shorter than <%=@searched_params %> minutes</h3>
+      <% @movie_array.each do |movie| %>
+      <%= movie %><br>
+    <% end %>
   <% end %>
-<% end %>
+  <% end %>
+<% else %>
+You need to add some movies!
 <% end %>
 </div>
