@@ -33,13 +33,7 @@ You need to add some movies!
 <% end %>
 </div>
 
-<h2>Search a movie</h2>
+<h2>What movie would you like to add?</h2>
 <div class="movie-search-form">
-  <%= form_for(:search, url: user_movies_path(@current_user)) do |f| %>
-
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-
-    <%= f.submit "Search" %>
-  <% end %>
+  <%= render 'add_movie' %>
 </div>
