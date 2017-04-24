@@ -14,3 +14,14 @@
 <div class="movie-search-form">
   <%= render 'add_movie' %>
 </div>
+
+<h3>Watch a Movie!</h3>
+
+<div class="watch-movie-form">
+  <%= form_tag(user_path(current_user), method: :get) do %>
+    <%= text_field_tag :runtime, nil, placeholder: 'Runtime' %>
+    <%= text_field_tag :decade, nil, placeholder: 'Decade' %>
+    <%= text_field_tag :director, nil, placeholder: 'Director' %>
+    <%= submit_tag 'Search' %>
+  <% end %>
+</div>
