@@ -5,33 +5,10 @@
 <%end%>
 
 <div class="watch-list">
-<h3>Your Movie Watch List:</h3>
-<% if current_user.movies.length != 0 %>
-  <% current_user.movies.each do |movie| %>
-    <%=movie.title%> <br>
-  <%end%>
+<%= render 'displayed_movies' %>
 </div>
 
-  <div class="movie-search">
-  <h3>How much time do you have?</h3>
-    <!-- Search time here -->
-  </div>
 
-  <div class="displayed-movies">
-  <% if @movie_array %>
-    <% if @movie_array == [] %>
-      Your search returned no movies. Sad Panda.
-    <% else %>
-      <h3>These movies are shorter than <%=@searched_params %> minutes</h3>
-      <% @movie_array.each do |movie| %>
-      <%= movie %><br>
-    <% end %>
-  <% end %>
-  <% end %>
-<% else %>
-You need to add some movies!
-<% end %>
-</div>
 
 <h2>What movie would you like to add?</h2>
 <div class="movie-search-form">

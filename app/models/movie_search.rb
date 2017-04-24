@@ -9,13 +9,13 @@ class MovieSearch
     
   end
 
-  def movie_year
-    @movie_data["Year"] ## This works!!!
-    
+  def movie_decade
+    year = @movie_data["Year"].to_i
+    return year
   end
 
-  def movie_time
-    @movie_data["Runtime"]
+  def movie_runtime
+    @movie_data["Runtime"].to_i
   end
 
   def response
@@ -24,5 +24,29 @@ class MovieSearch
 
   def movie_title
     @movie_data["Title"]
+  end
+
+  def movie_genre
+    @movie_data["Genre"]
+  end
+
+  def movie_director
+    @movie_data["Director"]
+  end
+
+  def movie_actors
+    @movie_data["Actors"]
+  end
+
+  def movie_awards
+    @movie_data["Awards"]
+  end
+
+  def movie_poster
+    @movie_data["Poster"]
+  end
+
+  def rotten_tomatoes_score
+    @movie_data["Ratings"].second["Value"].to_i
   end
 end
