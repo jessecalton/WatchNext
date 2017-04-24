@@ -17,9 +17,17 @@ ActiveRecord::Schema.define(version: 20170420004301) do
 
   create_table "movies", force: :cascade do |t|
     t.string   "title"
+    t.integer  "runtime"
+    t.string   "decade"
+    t.string   "genre"
+    t.string   "director"
+    t.string   "actors"
+    t.string   "awards"
+    t.string   "poster_url"
+    t.integer  "rotten_tomatoes"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "users", force: :cascade do |t|

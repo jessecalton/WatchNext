@@ -18,8 +18,12 @@ class MoviesController < ApplicationController
         runtime: movie_json.movie_runtime,
         decade: movie_json.movie_decade,
         genre: movie_json.movie_genre,
-        director: movie_json.
-        user_id: current_user.id,
+        director: movie_json.movie_director,
+        actors: movie_json.movie_actors,
+        awards: movie_json.movie_awards,
+        poster_url: movie_json.movie_poster,
+        rotten_tomatoes: movie_json.rotten_tomatoes_score,
+        user_id: current_user.id
         )
 
       redirect_to user_path(current_user)

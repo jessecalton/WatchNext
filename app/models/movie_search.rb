@@ -10,8 +10,9 @@ class MovieSearch
   end
 
   def movie_decade
-    year = @movie_data["Year"].to_i
-    return year
+    year = @movie_data["Year"]
+    year[-1] = "0"
+    return year.to_i
   end
 
   def movie_runtime
