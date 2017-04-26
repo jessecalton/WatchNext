@@ -4,9 +4,6 @@ module MoviesHelper
     @movie_array ||= []
   end
 
-  def get_user_movies
-  end
-
   def runtime_match
     current_user.movies.each do |movie|
       if movie.runtime <= params[:runtime].to_i

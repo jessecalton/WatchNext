@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+@font-face {
+  font-family: "Blockletter";
+  src: url(/assets/Blockletter.otf) format("truetype");
+}
+
+#hello-user {
+  font-family: "Blockletter";
+}

@@ -1,4 +1,4 @@
-<h1>Hello movie lover, <%=current_user.username%></h1>
+<h1 id="hello-user">Hello movie lover, <%=current_user.username%></h1>
 
 <% if flash[:notice] %>
   <div class="notice"><%= flash[:notice] %></div>
@@ -18,20 +18,9 @@
 <h3>Watch a Movie!</h3>
 
 <div class="watch-movie-form">
-  <%= form_tag(user_path(current_user), method: :get) do %>
-    <%= text_field_tag :runtime, nil, placeholder: 'Runtime' %>
-    <%= text_field_tag :decade, nil, placeholder: 'Decade' %>
-    <%= text_field_tag :director, nil, placeholder: 'Director' %>
-    <%= text_field_tag :genre, nil, placeholder: 'Genre' %>
-    <%= text_field_tag :actors, nil, placeholder: 'Actors' %>
-    <%= text_field_tag :awards, nil, placeholder: 'Awards' %>
-    <%= submit_tag 'Search' %>
-  <% end %>
+  <%= render 'search_form' %>
 </div>
 
 <div class="returned-movies">
-  <h3>Your search returned these films:</h3>
-  <% @movie_array.each do |movie| %>
-    <%= movie.title %>
-  <% end %>
+  <%= render 'returned_movies' %>
 </div>
