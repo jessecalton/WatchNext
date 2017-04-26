@@ -2,5 +2,7 @@
 <% if current_user.movies.length != 0 %>
   <% current_user.movies.each do |movie| %>
     <%=movie.title%> <br>
+    <img src=<%=movie.poster_url%>>
+    <%=link_to "Delete From List", movie_path(movie.id), :confirm => "Are you sure?", :method => :delete %>
   <%end%>
   <% end %>

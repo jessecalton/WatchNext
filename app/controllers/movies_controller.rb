@@ -36,6 +36,8 @@ class MoviesController < ApplicationController
   def update
   end
 
-  def delete
+  def destroy
+    current_user.movies.find(params[:id]).destroy
+    redirect_to user_path(current_user)
   end
 end
