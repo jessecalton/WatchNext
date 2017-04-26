@@ -18,7 +18,7 @@ module MoviesHelper
 
   def director_match
     current_user.movies.each do |movie|
-      if movie.director.include?(params[:director].capitalize)
+      if movie.director.include?(params[:director].titleize)
         @movie_array << movie
       end
     end
@@ -26,17 +26,39 @@ module MoviesHelper
   end
 
   def decade_match
-  current_user.movies.each do |movie|
-    if movie.decade == params[:decade]
-      @movie_array << movie
+    current_user.movies.each do |movie|
+      if movie.decade == params[:decade]
+        @movie_array << movie
+      end
     end
+    @movie_array
   end
-  @movie_array
-end
 
+  def genre_match
+    current_user.movies.each do |movie|
+      if movie.genre.include?(params[:genre].titleize)
+        @movie_array << movie 
+      end
+    end
+    @movie_array
+  end
 
-  # def movie_title_match(str) # params[:runtime].to_i
-  #   current_user.movies.each do |movie|
-  #     if 
-  # end
+  def actor_match
+    current_user.movies.each do |movie|
+      if movie.actors.include?(params[:actors].titleize)
+        @movie_array << movie 
+      end
+    end
+    @movie_array
+  end
+
+  def awards_match
+    current_user.movies.each do |movie|
+      if movie.awards.include?(params[:awards].titleize)
+        @movie_array << movie 
+      end
+    end
+    @movie_array
+  end
+
 end

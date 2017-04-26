@@ -30,6 +30,15 @@ class UsersController < ApplicationController
     if params[:decade].present?
       decade_match
     end
+    if params[:genre].present?
+      genre_match
+    end
+    if params[:actors].present?
+      actor_match
+    end
+    if params[:awards].present?
+      awards_match
+    end
     p @movie_array
   end
 
