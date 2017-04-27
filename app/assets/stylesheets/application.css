@@ -21,4 +21,29 @@
 
 #hello-user {
   font-family: "Blockletter";
+  display: flex;
+  justify-content: center;
+
+}
+
+.watch-list {
+  overflow: hidden;
+  width: 100%;
+
+}
+
+#movie-display {
+  background-color: gray;
+  height: 300px;
+  width: 300px;
+  margin: 5px;
+  float: left;
+}
+
+.movie-poster {
+  display: flex;
+  margin: 0 auto;
+  padding: 10px;
+  max-width: 50%;
+  max-height: 50%;
 }

@@ -1,17 +1,18 @@
 <h1 id="hello-user">Hello movie lover, <%=current_user.username%></h1>
 
-<% if flash[:notice] %>
-  <div class="notice"><%= flash[:notice] %></div>
-<%end%>
+<div class="notice">
+  <% if flash[:notice] %>
+    <%= flash[:notice]%>
+  <%end%>
+</div>
 
 <div class="watch-list">
 <%= render 'displayed_movies' %>
 </div>
 
 
-
-<h2>What movie would you like to add?</h2>
 <div class="movie-search-form">
+<h2>What movie would you like to add?</h2>
   <%= render 'add_movie' %>
 </div>
 
