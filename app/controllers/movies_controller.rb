@@ -13,7 +13,7 @@ class MoviesController < ApplicationController
     movie = params[:search][:title]
     movie_json = MovieSearch.new(movie) 
     if movie_json.response != "False" && check_duplicates(movie_json.movie_title)
-      new_movie = Movie.create(
+      @new_movie = Movie.create(
         title: movie_json.movie_title,
         runtime: movie_json.movie_runtime,
         decade: movie_json.movie_decade,
@@ -26,7 +26,11 @@ class MoviesController < ApplicationController
         user_id: current_user.id
         )
 
-      redirect_to user_path(current_user)
+    respond_to do |format|
+      format.html { redirect_to user_path(current_user) }
+      format.js
+    end
+      
     else
       flash[:notice] = 'Please enter a valid movie title'
       redirect_to user_path(current_user)
