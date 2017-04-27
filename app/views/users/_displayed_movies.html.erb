@@ -1,7 +1,7 @@
 <h3>Your Movie Watch List:</h3>
 <% if current_user.movies.length != 0 %>
   <% current_user.movies.each do |movie| %>
-  <div class="movie-display">
+  <div class="movie-display <%=movie.id%>">
     <div id="movie-title"><%=movie.title%></div>
     <img src=<%=movie.poster_url%> alt="Movie Poster" class="movie-poster">
     <%=button_to "Delete From List", movie_path(movie.id), data: {confirm: "Are you sure?"}, :method => :delete, remote: true %>
