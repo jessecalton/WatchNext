@@ -1,1 +1,7 @@
-$('.watch-list').append("<div id='movie-display'><%=@new_movie.title%>");
+$('.watch-list').append(
+  "<div id='movie-display'>\
+    <div id='movie-title'><%=@new_movie.title%></div>\
+      <img src=<%=@new_movie.poster_url%> alt='Movie Poster' class='movie-poster'>\
+    </div>");
+// $('#movie-display').append(
+//   "<%=button_to 'Delete From List', movie_path(@new_movie), :method => :delete %>");
