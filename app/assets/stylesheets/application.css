@@ -32,7 +32,7 @@
 
 }
 
-#movie-display {
+.movie-display {
   background-color: gray;
   height: 290px;
   width: 200px;
