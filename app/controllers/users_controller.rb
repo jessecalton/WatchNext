@@ -19,7 +19,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @movie_array = []
+    # @movie_array = []
     p "******************"
     p params
     if params[:runtime].present?
@@ -28,18 +28,18 @@ class UsersController < ApplicationController
     if params[:director].present?
       director_match
     end
-    # if params[:decade].present?
-    #   decade_match
-    # end
-    # if params[:genre].present?
-    #   genre_match
-    # end
-    # if params[:actors].present?
-    #   actor_match
-    # end
-    # if params[:awards].present?
-    #   awards_match
-    # end
+    if params[:decade].present?
+      decade_match
+    end
+    if params[:genre].present?
+      genre_match
+    end
+    if params[:actors].present?
+      actor_match
+    end
+    if params[:awards].present?
+      awards_match
+    end
     @movie_array
   end
 
