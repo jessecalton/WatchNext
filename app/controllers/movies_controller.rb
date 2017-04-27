@@ -41,7 +41,12 @@ class MoviesController < ApplicationController
   end
 
   def destroy
-    current_user.movies.find(params[:id]).destroy
-    redirect_to user_path(current_user)
+    respond_to do |format|
+      format.html {
+        current_user.movies.find(params[:id]).destroy
+        redirect_to user_path(current_user)
+      }
+      format.js {current_user.movies.find(params[:id]).destroy}
+    end
   end
 end
