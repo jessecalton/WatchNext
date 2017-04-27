@@ -5,6 +5,7 @@ module MoviesHelper
   end
 
   def runtime_match
+    @movie_array ||= []
     current_user.movies.each do |movie|
       if movie.runtime <= params[:runtime].to_i
         @movie_array << movie
@@ -14,18 +15,26 @@ module MoviesHelper
   end
 
   def director_match
-    current_user.movies.each do |movie|
-      if movie.director.include?(params[:director].titleize)
-        @movie_array << movie
+    if @movie_array
+      @movie_array.delete_if {|movie| movie.director.exclude?(params[:director].titleize)}
+    else
+      current_user.movies.each do |movie|
+        if movie.director.include?(params[:director].titleize)
+          @movie_array << movie
+        end
       end
     end
     @movie_array
   end
 
   def decade_match
-    current_user.movies.each do |movie|
-      if movie.decade == params[:decade]
-        @movie_array << movie
+    if @movie_array 
+      @movie_array.delete_if {|movie| movie.decade.exclude?(params[:decade])}
+    else
+      current_user.movies.each do |movie|
+        if movie.decade == params[:decade]
+          @movie_array << movie
+        end
       end
     end
     @movie_array

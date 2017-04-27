@@ -1,4 +1,8 @@
   <h3>Your search returned these films:</h3>
-  <% @movie_array.each do |movie| %>
-    <%= movie.title %>
+  <% if @movie_array.present? %>
+    <% @movie_array.each do |movie| %>
+      <%= movie.title %> <br>
+    <% end %>
+  <% else %>
+    Your search returned no movies. Sad Panda.
   <% end %>
