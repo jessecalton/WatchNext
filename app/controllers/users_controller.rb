@@ -19,9 +19,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    # @movie_array = []
-    p "******************"
-    p params
     if params[:runtime].present?
       runtime_match
     end
@@ -40,7 +37,6 @@ class UsersController < ApplicationController
     if params[:awards].present?
       awards_match
     end
-    @movie_array
     respond_to do |format|
       format.html {@movie_array}
       format.js {@movie_array}
