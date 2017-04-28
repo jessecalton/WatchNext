@@ -41,6 +41,10 @@ class UsersController < ApplicationController
       awards_match
     end
     @movie_array
+    respond_to do |format|
+      format.html {@movie_array}
+      format.js {@movie_array}
+    end
   end
 
 private
