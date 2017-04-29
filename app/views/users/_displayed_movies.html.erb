@@ -1,6 +1,6 @@
 <h3>Your Movie Watch List:</h3>
 <% if current_user.movies.length != 0 %>
-  <% current_user.movies.each do |movie| %>
+  <% current_user.movies.order('created_at ASC').each do |movie| %>
   <div class="movie-display <%=movie.id%>">
     <div id="movie-title"><%=movie.title%></div>
     <img src=<%=movie.poster_url%> alt="Movie Poster" class="movie-poster">

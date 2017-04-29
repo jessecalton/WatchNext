@@ -1,9 +1,9 @@
 var del = $(
   '<form class="button_to" method="delete" action="/movies/<%=@new_movie.id%>" data-remote="true"><input data-confirm="Are you sure?" type="submit" value="Delete From List"><input type="hidden"/>');
 var new_movie_box = $('.movie-display <%=@new_movie.id%>')
-$("<div class='movie-display'>\
+$("<div class='movie-display <%=@new_movie.id%>'>\
     <div id='movie-title'><%=@new_movie.title%></div>\
       <img src=<%=@new_movie.poster_url%> alt='Movie Poster' class='movie-poster'>\
   </div>").appendTo('.watch-list').append(del);
-console.log(new_movie_box)
+
 
