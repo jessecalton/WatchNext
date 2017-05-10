@@ -15,6 +15,10 @@ class MovieSearch
     return year.to_i
   end
 
+  def movie_data
+    @movie_data
+  end
+
   def movie_runtime
     @movie_data["Runtime"].to_i
   end
@@ -48,6 +52,6 @@ class MovieSearch
   end
 
   def rotten_tomatoes_score
-    @movie_data["Ratings"].second["Value"].to_i
+    @movie_data["Ratings"].find { |x| x["Source"] == "Rotten Tomatoes" }["Value"].to_i
   end
 end
