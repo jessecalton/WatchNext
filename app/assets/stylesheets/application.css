@@ -14,13 +14,9 @@
  *= require_self
  */
 
-@font-face {
-  font-family: "Blockletter";
-  src: url(/assets/Blockletter.otf) format("truetype");
-}
 
 #hello-user {
-  font-family: "Blockletter";
+  font-family: 'Londrina Solid', cursive;
   display: flex;
   justify-content: center;
 
@@ -41,7 +37,7 @@
 }
 
 #movie-title {
-  font-family: "Blockletter";
+  font-family: 'Londrina Solid', cursive;
   display: flex;
   justify-content: center;
   text-align: center;
