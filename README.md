@@ -1,4 +1,4 @@
-# Coming Soon to a Web Browser Near You 
+# 🎞 Coming Soon to a Web Browser Near You 🎞
 
 Do you spend more time browsing Netflix than watching its wealth of movies and television shows? Do you look at your watch list and wonder when you'll finally get around to watching Lawrence of Arabia? If this sounds like you, then you've come to the right place.
 
