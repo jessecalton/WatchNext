@@ -21,7 +21,7 @@ Do you spend more time browsing Netflix than watching its wealth of movies and t
 
 A working prototype of the app can be viewed by visiting:
 
-<https://www.what2watchnext.herokuapps.com>
+<https://www.what2watchnext.herokuapp.com>
 
 ## Contact
 
