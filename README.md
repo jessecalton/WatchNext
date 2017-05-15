@@ -20,8 +20,11 @@ Do you spend more time browsing Netflix than watching its wealth of movies and t
 ## Deployment
 
 A working prototype of the app can be viewed by visiting:
+
 <http://what2watchnext.herokuapp.com/>
 
 ## Contact
 
-Feel free to contact me at <jessecalton@gmail.com>
+Feel free to contact me at: 
+
+<jessecalton@gmail.com>
