@@ -1,24 +1,5 @@
-# README
+# WatchNext 🎬
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Do you spend more time browsing Netflix than watching its wealth of movies and television shows? Do you look at your watch list and wonder when you'll finally getting around to watching Lawrence of Arabia? If this sounds like you, then you've come to the right place.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration  
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### WatchNext will help you eliminate the time spent surfing Netflix and Hulu to get to what matters most - watching films! 📼
