@@ -1,3 +1,6 @@
+### WatchNext's movie search is currently down. The creator of the OMDB API is in need of funding to support the load of users using his API. I have contributed to his Patreon account and am waiting for my API key to become active. Please hold tight while all that processes and we can resume our regularly scheduled programming. Thank you!
+
+
 # 🎞 Coming Soon to a Web Browser Near You 🎞
 
 Do you spend more time browsing Netflix than watching its wealth of movies and television shows? Do you look at your watch list and wonder when you'll finally get around to watching Lawrence of Arabia? If this sounds like you, then you've come to the right place.
