@@ -1,24 +1,32 @@
-# README
+# 🎞 Coming Soon to a Web Browser Near You 🎞
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Do you spend more time browsing Netflix than watching its wealth of movies and television shows? Do you look at your watch list and wonder when you'll finally get around to watching Lawrence of Arabia? If this sounds like you, then you've come to the right place.
 
-Things you may want to cover:
+# WatchNext 📺 
 
-* Ruby version
+### WatchNext will help you eliminate the time spent surfing Netflix and Hulu to get to what matters most - watching films! 
 
-* System dependencies
+* Add and delete movies from a watch list with ease.
+* Search specific parameters to filter through movies in watch list.
+* Example: "I want to watch a movie that's less than 2 hours, is a Romantic Comedy from the 1980's, and has a Rotten Tomatoes score of at least 75."
 
-* Configuration  
+## Cast 📽️
 
-* Database creation
+* Ruby on Rails
+* CSS3
+* HTML5
+* PostgreSQL
+* [OMDB API](http://www.omdbapi.com)
+* jQuery
 
-* Database initialization
+## Test-Screenings 📼
 
-* How to run the test suite
+A working prototype of the app can be viewed by visiting:
 
-* Services (job queues, cache servers, search engines, etc.)
+<http://what2watchnext.herokuapp.com/>
 
-* Deployment instructions
+## Contact the Director 🎬
 
-* ...
+Please send all inquiries to: 
+
+<jessecalton@gmail.com>
