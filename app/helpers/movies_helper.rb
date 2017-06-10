@@ -34,7 +34,7 @@ module MoviesHelper
 
   def decade_match
     if @movie_array 
-      @movie_array.delete_if {|movie| movie.decade.exclude?(params[:decade])}
+      @movie_array.delete_if {|movie| movie.decade.exclude?(params[:decade].chop)}
     else
       @movie_array = []
       current_user.movies.each do |movie|

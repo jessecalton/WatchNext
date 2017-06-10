@@ -1,6 +1,6 @@
   <%= form_tag(user_path(current_user), method: :get, remote: :true) do %>
     <%= text_field_tag :runtime, nil, placeholder: 'Runtime' %>
-    <%= select_tag 'decade', "<option>1980</option><option>1990</option>".html_safe, include_blank: true %>
+    <%= select_tag 'decade', "<option>Decade</option><option>1950s or earlier</option><option>1960s</option><option>1970s</option><option>1980s</option><option>1990s</option><option>2000s</option><option>2010s</option>".html_safe%>
     <%= text_field_tag :director, nil, placeholder: 'Director' %>
     <%= text_field_tag :genre, nil, placeholder: 'Genre' %>
     <%= text_field_tag :actors, nil, placeholder: 'Actors' %>
