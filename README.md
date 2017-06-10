@@ -4,7 +4,7 @@ Do you spend more time browsing Netflix than watching its wealth of movies and t
 
 # WatchNext 📺 
 
-### WatchNext will help you eliminate the time spent surfing Netflix and Hulu to get to what matters most - watching films! 
+### WatchNext will help you eliminate the time spent surfing Netflix and Hulu and get to what matters most - watching films! 
 
 * Add and delete movies from a watch list with ease.
 * Search specific parameters to filter through movies in watch list.

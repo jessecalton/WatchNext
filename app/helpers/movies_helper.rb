@@ -33,12 +33,20 @@ module MoviesHelper
   end
 
   def decade_match
-    if @movie_array 
-      @movie_array.delete_if {|movie| movie.decade.exclude?(params[:decade])}
-    else
+    old_decades = ["1950", "1940", "1930", "1920", "1910"]
+    if @movie_array
+      if params[:decade] == "1950s or earlier"
+        @movie_array.delete_if {|movie| !old_decades.include?(movie.decade)}
+      else
+        @movie_array.delete_if {|movie| movie.decade.exclude?(params[:decade].chop)}
+      end
+    end
+    if !@movie_array
       @movie_array = []
       current_user.movies.each do |movie|
-        if movie.decade == params[:decade]
+        if params[:decade] == "1950s or earlier" && old_decades.include?(movie.decade)
+          @movie_array << movie
+        elsif movie.decade == params[:decade].chop
           @movie_array << movie
         end
       end
