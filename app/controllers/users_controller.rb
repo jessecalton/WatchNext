@@ -20,12 +20,14 @@ class UsersController < ApplicationController
 
   def show
     if params[:runtime].present?
+      p "HERE I AM ROCK ME "
       runtime_match
     end
     if params[:director].present?
       director_match
     end
     if params[:decade].present?
+      p "HERE I AM ROCK ME "
       decade_match
     end
     if params[:genre].present?
