@@ -19,6 +19,14 @@ class UsersController < ApplicationController
   end
 
   def show
+      @genre_array = []
+      current_user.movies.each do |movie|
+        movie.genre.scan(/[A-Z][a-z]+/).each do |genre|
+          @genre_array << genre 
+        end
+      end
+      @genre_array.sort!
+
     if params[:runtime].present?
       runtime_match
     end
@@ -41,6 +49,8 @@ class UsersController < ApplicationController
       format.html {@movie_array}
       format.js {@movie_array}
     end
+
+
   end
 
 private
