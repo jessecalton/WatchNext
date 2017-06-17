@@ -4,6 +4,8 @@ module MoviesHelper
     @movie_array ||= []
   end
 
+  
+
   def runtime_match
     if @movie_array
       @movie_array.delete_if {|movie| movie.runtime > params[:runtime].to_i}
