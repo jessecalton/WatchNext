@@ -4,7 +4,7 @@ module MoviesHelper
     @movie_array ||= []
   end
 
-  
+
 
   def runtime_match
     if @movie_array
@@ -96,6 +96,16 @@ module MoviesHelper
       end
     end
     @movie_array
+  end
+
+  def make_sorted_genre_array
+    @genre_array = []
+      current_user.movies.each do |movie|
+        movie.genre.scan(/[A-Z][a-z]+/).each do |genre|
+          @genre_array << genre 
+        end
+      end
+    @genre_array.sort!
   end
 
 end
