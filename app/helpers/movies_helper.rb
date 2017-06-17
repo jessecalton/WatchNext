@@ -98,6 +98,21 @@ module MoviesHelper
     @movie_array
   end
 
+  def rotten_tomatoes_range
+    sanitize_integer_params
+    if @movie_array 
+      @movie_array.delete_if {|movie| movie.rotten_tomatoes < params[:tomatoes]}
+    else
+      @movie_array = []
+      current_user.movies.each do |movie|
+        if movie.rotten_tomatoes > params[:tomatoes]
+          @movie_array << movie 
+        end
+      end
+    end
+    @movie_array
+  end
+
   def make_sorted_genre_array
     @genre_array = []
       current_user.movies.each do |movie|
@@ -106,6 +121,12 @@ module MoviesHelper
         end
       end
     @genre_array.sort!
+  end
+
+  private
+
+  def sanitize_integer_params
+    params[:tomatoes] = params[:tomatoes].delete!("> ").to_i
   end
 
 end
