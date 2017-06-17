@@ -28,7 +28,7 @@ class UsersController < ApplicationController
       director_match
     end
     if params[:decade].present?
-      decade_match if params[:decade] != "Decade"
+      decade_match
     end
     if params[:genre].present?
       genre_match
