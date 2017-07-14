@@ -26,6 +26,7 @@ A working prototype of the app can be viewed by visiting:
 <http://what2watchnext.herokuapp.com/>
 
 Play with the demo account:
+
   **Login:** haha@haha.com
   **Password:** haha
 
