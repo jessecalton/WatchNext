@@ -19,6 +19,8 @@ class UsersController < ApplicationController
   end
 
   def show
+    make_sorted_genre_array
+
     if params[:runtime].present?
       runtime_match
     end
@@ -37,10 +39,16 @@ class UsersController < ApplicationController
     if params[:awards].present?
       awards_match
     end
+    if params[:tomatoes].present?
+      rotten_tomatoes_range
+    end
+
     respond_to do |format|
       format.html {@movie_array}
       format.js {@movie_array}
     end
+
+
   end
 
 private
