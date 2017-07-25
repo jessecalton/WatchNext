@@ -6,9 +6,10 @@ Do you spend more time browsing Netflix than watching its wealth of movies and t
 
 ### WatchNext will help you eliminate the time spent surfing Netflix and Hulu and get to what matters most - watching films! 
 
-* Add and delete movies from a watch list with ease.
-* Search specific parameters to filter through movies in watch list.
-* Example: "I want to watch a movie that's less than 2 hours, is a Romantic Comedy from the 1980's, and has a Rotten Tomatoes score of at least 75."
+* Add to and delete movies from a watch list with ease.
+* Uses AJAX for dynamic adding/deleting of movie titles.
+* Search specific parameters to filter through movies in watch list, for example: "I want to watch a movie that's less than 2 hours, is a Romantic Comedy from the 1980's, and has a Rotten Tomatoes score of at least 75."
+* Just select the options you want to filter and you'll find tonight's movie!
 
 ## Cast 📽️
 
@@ -17,7 +18,7 @@ Do you spend more time browsing Netflix than watching its wealth of movies and t
 * HTML5
 * PostgreSQL
 * [OMDB API](http://www.omdbapi.com)
-* jQuery
+* jQuery/AJAX
 
 ## Test-Screenings 📼
 
