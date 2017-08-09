@@ -1,7 +1,7 @@
-<header id="logo">
+<div id="logo">
   <h1>WatchNext</h1>
    <%= link_to "Login", login_path, class: "btn blue", remote: true %>
-   <div class="login-form" style="display: none">
+   <div class="login-form">
   <%= form_for(:session, url: login_path) do |f| %>
 
     <%= f.label :email %>
@@ -12,8 +12,8 @@
 
     <%= f.submit "Login" %>
   <% end %>
+  </div>
 </div>
-</header>
 <div id="about">
   <p>WatchNext will help you eliminate the time spent surfing Netflix and Hulu and get to what matters most - watching films!</p>
 </div>

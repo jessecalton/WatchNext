@@ -85,6 +85,10 @@
   height: 20px;
 }
 
+.login-form {
+  display: none;
+}
+
 .movie-poster {
   display: flex;
   margin: 0 auto;
