@@ -1,6 +1,22 @@
-<h1>WatchNext</h1>
+<header id="logo">
+  <h1>WatchNext</h1>
+   <%= link_to "Login", login_path, class: "btn blue", remote: true %>
+   <div class="login-form" style="display: none">
+  <%= form_for(:session, url: login_path) do |f| %>
 
-<p>WatchNext will help you eliminate the time spent surfing Netflix and Hulu and get to what matters most - watching films!</p>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+
+    <%= f.submit "Login" %>
+  <% end %>
+</div>
+</header>
+<div id="about">
+  <p>WatchNext will help you eliminate the time spent surfing Netflix and Hulu and get to what matters most - watching films!</p>
+</div>
 
 <h3>With WatchNext you can: </h3>
 <p>Add and delete movies from a watch list with ease</p>
