@@ -2,6 +2,10 @@ class UsersController < ApplicationController
   include SessionsHelper
   include MoviesHelper
 
+  def index
+
+  end
+
   def new
     @user = User.new
     @errors = @user.errors.full_messages

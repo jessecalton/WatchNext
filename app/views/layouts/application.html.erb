@@ -2,17 +2,19 @@
 <html>
   <head>
     <title>WatchNext</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Solid" rel="stylesheet">
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link href="https://fonts.googleapis.com/css?family=Londrina+Solid" rel="stylesheet">
+    
 
   </head>
 
   <body>
     <div id="nav-bar">
-      <%=link_to "Home", users_path %>
+      <%=link_to "Home", root_path, method: :get %>
       <% if logged_in? %>
 
         <%= link_to "#{@current_user.username}", user_path(@current_user.id) %>

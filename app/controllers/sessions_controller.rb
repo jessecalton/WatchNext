@@ -9,6 +9,18 @@ class SessionsController < ApplicationController
       flash[:notice] = "Invalid email/password combination"
       render 'new'
     end
+    respond_to do |format|
+      format.html
+      format.js 
+    end
+
+  end
+
+  def new
+    respond_to do |format|
+      format.html
+      format.js 
+    end
   end
 
   def destroy
