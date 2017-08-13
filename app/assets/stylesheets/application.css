@@ -53,8 +53,12 @@
 }
 
 .green {
-  background-color: #55acee;
-  box-shadow: 0px 5px 0px 0px #3C93D5;
+  background-color: #01FF70;
+  box-shadow: 0px 5px 0px 0px #2ECC40;
+}
+
+.green:hover {
+  background-color: #82F91B;
 }
 
 /*User page*/
