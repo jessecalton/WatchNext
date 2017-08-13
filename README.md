@@ -20,6 +20,10 @@ Do you spend more time browsing Netflix than watching its wealth of movies and t
 * [OMDB API](http://www.omdbapi.com)
 * jQuery/AJAX
 
+## Sneak Preview 🍿
+
+![Demo](watch-next-demo.gif)
+
 ## Test-Screenings 📼
 
 A working prototype of the app can be viewed by visiting:
