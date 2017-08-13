@@ -14,7 +14,7 @@
 
   <body>
     <div id="nav-bar">
-      <%=link_to "Home", users_path %>
+      <%=link_to "Home", root_path, method: :get %>
       <% if logged_in? %>
 
         <%= link_to "#{@current_user.username}", user_path(@current_user.id) %>

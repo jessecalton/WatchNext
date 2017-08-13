@@ -4,7 +4,15 @@
 
 # for login button
 $(document).ready ->
-  $('button').click ->
+  $('button.btn.blue').click ->
     $('.login-form').toggle()
+    $('.demo-form').hide()
+    return
+  return
+
+$(document).ready ->
+  $('button.btn.green').click ->
+    $('.demo-form').toggle()
+    $('.login-form').hide()
     return
   return
