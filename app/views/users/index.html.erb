@@ -1,6 +1,7 @@
 <div id="logo">
   <h1>WatchNext</h1>
-   <%= link_to "Login", login_path, class: "btn blue", remote: true %>
+  <button class="btn blue">Login</button>
+   
    <div class="login-form">
   <%= form_for(:session, url: login_path) do |f| %>
 
