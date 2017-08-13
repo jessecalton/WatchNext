@@ -28,8 +28,8 @@ A working prototype of the app can be viewed by visiting:
 
 Play with the demo account:
 
-  **Login:** haha@haha.com <br>
-  **Password:** haha
+  **Login:** demo@demo.com <br>
+  **Password:** demo
 
 ## Contact the Director 🎬
 
