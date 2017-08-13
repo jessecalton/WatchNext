@@ -7,3 +7,8 @@ $("<div class='movie-display <%=@new_movie.id%>'>\
   </div>").appendTo('.watch-list').append(del);
 $('.movie-search-form form')[0].reset();
 
+
+var newDirector = "<%=@new_movie.director%>"
+console.log(newDirector)
+$("<option value=" + newDirector + ">" + newDirector + "</option>").appendTo('select#director')
+
