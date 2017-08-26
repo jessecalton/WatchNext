@@ -21,6 +21,8 @@
   font-family: 'Londrina Solid', cursive;
   text-align: center;
   font-size: 2em;
+  color: #FABC3C;
+  background-color: #3454D1;
 }
 
 /*Nav buttons*/
@@ -32,7 +34,7 @@
   font-family: 'Londrina Solid', cursive;
   text-decoration: none;
   margin: 20px;
-  color: #fff;
+  color: black;
   position: relative;
   display: inline-block;
 }
@@ -53,8 +55,8 @@
 }
 
 .green {
-  background-color: #01FF70;
-  box-shadow: 0px 5px 0px 0px #2ECC40;
+  background-color: #EA4866;
+  box-shadow: 0px 5px 0px 0px #EA4866;
 }
 
 .green:hover {
