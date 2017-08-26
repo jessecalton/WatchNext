@@ -25,6 +25,11 @@
   background-color: #3454D1;
 }
 
+#logo > h1 {
+  margin: 0;
+  padding-top: .3em;
+}
+
 /*Nav buttons*/
 
 .btn {
@@ -54,13 +59,23 @@
   background-color: #6FC6FF;
 }
 
-.green {
+.red {
   background-color: #EA4866;
   box-shadow: 0px 5px 0px 0px #EA4866;
 }
 
-.green:hover {
+.red:hover {
   background-color: #82F91B;
+}
+
+/*Nav bar*/
+
+#nav-bar {
+  font-family: 'Londrina Solid', cursive;
+  background-color: #114B5F;
+  min-height: 80px;
+  text-align: center;
+  float: top;
 }
 
 /*User page*/
