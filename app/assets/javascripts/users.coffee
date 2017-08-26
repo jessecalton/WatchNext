@@ -16,3 +16,9 @@ $(document).ready ->
     $('.login-form').hide()
     return
   return
+
+$(document).ready ->
+  $('button.btn.black').click ->
+    $('#about').toggle()
+    return
+  return

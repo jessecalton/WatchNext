@@ -60,12 +60,38 @@
 }
 
 .red {
-  background-color: #EA4866;
+  background-color: #F45B69;
   box-shadow: 0px 5px 0px 0px #EA4866;
 }
 
 .red:hover {
   background-color: #82F91B;
+}
+
+.black {
+  color: white;
+  background-color: black;
+  box-shadow: 0px 5px 0px 0px white;
+}
+
+.black:hover {
+  background-color: gray;
+}
+
+#about-button {
+  text-align: center;
+  background-color: #456990;
+}
+
+#about {
+  display: none;
+  text-align: center;
+  color: #E4FDE1;
+  background-color: #456990;
+}
+
+#about > h2 {
+  margin: 0;
 }
 
 /*Nav bar*/
