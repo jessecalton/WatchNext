@@ -11,7 +11,7 @@ $(document).ready ->
   return
 
 $(document).ready ->
-  $('button.btn.green').click ->
+  $('button.btn.red').click ->
     $('.demo-form').toggle()
     $('.login-form').hide()
     return
