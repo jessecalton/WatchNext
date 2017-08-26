@@ -73,9 +73,16 @@
 #nav-bar {
   font-family: 'Londrina Solid', cursive;
   background-color: #114B5F;
-  min-height: 80px;
+  min-height: 3.2em;
   text-align: center;
-  float: top;
+  padding-top: 1em;
+}
+
+#nav-bar > a {
+  color: #E4FDE1;
+  margin: 0 4em;
+  font-size: 2em;
+
 }
 
 /*User page*/
