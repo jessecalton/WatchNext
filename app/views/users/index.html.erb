@@ -1,39 +1,55 @@
-<div id="logo">
+  
+  <div id="logo-wrapper">
+    <div id="logo">
+      <svg viewBox="0 0 960 200">
+        <symbol id="s-text">
+          <text text-anchor="middle" x="50%" y="80%">WatchNext</text>
+        </symbol>
 
-  <h1>WatchNext</h1>
-  <button class="btn blue">Login</button>
-  <button class="btn red">Demo</button>
-   
-  <div class="login-form">
-    <%= render 'sessions/form' %>
+        <g class = "g-ants">
+          <use xlink:href="#s-text" class="text-copy"></use>
+          <use xlink:href="#s-text" class="text-copy"></use>
+          <use xlink:href="#s-text" class="text-copy"></use>
+          <use xlink:href="#s-text" class="text-copy"></use>
+          <use xlink:href="#s-text" class="text-copy"></use>
+        </g>
+      </svg>
+
+      <!-- <h1>WatchNext</h1> -->
+      <button class="btn blue">Login</button>
+      <button class="btn red">Demo</button>
+       
+      <div class="login-form">
+        <%= render 'sessions/form' %>
+      </div>
+
+      <div class="demo-form">
+        <%= render 'sessions/demo' %>
+      </div>
+
+    </div>
+  </div>
+  <div id="about-button">
+    <button class="btn black">About</button>
   </div>
 
-  <div class="demo-form">
-    <%= render 'sessions/demo' %>
+  <div id="about">
+    <h2>WatchNext will help you eliminate the time spent surfing Netflix and Hulu and get to what matters most - watching films!</h2>
+
+
+  <h3>With WatchNext you can: </h3>
+  <p>Add and delete movies from a watch list with ease</p>
+  <p>Search specific parameters to filter through movies in your watch list</p>
+  <p>Those search parameters include:</p>
+    <li>Runtime</li>
+    <li>Genre</li>
+    <li>Decade</li>
+    <li>Actors</li>
+    <li>Director</li>
+    <li>Awards</li>
+    <li>Rotten Tomatoes Score</li>
+
+  <h4>Log in with the demo account:</h4>
+  <p><strong>Login: </strong>demo@demo.com</p>
+  <p><strong>Password: </strong>demo</p>
   </div>
-
-</div>
-<div id="about-button">
-  <button class="btn black">About</button>
-</div>
-
-<div id="about">
-  <h2>WatchNext will help you eliminate the time spent surfing Netflix and Hulu and get to what matters most - watching films!</h2>
-
-
-<h3>With WatchNext you can: </h3>
-<p>Add and delete movies from a watch list with ease</p>
-<p>Search specific parameters to filter through movies in your watch list</p>
-<p>Those search parameters include:</p>
-  <li>Runtime</li>
-  <li>Genre</li>
-  <li>Decade</li>
-  <li>Actors</li>
-  <li>Director</li>
-  <li>Awards</li>
-  <li>Rotten Tomatoes Score</li>
-
-<h4>Log in with the demo account:</h4>
-<p><strong>Login: </strong>demo@demo.com</p>
-<p><strong>Password: </strong>demo</p>
-</div>
