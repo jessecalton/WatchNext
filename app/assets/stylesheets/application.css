@@ -14,11 +14,12 @@
  *= require_self
  *= require font-awesome
  */
-
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
  /*Home page*/ 
 
 .homepage {
   background-color: #456990;
+  margin: 0;
 }
 
 #logo-wrapper {
@@ -26,8 +27,9 @@
   text-align: center;
   font-size: 2em;
   color: #FABC3C;
-  background-color: #3454D1;
-  height: 400px;
+  background-color: black;
+  padding-bottom: 40px;
+  height: 500px;
 }
 
 #logo > h1 {
@@ -38,9 +40,59 @@
 #logo {
   margin: auto;
   position:relative;
-  top: 20%;
-  width: 50%;
-  height: 50%;
+  top: 10%;
+/*  width: 50%;
+  height: 50%;*/
+}
+
+/*Logo animation*/
+
+svg {
+    font-weight: 800;
+    display: block;
+    font: 5em 'Montserrat';
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+  stroke: #F45B69;
+  animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+  stroke: #F45B69;
+  animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+  stroke: #FABC3C;
+  animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+  stroke: #FABC3C;
+  animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+  stroke: white;
+  animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+  100% {stroke-dashoffset: -35%;}
 }
 
 /*Nav buttons*/
@@ -78,7 +130,7 @@
 }
 
 .red:hover {
-  background-color: #82F91B;
+  background-color: #fccfd3;
 }
 
 .black {
