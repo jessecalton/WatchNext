@@ -17,17 +17,30 @@
 
  /*Home page*/ 
 
-#logo {
+.homepage {
+  background-color: #456990;
+}
+
+#logo-wrapper {
   font-family: 'Londrina Solid', cursive;
   text-align: center;
   font-size: 2em;
   color: #FABC3C;
   background-color: #3454D1;
+  height: 400px;
 }
 
 #logo > h1 {
-  margin: 0;
-  padding-top: .3em;
+  margin: auto;
+  font-size: 4em;
+}
+
+#logo {
+  margin: auto;
+  position:relative;
+  top: 20%;
+  width: 50%;
+  height: 50%;
 }
 
 /*Nav buttons*/
@@ -106,7 +119,7 @@
 
 #nav-bar > a {
   color: #E4FDE1;
-  margin: 0 4em;
+  margin: 0 10%;
   font-size: 2em;
 
 }

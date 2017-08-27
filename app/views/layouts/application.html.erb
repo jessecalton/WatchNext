@@ -12,7 +12,7 @@
 
   </head>
 
-  <body>
+  <body class="<%= @home_page ? 'homepage' : ''%>">
     <div id="nav-bar">
       <%=link_to "Home", root_path, method: :get %>
       <% if logged_in? %>

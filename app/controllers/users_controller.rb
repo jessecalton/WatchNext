@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   include MoviesHelper
 
   def index
-
+    @home_page = true
   end
 
   def new
