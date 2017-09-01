@@ -52,7 +52,6 @@ class UsersController < ApplicationController
       format.js {@movie_array}
     end
 
-
   end
 
 private

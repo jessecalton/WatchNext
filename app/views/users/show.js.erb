@@ -1,9 +1,9 @@
 
-  $('.returned-movies').empty();
-  $('.returned-movies').find('.movie-display').remove()
-  $('.returned-movies').find('h3').remove()
+  $('#returned-movies').empty();
+  $('#returned-movies').find('.movie-display').remove()
+  $('#returned-movies').find('h3').remove()
 
-  $('.returned-movies').append(
+  $('#returned-movies').append(
     "<h3>Your search returned these films:</h3>\
     <% if @movie_array.present? %>\
       <% @movie_array.each do |movie| %>\
@@ -15,4 +15,6 @@
     <%else%>\
       Your search returned no movies. Sad Panda.\
     <%end%>")
-$('.watch-movie-form form')[0].reset();
+$('#watch-movie-form form')[0].reset();
+
+window.location.href = '#returned-movies';
