@@ -1,5 +1,8 @@
-<h1 id="hello-user">Hello movie lover, <%=current_user.username%></h1>
-
+<div id="hello-user">
+  <h1>Hello movie lover, <%=current_user.username%>!</h1>
+  <button class="btn blue" onclick="location.href='#movie-search-form'">Add Movie</button>
+  <button class="btn red">Watch Movie</button>
+</div>
 <div class="notice">
   <% if flash[:notice] %>
     <%= flash[:notice]%>
@@ -11,7 +14,7 @@
 </div>
 
 
-<div class="movie-search-form">
+<div id="movie-search-form">
 
 <h2>What movie would you like to add?</h2>
   <%= render 'add_movie' %>

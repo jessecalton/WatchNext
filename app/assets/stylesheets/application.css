@@ -180,8 +180,7 @@ svg {
 
 #hello-user {
   font-family: 'Londrina Solid', cursive;
-  display: flex;
-  justify-content: center;
+  text-align: center;
 
 }
 
