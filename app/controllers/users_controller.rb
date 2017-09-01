@@ -47,9 +47,12 @@ class UsersController < ApplicationController
       rotten_tomatoes_range
     end
 
+
+
     respond_to do |format|
       format.html {@movie_array}
-      format.js {@movie_array}
+      format.js {}
+      format.json {render @movie_array, params}
     end
 
   end
