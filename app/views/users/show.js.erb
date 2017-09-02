@@ -6,7 +6,7 @@
 // Passing the params in JS, we only need to run the logic once
 // Figuring out which params were entered and thus which ones to print to the page
 
-var movieParams = "<%=params[:runtime]%>"
+var movieRuntime = "<%=params[:runtime]%>"
 var movieDecade = "<%=params[:decade]%>"
 var movieDirector = "<%=params[:director]%>"
 var movieGenre = "<%=params[:genre]%>"
@@ -15,8 +15,23 @@ var movieTomatoes = "<%=params[:tomatoes]%>"
 
 var paramsArray = ["Your movie criteria: "]
 
-if (movieParams.length !== 0) {
-  paramsArray.push("less than " + movieParams + " minutes")
+if (movieRuntime.length !== 0) {
+  paramsArray.push("less than " + movieRuntime + " minutes")
+}
+if (movieDecade.length !== 0) {
+  paramsArray.push("from the " + movieDecade + " decade")
+}
+if (movieDirector.length !== 0) {
+  paramsArray.push("directed by " + movieDirector)
+}
+if (movieGenre.length !== 0) {
+  paramsArray.push("in the " + movieGenre + " genre")
+}
+if (movieActors.length !== 0) {
+  paramsArray.push("featuring " + movieActors)
+}
+if (movieTomatoes.length !== 0) {
+  paramsArray.push("with a Rotten Tomatoes score higher than " + movieTomatoes)
 }
 
 console.log(paramsArray.length)
