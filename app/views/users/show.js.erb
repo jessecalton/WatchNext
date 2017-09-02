@@ -3,22 +3,45 @@
   $('#returned-movies').find('.movie-display').remove()
   $('#returned-movies').find('h3').remove()
 
-  $('#returned-movies').append(
-    "<h3>Your search returned these films:</h3>\
-    <% if @movie_array.present? %>\
-      <% @movie_array.each do |movie| %>\
-      <div class='movie-display'>\
-        <div id='movie-title'><%= movie.title %></div>\
-        <img src=<%=movie.poster_url%> alt='Movie Poster' class='movie-poster'>\
-        </div>\
-      <%end%>\
-    <%else%>\
-      Your search returned no movies. Sad Panda.\
-    <%end%>")
-$('#watch-movie-form form')[0].reset();
+// Passing the params in JS, we only need to run the logic once
+// Figuring out which params were entered and thus which ones to print to the page
+
+var movieParams = "<%=params[:runtime]%>"
+var movieDecade = "<%=params[:decade]%>"
+var movieDirector = "<%=params[:director]%>"
+var movieGenre = "<%=params[:genre]%>"
+var movieActors = "<%=params[:actors]%>"
+var movieTomatoes = "<%=params[:tomatoes]%>"
+
+var paramsArray = ["Your movie criteria: "]
+
+if (movieParams.length !== 0) {
+  paramsArray.push("less than " + movieParams + " minutes")
+}
+
+console.log(paramsArray.length)
+
+$('#returned-movies').append("<div id='movie-criteria'><h3></h3></div>")
+
+for (i=0; i < paramsArray.length; i++) {
+    $('#movie-criteria h3').append(paramsArray[i])
+    if (i !== 0 && i !== (paramsArray.length - 1)) {
+      $('#movie-criteria h3').append(" <i class='fa fa-play' aria-hidden='true'></i> ")
+    }
+  }
+
+$('#returned-movies').append(
+  "<% if @movie_array.present? %>\
+    <% @movie_array.each do |movie| %>\
+    <div class='movie-display'>\
+      <div id='movie-title'><%= movie.title %></div>\
+      <img src=<%=movie.poster_url%> alt='Movie Poster' class='movie-poster'>\
+      </div>\
+    <%end%>\
+  <%else%>\
+    Your search returned no movies. Sad Panda.\
+  <%end%>")
 
 window.location.href = '#returned-movies';
 
-var movieParams = "<%=params[:runtime]%>"
-
-console.log(movieParams)
+$('#watch-movie-form form')[0].reset();
