@@ -9,6 +9,7 @@ $('#movie-search-form form')[0].reset();
 
 
 var newDirector = "<%=@new_movie.director%>"
-console.log(newDirector)
+
 $("<option value=" + newDirector + ">" + newDirector + "</option>").appendTo('select#director')
 
+var newActors = "<%=@new_movie.actors%>"
