@@ -223,6 +223,11 @@ svg {
   display: none;
 }
 
+.search-form > input, .search-form > select, .search-form > label{
+  height: 30px;
+  font-size: 1em;
+}
+
 .movie-poster {
   display: flex;
   margin: 0 auto;

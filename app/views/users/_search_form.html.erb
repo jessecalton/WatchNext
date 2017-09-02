@@ -1,5 +1,5 @@
-  <%= form_tag(user_path(current_user), method: :get, remote: :true) do %>
-    <%= text_field_tag :runtime, nil, placeholder: 'Runtime' %>
+  <%= form_tag(user_path(current_user), method: :get, remote: :true, class: "search-form") do %>
+    <%= text_field_tag :runtime, nil, placeholder: 'Runtime in Minutes' %>
     <%= select_tag 'decade', "<option>1950s or earlier</option><option>1960s</option><option>1970s</option><option>1980s</option><option>1990s</option><option>2000s</option><option>2010s</option>".html_safe, include_blank: "Decade" %>
     <% directors_array = current_user.movies.map { |movie| [movie.director] } %>
     <%= select_tag "director", options_for_select(directors_array.uniq), include_blank: "Directors" %>
