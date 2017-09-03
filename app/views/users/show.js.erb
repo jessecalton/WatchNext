@@ -13,7 +13,7 @@ var movieGenre = "<%=params[:genre]%>"
 var movieActors = "<%=params[:actors]%>"
 var movieTomatoes = "<%=params[:tomatoes]%>"
 
-var paramsArray = ["Your movie criteria: "]
+var paramsArray = ["Your search results of movies that are "]
 
 if (movieRuntime.length !== 0) {
   paramsArray.push("less than " + movieRuntime + " minutes")
@@ -31,7 +31,7 @@ if (movieActors.length !== 0) {
   paramsArray.push("featuring " + movieActors)
 }
 if (movieTomatoes.length !== 0) {
-  paramsArray.push("with a Rotten Tomatoes score higher than " + movieTomatoes)
+  paramsArray.push("rated above " + movieTomatoes + " on Rotten Tomatoes")
 }
 
 console.log(paramsArray.length)
@@ -54,7 +54,7 @@ $('#returned-movies').append(
       </div>\
     <%end%>\
   <%else%>\
-    Your search returned no movies. Sad Panda.\
+    Your search returned no movies.\
   <%end%>")
 
 window.location.href = '#returned-movies';
