@@ -228,6 +228,10 @@ svg {
   font-size: 1em;
 }
 
+#watch-movie-form {
+  padding-bottom: 75px;
+}
+
 .movie-poster {
   display: flex;
   margin: 0 auto;
