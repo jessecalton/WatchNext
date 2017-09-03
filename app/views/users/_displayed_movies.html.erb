@@ -1,4 +1,4 @@
-<h3>Your Movie Watch List:</h3>
+<h2>Your Movie Watch List:</h2>
 <% if current_user.movies.length != 0 %>
   <% current_user.movies.order('created_at ASC').each do |movie| %>
   <div class="movie-display <%=movie.id%>">
