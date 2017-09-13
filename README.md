@@ -9,6 +9,7 @@ Do you spend more time browsing Netflix than watching its wealth of movies and t
 * Add to and delete movies from a watch list with ease.
 * Uses AJAX for dynamic adding/deleting of movie titles.
 * Search specific parameters to filter through movies in watch list, for example: "I want to watch a movie that's less than 2 hours, is a Romantic Comedy from the 1980's, and has a Rotten Tomatoes score of at least 75."
+* Send your watch list to your smart phone via SMS using the Twilio API to check your list on the go.
 * Just select the options you want to filter and you'll find tonight's movie!
 
 ## Cast 📽️
