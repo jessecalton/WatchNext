@@ -55,6 +55,7 @@ class UsersController < ApplicationController
       movies = @movie_string
 
       new_messager.send_message(params[:number], movies, username)
+      redirect_to user_path(current_user)
     end
 
     p @movie_string

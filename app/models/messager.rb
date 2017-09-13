@@ -22,6 +22,7 @@ class Messager
         )
 
       puts text_message.to
+
   end
 
 
