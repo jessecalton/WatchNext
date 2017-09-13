@@ -61,10 +61,10 @@ function searchList() {
 };
 
 var checkTruthiness = "<%= params[:number].present? %>"
-console.log(typeof checkTruthiness)
 
 if (checkTruthiness === "true") {
-  
+  "<%new_message = Messager.new %>\
+    <%new_message.send_message(params[:number])%>"
 } else {
   searchList()
 };
