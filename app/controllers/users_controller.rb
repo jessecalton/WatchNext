@@ -24,6 +24,7 @@ class UsersController < ApplicationController
 
   def show
     current_user
+    get_all_movie_titles
     make_sorted_genre_array
 
     if params[:runtime].present?
@@ -50,8 +51,13 @@ class UsersController < ApplicationController
 
     if params[:number].present?
       new_messager = Messager.new
-      new_messager.send_message(params[:number])
+      username = current_user.username
+      movies = @movie_string
+
+      new_messager.send_message(params[:number], movies, username)
     end
+
+    p @movie_string
 
     respond_to do |format|
       format.html {@movie_array}

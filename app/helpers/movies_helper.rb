@@ -2,11 +2,11 @@ module MoviesHelper
 
 # Using this method for SMS message of watch list
   def get_all_movie_titles
-    @movie_title_array = []
+    @movie_string = " "
     current_user.movies.each do |movie|
-      @movie_title_array << movie.title
+      @movie_string << "\n" + movie.title
     end
-    @movie_title_array
+    @movie_string
   end
 
 
