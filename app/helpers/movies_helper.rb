@@ -1,11 +1,16 @@
 module MoviesHelper
 
-  def initialize_movie_array
-    @movie_array ||= []
+# Using this method for SMS message of watch list
+  def get_all_movie_titles
+    @movie_string = " "
+    current_user.movies.each do |movie|
+      @movie_string << "\n" + movie.title
+    end
+    @movie_string
   end
 
 
-
+# These methods for searching through watch list
   def runtime_match
     if @movie_array
       @movie_array.delete_if {|movie| movie.runtime > params[:runtime].to_i}
@@ -130,7 +135,7 @@ module MoviesHelper
           @actors_array << actor.strip
         end
       end
-    p @actors_array.sort!
+    @actors_array.sort!
   end
 
   private

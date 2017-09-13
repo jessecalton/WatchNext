@@ -1,7 +1,7 @@
 <div id="hello-user">
   <h1>Hello movie lover, <%=current_user.username%>!</h1>
-  <button class="btn blue" onclick="location.href='#movie-search-form'">Add Movie</button>
-  <button class="btn red" onclick="location.href='#watch-movie-form'">Watch Movie</button>
+  <button class="btn blue" onclick="location.href='#movie-search-form'">Add A Movie</button>
+  <button class="btn red" onclick="location.href='#watch-movie-form'">Pick A Movie</button>
 </div>
 <div class="notice">
   <% if flash[:notice] %>
@@ -29,3 +29,8 @@
 <div id="returned-movies">
 
 </div>
+
+<div id="twilio-form">
+  <%= render 'twilio' %>
+</div>
+

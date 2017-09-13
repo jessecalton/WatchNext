@@ -5,58 +5,59 @@
 
 // Passing the params in JS, we only need to run the logic once
 // Figuring out which params were entered and thus which ones to print to the page
+function searchList() {
+  var movieRuntime = "<%=params[:runtime]%>"
+  var movieDecade = "<%=params[:decade]%>"
+  var movieDirector = "<%=params[:director]%>"
+  var movieGenre = "<%=params[:genre]%>"
+  var movieActors = "<%=params[:actors]%>"
+  var movieTomatoes = "<%=params[:tomatoes]%>"
 
-var movieRuntime = "<%=params[:runtime]%>"
-var movieDecade = "<%=params[:decade]%>"
-var movieDirector = "<%=params[:director]%>"
-var movieGenre = "<%=params[:genre]%>"
-var movieActors = "<%=params[:actors]%>"
-var movieTomatoes = "<%=params[:tomatoes]%>"
+  var paramsArray = ["Your search results of movies that are "]
 
-var paramsArray = ["Your search results of movies that are "]
-
-if (movieRuntime.length !== 0) {
-  paramsArray.push("less than " + movieRuntime + " minutes")
-}
-if (movieDecade.length !== 0) {
-  paramsArray.push("from the " + movieDecade + " decade")
-}
-if (movieDirector.length !== 0) {
-  paramsArray.push("directed by " + movieDirector)
-}
-if (movieGenre.length !== 0) {
-  paramsArray.push("in the " + movieGenre + " genre")
-}
-if (movieActors.length !== 0) {
-  paramsArray.push("featuring " + movieActors)
-}
-if (movieTomatoes.length !== 0) {
-  paramsArray.push("rated above " + movieTomatoes + " on Rotten Tomatoes")
-}
-
-console.log(paramsArray.length)
-
-$('#returned-movies').append("<div id='movie-criteria'><h3></h3></div>")
-
-for (i=0; i < paramsArray.length; i++) {
-    $('#movie-criteria h3').append(paramsArray[i])
-    if (i !== 0 && i !== (paramsArray.length - 1)) {
-      $('#movie-criteria h3').append(" <i class='fa fa-play' aria-hidden='true'></i> ")
-    }
+  if (movieRuntime.length !== 0) {
+    paramsArray.push("less than " + movieRuntime + " minutes")
+  }
+  if (movieDecade.length !== 0) {
+    paramsArray.push("from the " + movieDecade + " decade")
+  }
+  if (movieDirector.length !== 0) {
+    paramsArray.push("directed by " + movieDirector)
+  }
+  if (movieGenre.length !== 0) {
+    paramsArray.push("in the " + movieGenre + " genre")
+  }
+  if (movieActors.length !== 0) {
+    paramsArray.push("featuring " + movieActors)
+  }
+  if (movieTomatoes.length !== 0) {
+    paramsArray.push("rated above " + movieTomatoes + " on Rotten Tomatoes")
   }
 
-$('#returned-movies').append(
-  "<% if @movie_array.present? %>\
-    <% @movie_array.each do |movie| %>\
-    <div class='movie-display'>\
-      <div id='movie-title'><%= movie.title %></div>\
-      <img src=<%=movie.poster_url%> alt='Movie Poster' class='movie-poster'>\
-      </div>\
-    <%end%>\
-  <%else%>\
-    Your search returned no movies.\
-  <%end%>")
+  $('#returned-movies').append("<div id='movie-criteria'><h3></h3></div>")
 
-window.location.href = '#returned-movies';
+  for (i=0; i < paramsArray.length; i++) {
+      $('#movie-criteria h3').append(paramsArray[i])
+      if (i !== 0 && i !== (paramsArray.length - 1)) {
+        $('#movie-criteria h3').append(" <i class='fa fa-play' aria-hidden='true'></i> ")
+      }
+    }
 
-$('#watch-movie-form form')[0].reset();
+  $('#returned-movies').append(
+    "<% if @movie_array.present? %>\
+      <% @movie_array.each do |movie| %>\
+      <div class='movie-display'>\
+        <div id='movie-title'><%= movie.title %></div>\
+        <img src=<%=movie.poster_url%> alt='Movie Poster' class='movie-poster'>\
+        </div>\
+      <%end%>\
+    <%else%>\
+      Your search returned no movies.\
+    <%end%>")
+
+  window.location.href = '#returned-movies';
+
+  $('#watch-movie-form form')[0].reset();
+};
+
+searchList()
