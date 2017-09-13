@@ -34,8 +34,6 @@ if (movieTomatoes.length !== 0) {
   paramsArray.push("rated above " + movieTomatoes + " on Rotten Tomatoes")
 }
 
-console.log(paramsArray.length)
-
 $('#returned-movies').append("<div id='movie-criteria'><h3></h3></div>")
 
 for (i=0; i < paramsArray.length; i++) {
@@ -60,3 +58,6 @@ $('#returned-movies').append(
 window.location.href = '#returned-movies';
 
 $('#watch-movie-form form')[0].reset();
+
+var numberParams = "<%=params[:number]"
+console.log(numberParams)

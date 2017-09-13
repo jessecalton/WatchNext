@@ -1,7 +1,10 @@
 module MoviesHelper
 
-  def initialize_movie_array
-    @movie_array ||= []
+  def get_all_movie_titles
+    current_user.movies.each do |movie|
+      @movie_array << movie.title
+    end
+    @movie_array
   end
 
 

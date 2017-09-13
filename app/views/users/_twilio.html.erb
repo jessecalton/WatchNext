@@ -1,0 +1,6 @@
+<%= form_for(user_path, remote: true, :html => {:class => "search-form"}) do |f| %>
+
+  <%= f.text_field :number, placeholder: "Phone Number" %>
+
+  <%= f.submit "Send Movie List" %>
+<% end %>

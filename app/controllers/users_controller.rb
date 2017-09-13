@@ -23,6 +23,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    current_user
     make_sorted_genre_array
 
     if params[:runtime].present?
@@ -47,6 +48,9 @@ class UsersController < ApplicationController
       rotten_tomatoes_range
     end
 
+    
+    new_messager = Messager.new
+    p params
 
 
     respond_to do |format|
