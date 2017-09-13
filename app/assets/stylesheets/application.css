@@ -24,6 +24,10 @@
   margin: 0;
 }
 
+.notice {
+  color: red;
+}
+
 #logo-wrapper {
   font-family: 'Londrina Solid', cursive;
   text-align: center;
