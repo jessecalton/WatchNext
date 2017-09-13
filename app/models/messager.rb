@@ -12,9 +12,6 @@ class Messager
 
 
   def send_message(phone_number, movies, username)
-    if phone_number.length != 12
-      return false
-    end
       text_message = @client.api.account.messages.create(
         from: @twilio_number,
         to: phone_number,

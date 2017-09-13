@@ -49,7 +49,7 @@ class UsersController < ApplicationController
       rotten_tomatoes_range
     end
 
-    if params[:number].present?
+    if params[:number].present? && params[:number].length == 10
       new_messager = Messager.new
       username = current_user.username
       movies = @movie_string
@@ -57,9 +57,11 @@ class UsersController < ApplicationController
 
       new_messager.send_message(number, movies, username)
       redirect_to user_path(current_user)
+    elsif params[:number].present? && params[:number].length != 10
+      flash.now[:notice] = "Please enter a valid phone number"
     end
+      
 
-    p @movie_string
 
     respond_to do |format|
       format.html {@movie_array}
