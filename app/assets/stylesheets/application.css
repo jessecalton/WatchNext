@@ -17,6 +17,8 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
  /*Home page*/ 
 
+
+
 .homepage {
   background-color: #456990;
   margin: 0;
@@ -180,8 +182,7 @@ svg {
 
 #hello-user {
   font-family: 'Londrina Solid', cursive;
-  display: flex;
-  justify-content: center;
+  text-align: center;
 
 }
 
@@ -210,12 +211,25 @@ svg {
   height: 20px;
 }
 
+#returned-movies {
+  overflow: auto;
+}
+
 .login-form {
   display: none;
 }
 
 .demo-form {
   display: none;
+}
+
+.search-form > input, .search-form > select, .search-form > label{
+  height: 30px;
+  font-size: 1em;
+}
+
+#watch-movie-form {
+  padding-bottom: 75px;
 }
 
 .movie-poster {

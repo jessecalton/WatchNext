@@ -123,6 +123,16 @@ module MoviesHelper
     @genre_array.sort!
   end
 
+  def make_sorted_actors_array
+    @actors_array = []
+      current_user.movies.each do |movie|
+        movie.actors.split(',').each do |actor|
+          @actors_array << actor.strip
+        end
+      end
+    p @actors_array.sort!
+  end
+
   private
 
   def sanitize_integer_params

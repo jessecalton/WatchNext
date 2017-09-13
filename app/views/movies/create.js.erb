@@ -5,10 +5,11 @@ $("<div class='movie-display <%=@new_movie.id%>'>\
     <div id='movie-title'><%=@new_movie.title%></div>\
       <img src=<%=@new_movie.poster_url%> alt='Movie Poster' class='movie-poster'>\
   </div>").appendTo('.watch-list').append(del);
-$('.movie-search-form form')[0].reset();
+$('#movie-search-form form')[0].reset();
 
 
 var newDirector = "<%=@new_movie.director%>"
-console.log(newDirector)
+
 $("<option value=" + newDirector + ">" + newDirector + "</option>").appendTo('select#director')
 
+var newActors = "<%=@new_movie.actors%>"

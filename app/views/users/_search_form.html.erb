@@ -1,10 +1,13 @@
-  <%= form_tag(user_path(current_user), method: :get, remote: :true) do %>
-    <%= text_field_tag :runtime, nil, placeholder: 'Runtime' %>
+  <%= form_tag(user_path(current_user), method: :get, remote: :true, class: "search-form") do %>
+    <%= text_field_tag :runtime, nil, placeholder: 'Runtime in Minutes' %>
     <%= select_tag 'decade', "<option>1950s or earlier</option><option>1960s</option><option>1970s</option><option>1980s</option><option>1990s</option><option>2000s</option><option>2010s</option>".html_safe, include_blank: "Decade" %>
     <% directors_array = current_user.movies.map { |movie| [movie.director] } %>
     <%= select_tag "director", options_for_select(directors_array.uniq), include_blank: "Directors" %>
+
     <%= select_tag "genre", options_for_select(@genre_array.uniq), include_blank: "Genre" %>
-    <%= text_field_tag :actors, nil, placeholder: 'Actors' %>
+    <% text_field_tag :actors, nil, placeholder: 'Actors' %>
+    <% make_sorted_actors_array %>
+    <%= select_tag "actors", options_for_select(@actors_array.uniq), include_blank: "Actors" %>
 
     <%= select_tag 'tomatoes', "<option>> 50</option><option>> 60</option><option>> 70</option><option>> 80</option><option>> 90</option>".html_safe, include_blank: "Rotten Tomatoes Score" %>
     <%= submit_tag 'Search' %>
