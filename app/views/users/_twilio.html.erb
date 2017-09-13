@@ -1,6 +1,4 @@
-<%= form_for(user_path, remote: true, :html => {:class => "search-form"}) do |f| %>
-
-  <%= f.text_field :number, placeholder: "Phone Number" %>
-
-  <%= f.submit "Send Movie List" %>
+<%= form_tag(user_path(current_user), method: :get, remote: :true, class: "search-form") do %>
+  <%= text_field_tag :number, nil, placeholder: 'Phone Number' %>
+  <%= submit_tag 'Send' %>
 <% end %>
