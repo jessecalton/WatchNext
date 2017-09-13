@@ -53,8 +53,9 @@ class UsersController < ApplicationController
       new_messager = Messager.new
       username = current_user.username
       movies = @movie_string
+      number = "+1" + params[:number]
 
-      new_messager.send_message(params[:number], movies, username)
+      new_messager.send_message(number, movies, username)
       redirect_to user_path(current_user)
     end
 

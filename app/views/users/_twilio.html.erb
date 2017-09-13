@@ -1,4 +1,6 @@
+<h2>Send an SMS text to yourself of your Watch List!</h2>
+
 <%= form_tag(user_path(current_user), method: :get, class: "search-form") do %>
-  <%= text_field_tag :number, nil, placeholder: 'Phone Number' %>
+  <%= text_field_tag :number, nil, placeholder: 'Ex: 5551234567' %>
   <%= submit_tag 'Send' %>
 <% end %>
