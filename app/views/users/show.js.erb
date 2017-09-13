@@ -60,11 +60,4 @@ function searchList() {
   $('#watch-movie-form form')[0].reset();
 };
 
-var checkTruthiness = "<%= params[:number].present? %>"
-
-if (checkTruthiness === "true") {
-  "<%new_message = Messager.new %>\
-    <%new_message.send_message(params[:number])%>"
-} else {
-  searchList()
-};
+searchList()

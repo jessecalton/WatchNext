@@ -48,10 +48,10 @@ class UsersController < ApplicationController
       rotten_tomatoes_range
     end
 
-    
-    new_messager = Messager.new
-    p params
-
+    if params[:number].present?
+      new_messager = Messager.new
+      new_messager.send_message(params[:number])
+    end
 
     respond_to do |format|
       format.html {@movie_array}
