@@ -17,7 +17,9 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
  /*Home page*/ 
 
-
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
 
 .homepage {
   background-color: #456990;
@@ -193,6 +195,7 @@ svg {
 .watch-list {
   overflow: hidden;
   width: 100%;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 }
 
