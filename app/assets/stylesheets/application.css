@@ -209,6 +209,11 @@ svg {
   float: left;
 }
 
+#button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 #movie-search-form {
   display: flex;
 }

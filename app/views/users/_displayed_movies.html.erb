@@ -5,15 +5,17 @@
   <div class="movie-display <%=movie.id%>">
     <div id="movie-title"><%=movie.title%></div>
     <img src=<%=movie.poster_url%> alt="Movie Poster" class="movie-poster">
+    <div id="button-wrapper">
     <%=button_to "Delete From List", movie_path(movie.id), data: {confirm: "Are you sure you want to delete #{movie.title}?"}, :method => :delete, remote: true %>
     <%=button_to "Details", movie_path(movie.id), method: :get, remote: true, class: "opener" %>
+    </div>
     <div id="movie-deets<%=movie.id%>" title="Movie Details" style="display:none">
-        <p>Runtime: <%=movie.runtime%></p>
-        <p>Decade: <%=movie.decade%></p>
-        <p>Director: <%=movie.director%></p>
-        <p>Genre: <%=movie.genre%></p>
-        <p>Actors: <%=movie.actors%></p>
-        <p>Rotten Tomatoes: <%=movie.rotten_tomatoes%></p>
+        <p><b>Runtime:</b> <%=movie.runtime%></p>
+        <p><b>Decade:</b> <%=movie.decade%></p>
+        <p><b>Director:</b> <%=movie.director%></p>
+        <p><b>Genre:</b> <%=movie.genre%></p>
+        <p><b>Actors:</b> <%=movie.actors%></p>
+        <p><b>Rotten Tomatoes:</b> <%=movie.rotten_tomatoes%></p>
     </div>
   </div>
   <%end%>
