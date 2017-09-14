@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  *= require font-awesome
+ *= require jquery-ui
  */
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
  /*Home page*/ 
@@ -265,5 +266,5 @@ form.button_to {
 
 /*Dropdown buttons*/
 #dialog {
-  display: none;
+  
 }
