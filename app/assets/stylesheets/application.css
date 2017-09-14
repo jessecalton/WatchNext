@@ -186,6 +186,7 @@ svg {
 
 /*User page*/
 
+
 #hello-user {
   font-family: 'Londrina Solid', cursive;
   text-align: center;
@@ -207,14 +208,23 @@ svg {
   float: left;
 }
 
+#movie-search-form {
+  display: flex;
+}
+
+#movie-search-form > form {
+  padding: .83em;
+  margin-left: 1em;
+}
+
 #movie-title {
   font-family: 'Londrina Solid', cursive;
-  display: flex;
+  /*display: flex;*/
   justify-content: center;
   text-align: center;
   padding: 5px;
   /*white-space: nowrap;*/
-  font-size: 1.2vw;
+  font-size: 1em;
   height: 20px;
 }
 
@@ -236,7 +246,7 @@ svg {
 }
 
 #watch-movie-form {
-  padding-bottom: 75px;
+  padding-bottom: 40px;
 }
 
 .movie-poster {
