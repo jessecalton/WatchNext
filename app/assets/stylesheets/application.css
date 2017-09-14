@@ -22,14 +22,47 @@ body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+/*Nav bar*/
+
+#nav-bar {
+  font-family: 'Londrina Solid', cursive;
+  background-color: #114B5F;
+  min-height: 3.2em;
+  text-align: center;
+  padding-top: 1em;
+}
+
+#nav-bar > a {
+  color: #E4FDE1;
+  margin: 0 10%;
+  font-size: 2em;
+
+}
+
+/*Homepage*/
+
 .homepage {
   background-color: #456990;
   margin: 0;
 }
 
+/*Error and flash notices*/
+
 .notice {
   color: red;
 }
+
+/*Login forms*/
+
+.login-form {
+  display: none;
+}
+
+.demo-form {
+  display: none;
+}
+
+/*Logo Div*/
 
 #logo-wrapper {
   font-family: 'Londrina Solid', cursive;
@@ -157,6 +190,8 @@ svg {
   background-color: #456990;
 }
 
+/*About Description*/
+
 #about {
   display: none;
   text-align: center;
@@ -168,23 +203,6 @@ svg {
   margin: 0;
 }
 
-/*Nav bar*/
-
-#nav-bar {
-  font-family: 'Londrina Solid', cursive;
-  background-color: #114B5F;
-  min-height: 3.2em;
-  text-align: center;
-  padding-top: 1em;
-}
-
-#nav-bar > a {
-  color: #E4FDE1;
-  margin: 0 10%;
-  font-size: 2em;
-
-}
-
 /*User page*/
 
 
@@ -193,6 +211,8 @@ svg {
   text-align: center;
 
 }
+
+/*Watch List*/
 
 .watch-list {
   overflow: hidden;
@@ -209,20 +229,6 @@ svg {
   float: left;
 }
 
-#button-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-#movie-search-form {
-  display: flex;
-}
-
-#movie-search-form > form {
-  padding: .83em;
-  margin-left: 1em;
-}
-
 #movie-title {
   font-family: 'Londrina Solid', cursive;
   /*display: flex;*/
@@ -234,16 +240,24 @@ svg {
   height: 20px;
 }
 
+#button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/*Search Form*/
+
+#movie-search-form {
+  display: flex;
+}
+
+#movie-search-form > form {
+  padding: .83em;
+  margin-left: 1em;
+}
+
 #returned-movies {
   overflow: auto;
-}
-
-.login-form {
-  display: none;
-}
-
-.demo-form {
-  display: none;
 }
 
 .search-form > input, .search-form > select, .search-form > label{
@@ -267,9 +281,4 @@ form.button_to {
   display: flex;
   justify-content: center;
   /*padding: 2px;*/
-}
-
-/*Dropdown buttons*/
-#dialog {
-  
 }
