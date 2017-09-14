@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  *= require font-awesome
+ *= require jquery-ui
  */
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
  /*Home page*/ 
@@ -21,14 +22,47 @@ body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+/*Nav bar*/
+
+#nav-bar {
+  font-family: 'Londrina Solid', cursive;
+  background-color: #114B5F;
+  min-height: 3.2em;
+  text-align: center;
+  padding-top: 1em;
+}
+
+#nav-bar > a {
+  color: #E4FDE1;
+  margin: 0 10%;
+  font-size: 2em;
+
+}
+
+/*Homepage*/
+
 .homepage {
   background-color: #456990;
   margin: 0;
 }
 
+/*Error and flash notices*/
+
 .notice {
   color: red;
 }
+
+/*Login forms*/
+
+.login-form {
+  display: none;
+}
+
+.demo-form {
+  display: none;
+}
+
+/*Logo Div*/
 
 #logo-wrapper {
   font-family: 'Londrina Solid', cursive;
@@ -156,6 +190,8 @@ svg {
   background-color: #456990;
 }
 
+/*About Description*/
+
 #about {
   display: none;
   text-align: center;
@@ -167,30 +203,16 @@ svg {
   margin: 0;
 }
 
-/*Nav bar*/
-
-#nav-bar {
-  font-family: 'Londrina Solid', cursive;
-  background-color: #114B5F;
-  min-height: 3.2em;
-  text-align: center;
-  padding-top: 1em;
-}
-
-#nav-bar > a {
-  color: #E4FDE1;
-  margin: 0 10%;
-  font-size: 2em;
-
-}
-
 /*User page*/
+
 
 #hello-user {
   font-family: 'Londrina Solid', cursive;
   text-align: center;
 
 }
+
+/*Watch List*/
 
 .watch-list {
   overflow: hidden;
@@ -209,25 +231,33 @@ svg {
 
 #movie-title {
   font-family: 'Londrina Solid', cursive;
-  display: flex;
+  /*display: flex;*/
   justify-content: center;
   text-align: center;
   padding: 5px;
   /*white-space: nowrap;*/
-  font-size: 1.2vw;
+  font-size: 1em;
   height: 20px;
+}
+
+#button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/*Search Form*/
+
+#movie-search-form {
+  display: flex;
+}
+
+#movie-search-form > form {
+  padding: .83em;
+  margin-left: 1em;
 }
 
 #returned-movies {
   overflow: auto;
-}
-
-.login-form {
-  display: none;
-}
-
-.demo-form {
-  display: none;
 }
 
 .search-form > input, .search-form > select, .search-form > label{
@@ -236,7 +266,7 @@ svg {
 }
 
 #watch-movie-form {
-  padding-bottom: 75px;
+  padding-bottom: 40px;
 }
 
 .movie-poster {

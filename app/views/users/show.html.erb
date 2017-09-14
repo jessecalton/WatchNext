@@ -1,36 +1,37 @@
-<div id="hello-user">
-  <h1>Hello movie lover, <%=current_user.username%>!</h1>
-  <button class="btn blue" onclick="location.href='#movie-search-form'">Add A Movie</button>
-  <button class="btn red" onclick="location.href='#watch-movie-form'">Pick A Movie</button>
+<div id="user-wrapper">
+  <div id="hello-user">
+    <h1>Hello movie lover, <%=current_user.username%>!</h1>
+    <button class="btn blue" onclick="location.href='#movie-search-form'">Add A Movie</button>
+    <button class="btn red" onclick="location.href='#watch-movie-form'">Pick A Movie</button>
+  </div>
+  <div class="notice">
+    <% if flash[:notice] %>
+      <h3><%= flash[:notice]%></h3>
+    <%end%>
+  </div>
+  <hr>
+  <div class="watch-list">
+  <%= render 'displayed_movies' %>
+  </div>
+  <hr>
+
+  <div id="movie-search-form">
+
+  <h2>What movie would you like to add?</h2>
+    <%= render 'add_movie' %>
+  </div>
+  <hr>
+  <h2>Search your Watch List based on the following criteria:</h2>
+
+  <div id="watch-movie-form">
+    <%= render 'search_form' %>
+  </div>
+
+  <div id="returned-movies">
+
+  </div>
+  <hr>
+  <div id="twilio-form">
+    <%= render 'twilio' %>
+  </div>
 </div>
-<div class="notice">
-  <% if flash[:notice] %>
-    <h3><%= flash[:notice]%></h3>
-  <%end%>
-</div>
-<hr>
-<div class="watch-list">
-<%= render 'displayed_movies' %>
-</div>
-<hr>
-
-<div id="movie-search-form">
-
-<h2>What movie would you like to add?</h2>
-  <%= render 'add_movie' %>
-</div>
-
-<h2>Search your Watch List based on the following criteria:</h2>
-
-<div id="watch-movie-form">
-  <%= render 'search_form' %>
-</div>
-
-<div id="returned-movies">
-
-</div>
-
-<div id="twilio-form">
-  <%= render 'twilio' %>
-</div>
-

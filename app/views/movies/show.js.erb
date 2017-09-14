@@ -1,0 +1,15 @@
+var movieTitle = "<%=@movie.title%>"
+
+// Using jQuery UI
+$("#movie-deets<%=@movie.id%>").dialog({
+  autoOpen: true,
+  show: {
+        effect: "blind",
+        duration: 500
+      },
+  width: 300,
+  height: 330,
+  modal: true,
+  title: movieTitle
+})
+
