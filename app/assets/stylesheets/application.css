@@ -262,3 +262,8 @@ form.button_to {
   justify-content: center;
   /*padding: 2px;*/
 }
+
+/*Dropdown buttons*/
+#dialog {
+  display: none;
+}

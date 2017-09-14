@@ -1,3 +1,4 @@
+
 <h2>Your Movie Watch List:</h2>
 <% if current_user.movies.length != 0 %>
   <% current_user.movies.order('created_at ASC').each do |movie| %>
@@ -5,6 +6,10 @@
     <div id="movie-title"><%=movie.title%></div>
     <img src=<%=movie.poster_url%> alt="Movie Poster" class="movie-poster">
     <%=button_to "Delete From List", movie_path(movie.id), data: {confirm: "Are you sure you want to delete #{movie.title}?"}, :method => :delete, remote: true %>
+    <%=button_to "Details", movie_path(movie.id), method: :get, remote: true, class: "opener" %>
+    <div id="dialog">
+      <p>Here are movie details</p>
+    </div>
   </div>
   <%end%>
 <%end%>

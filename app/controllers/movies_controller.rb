@@ -37,10 +37,19 @@ class MoviesController < ApplicationController
     end
   end
 
+  def show
+    @movie = current_user.movies.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.js {@movie}
+    end
+  end
+
   def update
   end
 
   def destroy
+    current_user
     @movie = current_user.movies.find(params[:id])
     respond_to do |format|
       format.html {
