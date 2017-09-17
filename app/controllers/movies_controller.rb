@@ -11,6 +11,10 @@ class MoviesController < ApplicationController
   def create
     current_user
     movie = params[:search][:title]
+    # if params[:search][:title]
+    #   p "***************"
+    #   p params[:search][:title] == ""
+    # end
     movie_json = MovieSearch.new(movie) 
     if movie_json.response != "False" && check_duplicates(movie_json.movie_title)
       @new_movie = Movie.create(

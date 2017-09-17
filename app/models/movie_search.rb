@@ -2,10 +2,18 @@ class MovieSearch
   include HTTParty
   # base_uri 'http://www.omdbapi.com/?t='
 
-  def initialize(title)
+  def initialize(title, year, imdb_id)
+    if title && year == "" && imdb_id == ""
+      movie_url = "t=" + title.gsub(/\s+/, "+")
+    elsif title && year && imdb_id == ""
+      movie_url = "t=" + title.gsub(/\s+/, "+") + "&y=" + year
+      p movie_url
+    elsif imdb_id
+      movie_url = "i=" + imdb_id
+    end
     api_key = ENV["API_KEY"]
-    movie_url = title.gsub(/\s+/, "+")
-    uri = URI.parse("http://www.omdbapi.com/?t=#{movie_url}&apikey=#{api_key}")
+    
+    uri = URI.parse("http://www.omdbapi.com/?#{movie_url}&apikey=#{api_key}")
     uri.open {|f| @movie_data = self.class.get(uri) }
     
   end

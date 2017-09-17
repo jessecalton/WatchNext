@@ -4,3 +4,12 @@
 
   <%= f.submit "Add Movie" %>
 <% end %>
+
+<%= form_for(:search, url: movies_path, remote: true, :html => {:class => "search-form"}) do |f| %>
+
+  <%= f.text_field :title, placeholder: "Movie Title" %>
+  <%= f.text_field :year, placeholder: "Movie Year" %>
+  <%= f.text_field :imdbid, placeholder: "IMDB ID" %>
+
+  <%= f.submit "Add Movie" %>
+<% end %>
