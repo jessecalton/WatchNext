@@ -9,7 +9,15 @@ $('#movie-search-form form')[0].reset();
 $('#movie-search-form form')[1].reset();
 
 var newDirector = "<%=@new_movie.director%>"
+var directorsArray = newDirector.split(',')
 
-$("<option value=" + newDirector + ">" + newDirector + "</option>").appendTo('select#director')
+for (i=0; i < directorsArray.length; i++) {
+  $("<option value=" + directorsArray[i] + ">" + directorsArray[i] + "</option>").appendTo('select#director')
+}
 
 var newActors = "<%=@new_movie.actors%>"
+var actorsArray = newActors.split(',')
+
+for (i=0; i < actorsArray.length; i++) {
+  $("<option value=" + actorsArray[i] + ">" + actorsArray[i] + "</option>").appendTo('select#actors')
+}
