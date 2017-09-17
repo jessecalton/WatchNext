@@ -17,7 +17,21 @@ for (i=0; i < directorsArray.length; i++) {
 
 var newActors = "<%=@new_movie.actors%>"
 var actorsArray = newActors.split(',')
+console.log(actorsArray)
 
-for (i=0; i < actorsArray.length; i++) {
-  $("<option value=" + actorsArray[i] + ">" + actorsArray[i] + "</option>").appendTo('select#actors')
+function getNewActors() {
+  for (i=0; i < actorsArray.length; i++) {
+    $('select#actors').append($("<option value='" + actorsArray[i].trim() + "'>" + actorsArray[i].trim() + "</option>"))
+  }
 }
+
+
+
+function newActorsMenu() {
+  $('select#actors').html($('select#actors option').sort(function(x, y) {
+    return $(x).val().toUpperCase() < $(y).val().toUpperCase() ? -1 : 1
+  }));
+  $('select#actors').get(0).selectedIndex = 0;
+};
+
+$.when(getNewActors()).then(newActorsMenu());
