@@ -5,7 +5,9 @@
   <%= f.submit "Add Movie" %>
 <% end %>
 
-<%= form_for(:adv_search, url: movies_path, remote: true, :html => {:class => "search-form"}) do |f| %>
+<p id="advanced-search">Advanced Search</p>
+
+<%= form_for(:adv_search, url: movies_path, remote: true, :html => {:class => "search-form advanced"}) do |f| %>
 
   <%= f.text_field :title, placeholder: "Movie Title" %>
   <%= f.text_field :year, placeholder: "Movie Year" %>
