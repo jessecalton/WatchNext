@@ -8,13 +8,6 @@ $("<div class='movie-display <%=@new_movie.id%>'>\
 $('#movie-search-form form')[0].reset();
 $('#movie-search-form form')[1].reset();
 
-var newDirector = "<%=@new_movie.director%>"
-var directorsArray = newDirector.split(',')
-
-for (i=0; i < directorsArray.length; i++) {
-  $("<option value=" + directorsArray[i] + ">" + directorsArray[i] + "</option>").appendTo('select#director')
-}
-
 var combos = new Map();
 combos.set('select#actors', "<%=@new_movie.actors%>".split(','))
 combos.set('select#director', "<%=@new_movie.director%>".split(','))
@@ -24,7 +17,7 @@ combos.set('select#genre', "<%=@new_movie.genre%>".split(','))
 function addNewStuff() {
   for (var [key, value] of combos) {
     function appendToMenu(elementId, movieDetail) {
-      for (i=0; i < movieDetail.length - 1; i++) {
+      for (i=0; i < movieDetail.length; i++) {
         console.log(movieDetail)
         $(elementId).append($("<option value='" + movieDetail[i].trim() + "'>" + movieDetail[i].trim() + "</option>"))
     }};
@@ -43,9 +36,9 @@ function addNewStuff() {
 
 addNewStuff()
 
-// var coolOption = "select#director"
-// var coolArray = new Array()
-// $(coolOption + " > option").each(function() {
-//     coolArray.push(this.text)
-// });
-// console.log(coolArray)
+var coolOption = "select#director"
+var coolArray = new Array()
+$(coolOption + " > option").each(function() {
+    coolArray.push(this.text)
+});
+console.log(coolArray)
