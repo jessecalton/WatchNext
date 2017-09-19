@@ -28,7 +28,7 @@ Do you spend more time browsing Netflix than watching its wealth of movies and t
 
 ## Test-Screenings 📼
 
-A working prototype of the app can be viewed by visiting:
+The most recent deployment of WatchNext can be viewed at:
 
 <http://what2watchnext.herokuapp.com/>
 
