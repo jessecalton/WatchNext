@@ -265,6 +265,16 @@ svg {
   font-size: 1em;
 }
 
+.search-form.advanced {
+  display: none;
+}
+
+#advanced-search {
+  color: #0000EE;
+  text-decoration: underline #0000EE;
+  cursor: pointer;
+}
+
 #watch-movie-form {
   padding-bottom: 40px;
 }

@@ -121,8 +121,8 @@ module MoviesHelper
   def make_sorted_genre_array
     @genre_array = []
       current_user.movies.each do |movie|
-        movie.genre.scan(/[A-Z][a-z]+/).each do |genre|
-          @genre_array << genre 
+        movie.genre.split(',').each do |genre|
+          @genre_array << genre.strip
         end
       end
     @genre_array.sort!
@@ -136,6 +136,16 @@ module MoviesHelper
         end
       end
     @actors_array.sort!
+  end
+
+  def make_sorted_directors_array
+    @directors_array = []
+      current_user.movies.each do |movie|
+        movie.director.split(',').each do |director|
+          @directors_array << director.strip
+        end
+      end
+    @directors_array.sort!
   end
 
   private

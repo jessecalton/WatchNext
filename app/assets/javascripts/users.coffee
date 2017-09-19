@@ -22,3 +22,9 @@ $(document).ready ->
     $('#about').toggle()
     return
   return
+
+$(document).ready ->
+  $('p#advanced-search').click ->
+    $('form.search-form.advanced').toggle()
+    return
+  return
