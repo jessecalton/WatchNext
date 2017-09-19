@@ -15,23 +15,51 @@ for (i=0; i < directorsArray.length; i++) {
   $("<option value=" + directorsArray[i] + ">" + directorsArray[i] + "</option>").appendTo('select#director')
 }
 
+var combos = new Map();
+combos.set('select#actors', "<%=@new_movie.actors%>".split(','))
+combos.set('select#director', "<%=@new_movie.director%>".split(','))
+combos.set('select#genre', "<%=@new_movie.genre%>".split(','))
+
+var newStuff = ["<%=@new_movie.actors%>", "<%=@new_movie.director%>", "<%=@new_movie.genre%>"]
+
 var newActors = "<%=@new_movie.actors%>"
 var actorsArray = newActors.split(',')
-console.log(actorsArray)
 
-function getNewActors() {
-  for (i=0; i < actorsArray.length; i++) {
-    $('select#actors').append($("<option value='" + actorsArray[i].trim() + "'>" + actorsArray[i].trim() + "</option>"))
+
+function addNewStuff() {
+  for (var [key, value] of combos) {
+    function appendToMenu(elementId, movieDetail) {
+      for (i=0; i < movieDetail.length; i++) {
+        $(elementId).append($("<option value='" + movieDetail[i].trim() + "'>" + movieDetail[i].trim() + "</option>"))
+    }};
+    function sortMenu(elementId) {
+    var option = elementId + ' option'
+    console.log(option)
+    $(elementId).html($(option).sort(function(x, y) {
+      return $(x).val().toUpperCase() < $(y).val().toUpperCase() ? -1 : 1
+      }));
+    $(elementId).get(0).selectedIndex = 0;
+    }
+    $.when(appendToMenu(key, value)).then(sortMenu(key));
   }
+  
 }
 
+addNewStuff()
+
+// function getNewActors() {
+//   for (i=0; i < actorsArray.length; i++) {
+//     $('select#actors').append($("<option value='" + actorsArray[i].trim() + "'>" + actorsArray[i].trim() + "</option>"))
+//   }
+// }
 
 
-function newActorsMenu() {
-  $('select#actors').html($('select#actors option').sort(function(x, y) {
-    return $(x).val().toUpperCase() < $(y).val().toUpperCase() ? -1 : 1
-  }));
-  $('select#actors').get(0).selectedIndex = 0;
-};
+
+// function newActorsMenu() {
+//   $('select#actors').html($('select#actors option').sort(function(x, y) {
+//     return $(x).val().toUpperCase() < $(y).val().toUpperCase() ? -1 : 1
+//   }));
+//   $('select#actors').get(0).selectedIndex = 0;
+// };
 
 $.when(getNewActors()).then(newActorsMenu());
