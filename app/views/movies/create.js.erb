@@ -20,21 +20,17 @@ combos.set('select#actors', "<%=@new_movie.actors%>".split(','))
 combos.set('select#director', "<%=@new_movie.director%>".split(','))
 combos.set('select#genre', "<%=@new_movie.genre%>".split(','))
 
-var newStuff = ["<%=@new_movie.actors%>", "<%=@new_movie.director%>", "<%=@new_movie.genre%>"]
-
-var newActors = "<%=@new_movie.actors%>"
-var actorsArray = newActors.split(',')
-
 
 function addNewStuff() {
   for (var [key, value] of combos) {
     function appendToMenu(elementId, movieDetail) {
-      for (i=0; i < movieDetail.length; i++) {
+      for (i=0; i < movieDetail.length - 1; i++) {
+        console.log(movieDetail)
         $(elementId).append($("<option value='" + movieDetail[i].trim() + "'>" + movieDetail[i].trim() + "</option>"))
     }};
     function sortMenu(elementId) {
     var option = elementId + ' option'
-    console.log(option)
+
     $(elementId).html($(option).sort(function(x, y) {
       return $(x).val().toUpperCase() < $(y).val().toUpperCase() ? -1 : 1
       }));
@@ -47,19 +43,9 @@ function addNewStuff() {
 
 addNewStuff()
 
-// function getNewActors() {
-//   for (i=0; i < actorsArray.length; i++) {
-//     $('select#actors').append($("<option value='" + actorsArray[i].trim() + "'>" + actorsArray[i].trim() + "</option>"))
-//   }
-// }
-
-
-
-// function newActorsMenu() {
-//   $('select#actors').html($('select#actors option').sort(function(x, y) {
-//     return $(x).val().toUpperCase() < $(y).val().toUpperCase() ? -1 : 1
-//   }));
-//   $('select#actors').get(0).selectedIndex = 0;
-// };
-
-$.when(getNewActors()).then(newActorsMenu());
+// var coolOption = "select#director"
+// var coolArray = new Array()
+// $(coolOption + " > option").each(function() {
+//     coolArray.push(this.text)
+// });
+// console.log(coolArray)
