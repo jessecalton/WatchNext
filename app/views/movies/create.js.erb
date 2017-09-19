@@ -17,8 +17,13 @@ combos.set('select#genre', "<%=@new_movie.genre%>".split(','))
 function addNewStuff() {
   for (var [key, value] of combos) {
     function appendToMenu(elementId, movieDetail) {
+      var coolArray = new Array()
+      $(elementId + " > option").each(function() {
+          coolArray.push(this.text)
+      });
+      
       for (i=0; i < movieDetail.length; i++) {
-        console.log(movieDetail)
+        if (coolArray.includes(movieDetail[i].trim())) { continue }
         $(elementId).append($("<option value='" + movieDetail[i].trim() + "'>" + movieDetail[i].trim() + "</option>"))
     }};
     function sortMenu(elementId) {
@@ -36,9 +41,9 @@ function addNewStuff() {
 
 addNewStuff()
 
-var coolOption = "select#director"
-var coolArray = new Array()
-$(coolOption + " > option").each(function() {
-    coolArray.push(this.text)
-});
-console.log(coolArray)
+// var coolOption = "select#director"
+// var coolArray = new Array()
+// $(coolOption + " > option").each(function() {
+//     coolArray.push(this.text)
+// });
+// console.log(coolArray)
