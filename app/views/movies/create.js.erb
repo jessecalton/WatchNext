@@ -13,17 +13,17 @@ combos.set('select#actors', "<%=@new_movie.actors%>".split(','))
 combos.set('select#director', "<%=@new_movie.director%>".split(','))
 combos.set('select#genre', "<%=@new_movie.genre%>".split(','))
 
+// Updates the pulldown menus for directors, genre, actors, and removes any duplicates
 
-function addNewStuff() {
+function addNewFilmDetails() {
   for (var [key, value] of combos) {
     function appendToMenu(elementId, movieDetail) {
-      var coolArray = new Array()
+      var detailArray = new Array()
       $(elementId + " > option").each(function() {
-          coolArray.push(this.text)
+          detailArray.push(this.text)
       });
-      
       for (i=0; i < movieDetail.length; i++) {
-        if (coolArray.includes(movieDetail[i].trim())) { continue }
+        if (detailArray.includes(movieDetail[i].trim())) { continue }
         $(elementId).append($("<option value='" + movieDetail[i].trim() + "'>" + movieDetail[i].trim() + "</option>"))
     }};
     function sortMenu(elementId) {
@@ -39,11 +39,4 @@ function addNewStuff() {
   
 }
 
-addNewStuff()
-
-// var coolOption = "select#director"
-// var coolArray = new Array()
-// $(coolOption + " > option").each(function() {
-//     coolArray.push(this.text)
-// });
-// console.log(coolArray)
+addNewFilmDetails()
