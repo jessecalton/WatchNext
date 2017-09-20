@@ -293,11 +293,22 @@ svg {
   grid-area: "main";
 }
 
+/*Flexbox css*/
+
+.flexbox {
+  display: flex;
+  flex-direction: row;
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  /*font-size: 150%;*/
+  text-align: left;
+}
+
 .opening-1 {
-  /*grid-area: "content";*/
   grid-column: col;
   grid-row: row 3;
-  display: inline-block;
   text-align: center;
   padding-left: 10px;
   padding-right: 10px;
@@ -306,10 +317,8 @@ svg {
 }
 
 .opening-2 {
-  /*grid-area: "content";*/
   grid-column: col 2;
   grid-row: row 3;
-  /*display: inline-block;*/
   text-align: center;
   padding-left: 10px;
   padding-right: 10px;
@@ -318,9 +327,13 @@ svg {
 }
 
 .opening-3 {
-  /*grid-area: "content";*/
   grid-column: col 3;
   grid-row: row 3;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .opening-content {
@@ -328,22 +341,31 @@ svg {
   display: inline-block;
   margin-left: 8%;
   width: 60%;
-  /*padding: 5px;*/
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .icon {
   display: inline-block;
-  width: 20%;
+  width: 30%;
   height: 100%;
-  line-height: 20px;
   font-size: 15px;
-  border-right: 1px solid white;
 
   padding-right: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
-.pointer {
-  width: fit-content;
+.fa-mobile-phone:before, .fa-mobile:before {
+    content: "\f10b";
+    font-size: 1.25em;
+}
+
+.liner {
+  display: inline-block;
+  border-right: 1px solid white;
+  height: 100%;
+  width: 1%;
 }
 
 /*User page*/
