@@ -71,7 +71,7 @@ body {
   color: #FABC3C;
   background-color: black;
   padding-bottom: 40px;
-  height: 500px;
+  height: 450px;
 }
 
 #logo > h1 {
@@ -193,7 +193,7 @@ svg {
 /*About Description*/
 
 #about {
-  /*display: none;*/
+  display: none;
   text-align: center;
   color: #E4FDE1;
   background-color: #456990;
