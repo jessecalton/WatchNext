@@ -193,7 +193,7 @@ svg {
 /*About Description*/
 
 #about {
-  display: none;
+  /*display: none;*/
   text-align: center;
   color: #E4FDE1;
   background-color: #456990;
@@ -201,6 +201,60 @@ svg {
 
 #about > h2 {
   margin: 0;
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-gap: 10px;
+  /*background-color: #fff;*/
+  color: #444;
+  grid-template-areas:  "header header header"
+                        "main main main"
+                        "main main main";
+  justify-content: center;
+}
+
+.box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  /*font-size: 150%;*/
+  text-align: left;
+}
+
+.heading {
+  color: red;
+}
+
+.header {
+    grid-area: header;
+    text-align: center;
+}
+
+.content-1 {
+  grid-area: "main";
+}
+
+.content-2 {
+  grid-area: "main";
+}
+
+.content-3 {
+  grid-area: "main";
+}
+
+.content-4 {
+  grid-area: "main";
+}
+
+.content-5 {
+  grid-area: "main";
+}
+
+.content-6 {
+  grid-area: "main";
 }
 
 /*User page*/
