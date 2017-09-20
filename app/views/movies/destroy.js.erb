@@ -31,7 +31,6 @@ function filterElements() {
   n = 0
   for (var [key, value] of comparedElements) {
     function getElementsToDelete(duplicateArray, deletedArray) {
-      console.log("hellooo")
       var toDeleteArray = new Array();
         for (i=0; i < deletedArray.length; i++) {
           if (duplicateArray.includes(deletedArray[i])) {continue}
@@ -39,10 +38,8 @@ function filterElements() {
 
         }
       var idName = elementIds[n]
-      console.log(idName)
       elements.set(idName, toDeleteArray)
       n++
-      console.log(n)
 
     }
     getElementsToDelete(key, value)
@@ -56,14 +53,13 @@ filterElements()
 function deleteElements() {
   for (var [key, value] of elements) {
     function deleteDetail(elementId, movieDetail) {
-      console.log('from ' + elementId + ' will be deleted are: ' + movieDetail)
-      console.log(movieDetail.length + ' is this long')
+      // console.log('from ' + elementId + ' will be deleted are: ' + movieDetail)
+
       var detailArray = new Array();
       $(elementId + " > option").each(function() {
         detailArray.push(this.text)
       });
       for (i=0; i < movieDetail.length; i++) {
-        console.log(movieDetail[i].trim())
           $(elementId + ' option[value="' + movieDetail[i].trim() + '"]').remove()
       }
     }
@@ -72,4 +68,3 @@ function deleteElements() {
 }
 
 deleteElements()
-console.log(elements.get('select#director'))
