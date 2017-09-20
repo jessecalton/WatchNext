@@ -1,1 +1,70 @@
 $('form.button_to').closest('.movie-display.<%=@movie.id%>').remove();
+
+var genreArray = <%=raw @genre_doubles %>
+var directorArray = <%=raw @director_doubles %>
+var actorArray  = <%=raw @actor_doubles %>
+// var deletedFilm = "<%=@movie.title%>"
+// console.log(deletedFilm)
+
+var duplicateArray = new Map();
+duplicateArray.set('select#actors', actorArray)
+duplicateArray.set('select#director', directorArray)
+duplicateArray.set('select#genre', genreArray)
+
+// var deletedMovieArray = new Map();
+// deletedMovieArray.set('select#actors', "<%=@movie.actors%>".split(','))
+// deletedMovieArray.set('select#director', "<%=@movie.director%>".split(','))
+// deletedMovieArray.set('select#genre', "<%=@movie.genre%>".split(','))
+
+deletedActorArray = "<%=@movie.actors%>".split(',');
+deletedDirectorArray = "<%=@movie.director%>".split(',');
+deletedGenreArray = "<%=@movie.genre%>".split(',');
+
+var comparedElements = new Map();
+comparedElements.set(actorArray, deletedActorArray)
+comparedElements.set(directorArray, deletedDirectorArray)
+comparedElements.set(genreArray, deletedGenreArray)
+
+var elementIds = ['select#actors', 'select#director', 'select#genre']
+var elements = new Map();
+function filterElements() {
+  n = 0
+  for (var [key, value] of comparedElements) {
+    function getElementsToDelete(duplicateArray, deletedArray) {
+      var toDeleteArray = new Array();
+        for (i=0; i < deletedArray.length; i++) {
+          if (duplicateArray.includes(deletedArray[i])) {continue}
+          else { toDeleteArray.push(deletedArray[i]) }
+
+        }
+      var idName = elementIds[n]
+      elements.set(idName, toDeleteArray)
+      n++
+
+    }
+    getElementsToDelete(key, value)
+  }
+
+}
+filterElements()
+
+
+
+function deleteElements() {
+  for (var [key, value] of elements) {
+    function deleteDetail(elementId, movieDetail) {
+      // console.log('from ' + elementId + ' will be deleted are: ' + movieDetail)
+
+      var detailArray = new Array();
+      $(elementId + " > option").each(function() {
+        detailArray.push(this.text)
+      });
+      for (i=0; i < movieDetail.length; i++) {
+          $(elementId + ' option[value="' + movieDetail[i].trim() + '"]').remove()
+      }
+    }
+    deleteDetail(key, value)
+  }
+}
+
+deleteElements()
