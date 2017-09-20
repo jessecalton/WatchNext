@@ -27,9 +27,8 @@ comparedElements.set(genreArray, deletedGenreArray)
 
 var elementIds = ['select#actors', 'select#director', 'select#genre']
 var elements = new Map();
-function doStuff() {
+function filterElements() {
   n = 0
-
   for (var [key, value] of comparedElements) {
     function getElementsToDelete(duplicateArray, deletedArray) {
       console.log("hellooo")
@@ -48,14 +47,13 @@ function doStuff() {
     }
     getElementsToDelete(key, value)
   }
-  elements
 
 }
-doStuff()
+filterElements()
 
 
 
-function doMoreStuff() {
+function deleteElements() {
   for (var [key, value] of elements) {
     function deleteDetail(elementId, movieDetail) {
       console.log('from ' + elementId + ' will be deleted are: ' + movieDetail)
@@ -73,5 +71,5 @@ function doMoreStuff() {
   }
 }
 
-doMoreStuff()
+deleteElements()
 console.log(elements.get('select#director'))
