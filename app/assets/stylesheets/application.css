@@ -194,7 +194,7 @@ svg {
 /*About Description*/
 
 #about {
-  display: none;
+  /*display: none;*/
   text-align: center;
   color: #E4FDE1;
   background-color: #456990;
@@ -218,8 +218,8 @@ svg {
 
 .opening-grid-wrapper {
   display: grid;
-  grid-template-columns: [col] 300px [col] 300px [col] 300px;
-  grid-template-rows: [row] auto [row] auto [row] ;
+  grid-template: 200px / repeat(4, 1fr);
+  /*grid-template-rows: auto;*/
   grid-gap: 10px;
   /*background-color: #fff;*/
   color: #444;
@@ -228,6 +228,7 @@ svg {
                         "content content content";*/
   justify-content: center;
   margin-bottom: 20px;
+
 }
 
 .box {
@@ -254,8 +255,8 @@ svg {
 
 .header-opening-1 {
     /*grid-area: header;*/
-    grid-column: col / span 3;
-    grid-row: row ;
+    grid-column: col 2 / span 3;
+    grid-row: row;
     text-align: center;
     color: #ffd600;
     font-size: 1.4em;
