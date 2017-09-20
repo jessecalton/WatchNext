@@ -215,6 +215,20 @@ svg {
   justify-content: center;
 }
 
+.opening-grid-wrapper {
+  display: grid;
+  grid-template-columns: [col] 300px [col] 300px [col] 300px;
+  grid-template-rows: [row] auto [row] auto [row] ;
+  grid-gap: 10px;
+  /*background-color: #fff;*/
+  color: #444;
+  /*grid-template-areas:  "header header header"
+                        "sub-header sub-header sub-header"
+                        "content content content";*/
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
 .box {
   background-color: #444;
   color: #fff;
@@ -232,6 +246,24 @@ svg {
 
 .header {
     grid-area: header;
+    text-align: center;
+    color: #ffd600;
+    font-size: 1.4em;
+}
+
+.header-opening-1 {
+    /*grid-area: header;*/
+    grid-column: col / span 3;
+    grid-row: row ;
+    text-align: center;
+    color: #ffd600;
+    font-size: 1.4em;
+}
+
+.header-opening-2 {
+    /*grid-area: "sub-header";*/
+    grid-column: col / span 3;
+    grid-row: row 2;
     text-align: center;
     color: #ffd600;
     font-size: 1.4em;
@@ -259,6 +291,24 @@ svg {
 
 .content-6 {
   grid-area: "main";
+}
+
+.opening-1 {
+  /*grid-area: "content";*/
+  grid-column: col;
+  grid-row: row 3;
+}
+
+.opening-2 {
+  /*grid-area: "content";*/
+  grid-column: col 2;
+  grid-row: row 3;
+}
+
+.opening-3 {
+  /*grid-area: "content";*/
+  grid-column: col 3;
+  grid-row: row 3;
 }
 
 /*User page*/
