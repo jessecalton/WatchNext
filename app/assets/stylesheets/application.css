@@ -297,18 +297,53 @@ svg {
   /*grid-area: "content";*/
   grid-column: col;
   grid-row: row 3;
+  display: inline-block;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .opening-2 {
   /*grid-area: "content";*/
   grid-column: col 2;
   grid-row: row 3;
+  /*display: inline-block;*/
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .opening-3 {
   /*grid-area: "content";*/
   grid-column: col 3;
   grid-row: row 3;
+}
+
+.opening-content {
+  text-align: left;
+  display: inline-block;
+  margin-left: 8%;
+  width: 60%;
+  /*padding: 5px;*/
+}
+
+.icon {
+  display: inline-block;
+  width: 20%;
+  height: 100%;
+  line-height: 20px;
+  font-size: 15px;
+  border-right: 1px solid white;
+
+  padding-right: 10px;
+}
+
+.pointer {
+  width: fit-content;
 }
 
 /*User page*/
