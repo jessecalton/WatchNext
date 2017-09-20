@@ -1,4 +1,44 @@
 $('form.button_to').closest('.movie-display.<%=@movie.id%>').remove();
 
-// var allMovies = "<%=@all_movies%>".split(',')
-// console.log(allMovies)
+var genreArray = <%=raw @genre_doubles %>
+var directorArray = <%=raw @director_doubles %>
+var actorArray  = <%=raw @actor_doubles %>
+// var deletedFilm = "<%=@movie.title%>"
+// console.log(deletedFilm)
+
+var duplicateArray = new Map();
+duplicateArray.set('select#actors', actorArray)
+duplicateArray.set('select#director', directorArray)
+duplicateArray.set('select#genre', genreArray)
+
+// var deletedMovieArray = new Map();
+// deletedMovieArray.set('select#actors', "<%=@movie.actors%>".split(','))
+// deletedMovieArray.set('select#director', "<%=@movie.director%>".split(','))
+// deletedMovieArray.set('select#genre', "<%=@movie.genre%>".split(','))
+
+deletedActorArray = "<%=@movie.actors%>".split(',');
+deltedDirectorArray = "<%=@movie.director%>".split(',');
+deletedGenreArray = "<%=@movie.genre%>".split(',');
+
+
+for (var [key, value] of duplicateArray) {
+  function deleteDetail(elementId, movieDetail) {
+    var toDeleteArr = new Array()
+    for (i=0; i < deletedActorArray.length; i++) {
+      if (movieDetail.includes(deletedActorArray[i].trim())) {continue}
+      else { toDeleteArr.push(deletedActorArray[i].trim()) }
+    }
+    console.log(toDeleteArr)
+    var detailArray = new Array();
+    $(elementId + " > option").each(function() {
+        detailArray.push(this.text)
+    });
+    for (i=0; i < toDeleteArr.length; i++) {
+      if (detailArray.includes(toDeleteArr[i].trim())) {
+ 
+        $(elementId + ' option[value="' + toDeleteArr[i].trim() + '"]').remove()
+      }
+    }
+  }
+  deleteDetail(key, value)
+}

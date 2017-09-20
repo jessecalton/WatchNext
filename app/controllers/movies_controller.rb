@@ -59,10 +59,9 @@ class MoviesController < ApplicationController
   end
 
   def destroy
-    p "********************"
-    delete_from_duplicates("directors")
-    p @new_arr
-    p "*******************"
+
+    delete_from_duplicates
+    p @genre_doubles
     @movie = current_user.movies.find(params[:id])
     respond_to do |format|
       format.html {
