@@ -58,14 +58,15 @@ doStuff()
 function doMoreStuff() {
   for (var [key, value] of elements) {
     function deleteDetail(elementId, movieDetail) {
+      console.log(elementId + ' here is ' + movieDetail)
+      console.log(movieDetail.length + 'this is length')
       var detailArray = new Array();
       $(elementId + " > option").each(function() {
         detailArray.push(this.text)
       });
       for (i=0; i < movieDetail.length; i++) {
-        if (detailArray.includes(movieDetail[i])) {
+        console.log(movieDetail[i].trim())
           $(elementId + ' option[value="' + movieDetail[i].trim() + '"]').remove()
-        }
       }
     }
     deleteDetail(key, value)
