@@ -1,6 +1,7 @@
 class MoviesController < ApplicationController
   include SessionsHelper
   include ApplicationHelper
+  include MoviesHelper
 
   def index
   end
@@ -58,7 +59,10 @@ class MoviesController < ApplicationController
   end
 
   def destroy
-    current_user
+    p "********************"
+    delete_from_duplicates("directors")
+    p @new_arr
+    p "*******************"
     @movie = current_user.movies.find(params[:id])
     respond_to do |format|
       format.html {
