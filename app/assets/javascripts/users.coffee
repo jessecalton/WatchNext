@@ -20,6 +20,7 @@ $(document).ready ->
 $(document).ready ->
   $('button.btn.black').click ->
     $('#about').toggle()
+    $('html, body').scrollTop $('#about-button').offset().top
     return
   return
 
