@@ -53,26 +53,24 @@ function doStuff() {
 }
 doStuff()
 
-console.log(elements.get('select#director'))
 
-// for (var [key, value] of duplicateArray) {
-//   function deleteDetail(elementId, movieDetail) {
-//     var toDeleteArr = new Array()
-//     for (i=0; i < deletedActorArray.length; i++) {
-//       if (movieDetail.includes(deletedActorArray[i].trim())) {continue}
-//       else { toDeleteArr.push(deletedActorArray[i].trim()) }
-//     }
-//     console.log(toDeleteArr)
-//     var detailArray = new Array();
-//     $(elementId + " > option").each(function() {
-//         detailArray.push(this.text)
-//     });
-//     for (i=0; i < toDeleteArr.length; i++) {
-//       if (detailArray.includes(toDeleteArr[i].trim())) {
-     
-//         $(elementId + ' option[value="' + toDeleteArr[i].trim() + '"]').remove()
-//       }
-//     }
-//   }
-//   deleteDetail(key, value)
-// }
+
+function doMoreStuff() {
+  for (var [key, value] of elements) {
+    function deleteDetail(elementId, movieDetail) {
+      var detailArray = new Array();
+      $(elementId + " > option").each(function() {
+        detailArray.push(this.text)
+      });
+      for (i=0; i < movieDetail.length; i++) {
+        if (detailArray.includes(movieDetail[i])) {
+          $(elementId + ' option[value="' + movieDetail[i].trim() + '"]').remove()
+        }
+      }
+    }
+    deleteDetail(key, value)
+  }
+}
+
+doMoreStuff()
+console.log(elements.get('select#director'))
