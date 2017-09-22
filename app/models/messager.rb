@@ -1,4 +1,6 @@
 class Messager
+  attr_reader :error
+  attr_reader :client
 
   def initialize
     @account_sid = ENV['ACCOUNT_SID']
@@ -12,13 +14,20 @@ class Messager
 
 
   def send_message(phone_number, movies, username)
+    begin
       text_message = @client.api.account.messages.create(
         from: @twilio_number,
         to: phone_number,
         body: "Hello movie lover, #{username}!\nHere is your current watch list:\n#{movies}"
         )
 
-      puts text_message.to
+      return true
+    rescue Twilio::REST::RestError => error
+      @error = error
+      return false
+    end
+
+
 
   end
 

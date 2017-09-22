@@ -24,7 +24,7 @@ class UsersController < ApplicationController
 
   def show
     current_user
-    get_all_movie_titles
+
     make_sorted_genre_array
 
     if params[:runtime].present?
@@ -49,17 +49,7 @@ class UsersController < ApplicationController
       rotten_tomatoes_range
     end
 
-    if params[:number].present? && params[:number].length == 10
-      new_messager = Messager.new
-      username = current_user.username
-      movies = @movie_string
-      number = "+1" + params[:number]
 
-      new_messager.send_message(number, movies, username)
-      redirect_to user_path(current_user)
-    elsif params[:number].present? && params[:number].length != 10
-      flash.now[:notice] = "Please enter a valid phone number"
-    end
       
 
 
