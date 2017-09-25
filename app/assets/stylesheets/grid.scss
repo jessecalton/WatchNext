@@ -5,6 +5,7 @@ $color-background: #444;
   grid-gap: 10px;
   justify-content: center;
   color: $color-background;
+
 }
 
 @mixin boxly {
@@ -14,30 +15,39 @@ $color-background: #444;
 }
 
 .grid-wrapper {
-  @include gridly;
-  grid-template-columns: 300px 300px 300px;
-  grid-template-areas:  "header header header"
-                        "main main main"
-                        "main main main";
-  
-}
-
-.opening-grid-wrapper {
-  @include gridly;
-  grid-template-columns: repeat(3,350px);
-  grid-template-areas:  "a a a"
+  &-1 {
+    @include gridly;
+    grid-template-columns: repeat(3,350px);
+    grid-template-areas:  "a a a"
                         "b b b"
                         "c d e";
-  margin-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  &-2 {
+    @include gridly;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-areas:  "a a a"
+                          "b b b"
+                          "b b b";
+  }
 }
 
-.box {
-  background-color: $color-background;
-  color: #fff;
-  border-radius: 5px;
-  padding: 20px;
-  text-align: left;
-}
+// .opening-grid-wrapper {
+//   @include gridly;
+//   grid-template-columns: repeat(3,350px);
+//   grid-template-areas:  "a a a"
+//                         "b b b"
+//                         "c d e";
+//   margin-bottom: 20px;
+// }
+
+// .box {
+//   background-color: $color-background;
+//   color: #fff;
+//   border-radius: 5px;
+//   padding: 20px;
+//   text-align: left;
+// }
 
 .heading {
   color: #ff7043;
@@ -62,34 +72,62 @@ $color-background: #444;
     @extend %header;
   }
   &-opening-3 { 
-    grid-area: header;
+    grid-area: a;
     @extend %header;
   }  
 }
 
-.content-1 {
-  grid-area: "main";
+%content {
+  @include boxly;
+  text-align: left;
+  color: #fff;
+
 }
 
-.content-2 {
-  grid-area: "main";
+.content {
+  &-1 {
+    @extend %content;
+  }
+    &-2 {
+    @extend %content;
+  }
+    &-3 {
+    @extend %content;
+  }
+    &-4 {
+    @extend %content;
+  }
+    &-5 {
+    @extend %content;
+  }
+    &-6 {
+    @extend %content;
+  }
 }
 
-.content-3 {
-  grid-area: "main";
-}
+// .content-1 {
+//   grid-area: "main";
+// }
 
-.content-4 {
-  grid-area: "main";
-}
+// .content-2 {
+//   grid-area: "main";
+// }
 
-.content-5 {
-  grid-area: "main";
-}
+// .content-3 {
+//   grid-area: "main";
+// }
 
-.content-6 {
-  grid-area: "main";
-}
+// .content-4 {
+//   grid-area: "main";
+// }
+
+// .content-5 {
+//   grid-area: "main";
+// }
+
+// .content-6 {
+//   grid-area: "main";
+// }
 
 /*Flexbox css*/
 
@@ -116,50 +154,14 @@ $color-background: #444;
     @extend %flexbox;
     grid-area: e;
   }
-}
-
-// .opening-1 {
-//   grid-area: c;
-// /*  grid-column: col;
-//   grid-row: row 3;*/
-//   text-align: center;
-//   padding-left: 10px;
-//   padding-right: 10px;
-//   padding-top: 10px;
-//   padding-bottom: 10px;
-// }
-
-// .opening-2 {
-//     grid-area: d;
-// /*  grid-column: col 2;
-//   grid-row: row 3;*/
-//   text-align: center;
-//   padding-left: 10px;
-//   padding-right: 10px;
-//   padding-top: 10px;
-//   padding-bottom: 10px;
-// }
-
-// .opening-3 {
-//     grid-area: e;
-// /*  grid-column: col 3;
-//   grid-row: row 3;*/
-//   text-align: center;
-//   padding-left: 10px;
-//   padding-right: 10px;
-//   padding-top: 10px;
-//   padding-bottom: 10px;
-// }
-
-
-
-.opening-content {
-  text-align: left;
-  display: inline-block;
-  margin-left: 8%;
-  width: 60%;
-  margin-top: auto;
-  margin-bottom: auto;
+  &-content {
+    text-align: left;
+    display: inline-block;
+    margin-left: 8%;
+    width: 60%;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
 }
 
 .icon {
@@ -167,7 +169,6 @@ $color-background: #444;
   width: 30%;
   height: 100%;
   font-size: 15px;
-
   padding-right: 10px;
   margin-top: auto;
   margin-bottom: auto;
