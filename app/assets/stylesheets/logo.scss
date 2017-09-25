@@ -1,3 +1,31 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+$font-secondary: 'Londrina Solid', cursive;
+
+
+/*Logo Div*/
+
+#logo-wrapper {
+  font-family: $font-secondary;
+  text-align: center;
+  font-size: 2em;
+  color: #FABC3C;
+  background-color: black;
+  padding-bottom: 40px;
+  height: 450px;
+}
+
+#logo {
+  margin: auto;
+  position:relative;
+  top: 10%;
+  h1 {
+    font-size: 4em;
+  }
+}
+
+
+
 /*Logo animation*/
 
 svg {

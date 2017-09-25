@@ -15,27 +15,12 @@
  *= require font-awesome
  *= require jquery-ui
  */
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
  /*Home page*/ 
 
 
 
-/*Nav bar*/
 
-#nav-bar {
-  font-family: 'Londrina Solid', cursive;
-  background-color: #114B5F;
-  min-height: 3.2em;
-  text-align: center;
-  padding-top: 1em;
-}
-
-#nav-bar > a {
-  color: #E4FDE1;
-  margin: 0 10%;
-  font-size: 2em;
-
-}
 
 /*Error and flash notices*/
 
@@ -53,30 +38,7 @@
   display: none;
 }
 
-/*Logo Div*/
 
-#logo-wrapper {
-  font-family: 'Londrina Solid', cursive;
-  text-align: center;
-  font-size: 2em;
-  color: #FABC3C;
-  background-color: black;
-  padding-bottom: 40px;
-  height: 450px;
-}
-
-#logo > h1 {
-  margin: auto;
-  font-size: 4em;
-}
-
-#logo {
-  margin: auto;
-  position:relative;
-  top: 10%;
-/*  width: 50%;
-  height: 50%;*/
-}
 
 /*Nav buttons*/
 
