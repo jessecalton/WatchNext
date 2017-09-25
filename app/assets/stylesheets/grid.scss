@@ -1,35 +1,41 @@
-.grid-wrapper {
+$color-background: #444;
+
+@mixin gridly {
   display: grid;
-  grid-template-columns: 300px 300px 300px;
   grid-gap: 10px;
-  /*background-color: #fff;*/
-  color: #444;
+  justify-content: center;
+  color: $color-background;
+}
+
+@mixin boxly {
+  background-color: $color-background;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.grid-wrapper {
+  @include gridly;
+  grid-template-columns: 300px 300px 300px;
   grid-template-areas:  "header header header"
                         "main main main"
                         "main main main";
-  justify-content: center;
+  
 }
 
 .opening-grid-wrapper {
-  display: grid;
+  @include gridly;
   grid-template-columns: repeat(3,350px);
-  /*grid-template-rows: [row] auto [row] auto [row] ;*/
-  grid-gap: 10px;
-  /*background-color: #fff;*/
-  color: #444;
   grid-template-areas:  "a a a"
                         "b b b"
                         "c d e";
-  justify-content: center;
   margin-bottom: 20px;
 }
 
 .box {
-  background-color: #444;
+  background-color: $color-background;
   color: #fff;
   border-radius: 5px;
   padding: 20px;
-  /*font-size: 150%;*/
   text-align: left;
 }
 
@@ -39,29 +45,26 @@
   font-size: 1.4em;
 }
 
+%header {
+  @include boxly;
+    text-align: center;
+    color: #ffd600;
+    font-size: 1.4em;
+}
+
 .header {
-    grid-area: header;
-    text-align: center;
-    color: #ffd600;
-    font-size: 1.4em;
-}
-
-.header-opening-1 {
+  &-opening-1 { 
     grid-area: a;
-/*    grid-column: col / span 3;
-    grid-row: row ;*/
-    text-align: center;
-    color: #ffd600;
-    font-size: 1.4em;
-}
-
-.header-opening-2 {
+    @extend %header;
+  }
+  &-opening-2 { 
     grid-area: b;
-/*    grid-column: col / span 3;
-    grid-row: row 2;*/
-    text-align: center;
-    color: #ffd600;
-    font-size: 1.4em;
+    @extend %header;
+  }
+  &-opening-3 { 
+    grid-area: header;
+    @extend %header;
+  }  
 }
 
 .content-1 {
@@ -90,33 +93,63 @@
 
 /*Flexbox css*/
 
-.flexbox {
+%flexbox {
   display: flex;
   flex-direction: row;
-  background-color: #444;
+  background-color: $color-background;
   color: #fff;
   border-radius: 5px;
-  padding: 20px;
-  /*font-size: 150%;*/
-  text-align: left;
+  padding: 10px;
+  text-align: center;
 }
 
 .opening {
-  text-align: center;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
   &-1 {
+    @extend %flexbox;
     grid-area: c;
   }
   &-2 {
+    @extend %flexbox;
     grid-area: d;
   }
   &-3 {
+    @extend %flexbox;
     grid-area: e;
   }
 }
+
+// .opening-1 {
+//   grid-area: c;
+// /*  grid-column: col;
+//   grid-row: row 3;*/
+//   text-align: center;
+//   padding-left: 10px;
+//   padding-right: 10px;
+//   padding-top: 10px;
+//   padding-bottom: 10px;
+// }
+
+// .opening-2 {
+//     grid-area: d;
+// /*  grid-column: col 2;
+//   grid-row: row 3;*/
+//   text-align: center;
+//   padding-left: 10px;
+//   padding-right: 10px;
+//   padding-top: 10px;
+//   padding-bottom: 10px;
+// }
+
+// .opening-3 {
+//     grid-area: e;
+// /*  grid-column: col 3;
+//   grid-row: row 3;*/
+//   text-align: center;
+//   padding-left: 10px;
+//   padding-right: 10px;
+//   padding-top: 10px;
+//   padding-bottom: 10px;
+// }
 
 
 
