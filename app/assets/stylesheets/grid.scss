@@ -1,4 +1,7 @@
-$color-background: #444;
+$color-background: #444; // Gray
+$color-white: #fff;
+$color-header: #ffd600; // Gold
+$color-detail-heading: #ff7043; // Orange-ish Red
 
 @mixin gridly {
   display: grid;
@@ -32,25 +35,8 @@ $color-background: #444;
   }
 }
 
-// .opening-grid-wrapper {
-//   @include gridly;
-//   grid-template-columns: repeat(3,350px);
-//   grid-template-areas:  "a a a"
-//                         "b b b"
-//                         "c d e";
-//   margin-bottom: 20px;
-// }
-
-// .box {
-//   background-color: $color-background;
-//   color: #fff;
-//   border-radius: 5px;
-//   padding: 20px;
-//   text-align: left;
-// }
-
 .heading {
-  color: #ff7043;
+  color: $color-detail-heading;
   text-align: center;
   font-size: 1.4em;
 }
@@ -58,7 +44,7 @@ $color-background: #444;
 %header {
   @include boxly;
     text-align: center;
-    color: #ffd600;
+    color: $color-header;
     font-size: 1.4em;
 }
 
@@ -80,7 +66,7 @@ $color-background: #444;
 %content {
   @include boxly;
   text-align: left;
-  color: #fff;
+  color: $color-white;
 
 }
 
@@ -105,37 +91,13 @@ $color-background: #444;
   }
 }
 
-// .content-1 {
-//   grid-area: "main";
-// }
-
-// .content-2 {
-//   grid-area: "main";
-// }
-
-// .content-3 {
-//   grid-area: "main";
-// }
-
-// .content-4 {
-//   grid-area: "main";
-// }
-
-// .content-5 {
-//   grid-area: "main";
-// }
-
-// .content-6 {
-//   grid-area: "main";
-// }
-
 /*Flexbox css*/
 
 %flexbox {
   display: flex;
   flex-direction: row;
   background-color: $color-background;
-  color: #fff;
+  color: $color-white;
   border-radius: 5px;
   padding: 10px;
   text-align: center;
