@@ -18,9 +18,7 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
  /*Home page*/ 
 
-body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
+
 
 /*Nav bar*/
 
@@ -39,12 +37,7 @@ body {
 
 }
 
-/*Homepage*/
 
-.homepage {
-  background-color: #456990;
-  margin: 0;
-}
 
 /*Error and flash notices*/
 

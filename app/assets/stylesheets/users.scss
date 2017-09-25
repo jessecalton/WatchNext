@@ -3,4 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-    
+$font-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+$color-background: #456990; // slightly lighter blue-ish
+
+body {
+  font-family: $font-primary;
+}
+
+/*Homepage*/
+
+.homepage {
+  background-color: $color-background;
+  margin: 0;
+}
