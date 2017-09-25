@@ -1,0 +1,57 @@
+$font-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif; // the Netflix font
+$font-secondary: 'Londrina Solid', cursive;
+
+$color-background: #456990; // slightly lighter blue-ish
+$color-nav: #114B5F; // nav-bar color
+$color-font-primary: #E4FDE1; // the lime-yellow color
+/*Nav buttons*/
+
+.btn {
+  border-radius: 5px;
+  padding: 15px 25px;
+  font-size: 22px;
+  font-family: $font-secondary;
+  text-decoration: none;
+  margin: 20px;
+  color: black;
+  position: relative;
+  display: inline-block;
+}
+
+.btn:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  box-shadow: 0px 1px 0px 0px;
+}
+
+.blue {
+  background-color: #55acee;
+  box-shadow: 0px 5px 0px 0px #3C93D5;
+}
+
+.blue:hover {
+  background-color: #6FC6FF;
+}
+
+.red {
+  background-color: #F45B69;
+  box-shadow: 0px 5px 0px 0px #EA4866;
+}
+
+.red:hover {
+  background-color: #fccfd3;
+}
+
+.black {
+  color: white;
+  background-color: black;
+  box-shadow: 0px 5px 0px 0px white;
+}
+
+.black:hover {
+  background-color: gray;
+}
+
+#about-button {
+  text-align: center;
+}

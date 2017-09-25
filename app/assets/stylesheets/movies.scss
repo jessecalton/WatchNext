@@ -1,3 +1,77 @@
 // Place all the styles related to the Movies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$font-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif; // the Netflix font
+$font-secondary: 'Londrina Solid', cursive;
+
+.watch-list {
+  overflow: hidden;
+  width: 100%;
+  font-family: $font-primary;
+}
+
+.movie-display {
+  background-color: gray;
+  height: 290px;
+  width: 200px;
+  margin: 5px;
+  float: left;
+}
+
+#movie-title {
+  font-family: $font-secondary;
+  /*display: flex;*/
+  justify-content: center;
+  text-align: center;
+  padding: 5px;
+  /*white-space: nowrap;*/
+  font-size: 1em;
+  height: 20px;
+}
+
+/*Search Form*/
+
+#movie-search-form {
+  display: flex;
+  > form {
+    padding: .83em;
+    margin-left: 1em;  
+  }
+}
+
+#returned-movies {
+  overflow: auto;
+}
+
+%search-form {
+  height: 30px;
+  font-size: 1em;
+}
+
+.search-form {
+  > input { @extend %search-form;}
+  > select { @extend %search-form;}
+  > label { @extend %search-form;}
+}
+
+.search-form.advanced {
+  display: none;
+}
+
+#advanced-search {
+  color: #0000EE;
+  text-decoration: underline #0000EE;
+  cursor: pointer;
+}
+
+#watch-movie-form {
+  padding-bottom: 40px;
+}
+
+.movie-poster {
+  display: flex;
+  margin: 0 auto;
+  padding: 10px;
+  max-width: 80%;
+  max-height: 70%;
+}

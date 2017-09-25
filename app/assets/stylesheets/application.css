@@ -28,83 +28,11 @@
   color: red;
 }
 
-/*Login forms*/
 
-.login-form {
-  display: none;
-}
-
-.demo-form {
-  display: none;
-}
-
-
-
-/*Nav buttons*/
-
-.btn {
-  border-radius: 5px;
-  padding: 15px 25px;
-  font-size: 22px;
-  font-family: 'Londrina Solid', cursive;
-  text-decoration: none;
-  margin: 20px;
-  color: black;
-  position: relative;
-  display: inline-block;
-}
-
-.btn:active {
-  transform: translate(0px, 5px);
-  -webkit-transform: translate(0px, 5px);
-  box-shadow: 0px 1px 0px 0px;
-}
-
-.blue {
-  background-color: #55acee;
-  box-shadow: 0px 5px 0px 0px #3C93D5;
-}
-
-.blue:hover {
-  background-color: #6FC6FF;
-}
-
-.red {
-  background-color: #F45B69;
-  box-shadow: 0px 5px 0px 0px #EA4866;
-}
-
-.red:hover {
-  background-color: #fccfd3;
-}
-
-.black {
-  color: white;
-  background-color: black;
-  box-shadow: 0px 5px 0px 0px white;
-}
-
-.black:hover {
-  background-color: gray;
-}
-
-#about-button {
-  text-align: center;
-  background-color: #456990;
-}
 
 /*About Description*/
 
-#about {
-  display: none;
-  text-align: center;
-  color: #E4FDE1;
-  background-color: #456990;
-}
 
-#about > h2 {
-  margin: 0;
-}
 
 
 
@@ -119,78 +47,14 @@
 
 /*Watch List*/
 
-.watch-list {
-  overflow: hidden;
-  width: 100%;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-}
-
-.movie-display {
-  background-color: gray;
-  height: 290px;
-  width: 200px;
-  margin: 5px;
-  float: left;
-}
-
-#movie-title {
-  font-family: 'Londrina Solid', cursive;
-  /*display: flex;*/
-  justify-content: center;
-  text-align: center;
-  padding: 5px;
-  /*white-space: nowrap;*/
-  font-size: 1em;
-  height: 20px;
-}
 
 #button-wrapper {
   display: flex;
   justify-content: center;
 }
 
-/*Search Form*/
 
-#movie-search-form {
-  display: flex;
-}
-
-#movie-search-form > form {
-  padding: .83em;
-  margin-left: 1em;
-}
-
-#returned-movies {
-  overflow: auto;
-}
-
-.search-form > input, .search-form > select, .search-form > label{
-  height: 30px;
-  font-size: 1em;
-}
-
-.search-form.advanced {
-  display: none;
-}
-
-#advanced-search {
-  color: #0000EE;
-  text-decoration: underline #0000EE;
-  cursor: pointer;
-}
-
-#watch-movie-form {
-  padding-bottom: 40px;
-}
-
-.movie-poster {
-  display: flex;
-  margin: 0 auto;
-  padding: 10px;
-  max-width: 80%;
-  max-height: 70%;
-}
 
 form.button_to {
   display: flex;
