@@ -16,48 +16,9 @@
  *= require jquery-ui
  */
 
- /*Home page*/ 
+ 
 
 
 
 
 
-/*Error and flash notices*/
-
-.notice {
-  color: red;
-}
-
-
-
-/*About Description*/
-
-
-
-
-
-/*User page*/
-
-
-#hello-user {
-  font-family: 'Londrina Solid', cursive;
-  text-align: center;
-
-}
-
-/*Watch List*/
-
-
-
-#button-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-
-
-form.button_to {
-  display: flex;
-  justify-content: center;
-  /*padding: 2px;*/
-}

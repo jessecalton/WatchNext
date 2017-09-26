@@ -4,6 +4,11 @@
 $font-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif; // the Netflix font
 $font-secondary: 'Londrina Solid', cursive;
 
+#hello-user {
+  font-family: $font-secondary;
+  text-align: center;
+}
+
 .watch-list {
   overflow: hidden;
   width: 100%;
@@ -74,4 +79,15 @@ $font-secondary: 'Londrina Solid', cursive;
   padding: 10px;
   max-width: 80%;
   max-height: 70%;
+}
+
+form.button_to {
+  display: flex;
+  justify-content: center;
+  /*padding: 2px;*/
+}
+
+#button-wrapper {
+  display: flex;
+  justify-content: center;
 }

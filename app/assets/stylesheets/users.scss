@@ -14,14 +14,14 @@ body {
   font-family: $font-primary;
 }
 
-/*Homepage*/
+// Homepage
 
 .homepage {
   background-color: $color-background;
   margin: 0;
 }
 
-/*Login forms*/
+// Login forms
 
 .login-form {
   display: none;
@@ -31,7 +31,7 @@ body {
   display: none;
 }
 
-/*Nav bar*/
+// Nav bar
 
 #nav-bar {
   font-family: $font-secondary;
@@ -44,4 +44,10 @@ body {
     margin: 0 10%;
     font-size: 2em;
   }
+}
+
+// Flash Notices
+
+.notice {
+  color: red;
 }
