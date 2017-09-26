@@ -3,4 +3,51 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-    
+$font-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif; // the Netflix font
+$font-secondary: 'Londrina Solid', cursive;
+
+$color-background: #456990; // slightly lighter blue-ish
+$color-nav: #114B5F; // nav-bar color
+$color-font-primary: #E4FDE1; // the lime-yellow color
+
+body {
+  font-family: $font-primary;
+}
+
+// Homepage
+
+.homepage {
+  background-color: $color-background;
+  margin: 0;
+}
+
+// Login forms
+
+.login-form {
+  display: none;
+}
+
+.demo-form {
+  display: none;
+}
+
+// Nav bar
+
+#nav-bar {
+  font-family: $font-secondary;
+  background-color: $color-nav;
+  min-height: 3.2em;
+  text-align: center;
+  padding-top: 1em;
+  a {   
+    color: $color-font-primary;
+    margin: 0 10%;
+    font-size: 2em;
+  }
+}
+
+// Flash Notices
+
+.notice {
+  color: red;
+}

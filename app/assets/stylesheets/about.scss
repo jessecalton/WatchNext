@@ -1,0 +1,156 @@
+$color-background: #444; // Gray
+$color-white: #fff;
+$color-header: #ffd600; // Gold
+$color-detail-heading: #ff7043; // Orange-ish Red
+$color-font-primary: #E4FDE1; // the lime-yellow color
+
+@mixin gridly {
+  display: grid;
+  grid-gap: 10px;
+  justify-content: center;
+  color: $color-background;
+
+}
+
+@mixin boxly {
+  background-color: $color-background;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+#about {
+  display: none;
+  text-align: center;
+  color: $color-font-primary;
+}
+
+.grid-wrapper {
+  &-1 {
+    @include gridly;
+    grid-template-columns: repeat(3,350px);
+    grid-template-areas:  "a a a"
+                        "b b b"
+                        "c d e";
+    margin-bottom: 20px;
+  }
+  &-2 {
+    @include gridly;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-areas:  "a a a"
+                          "b b b"
+                          "b b b";
+  }
+}
+
+.heading {
+  color: $color-detail-heading;
+  text-align: center;
+  font-size: 1.4em;
+}
+
+%header {
+  @include boxly;
+    text-align: center;
+    color: $color-header;
+    font-size: 1.4em;
+}
+
+.header {
+  &-opening-1 { 
+    grid-area: a;
+    @extend %header;
+  }
+  &-opening-2 { 
+    grid-area: b;
+    @extend %header;
+  }
+  &-opening-3 { 
+    grid-area: a;
+    @extend %header;
+  }  
+}
+
+%content {
+  @include boxly;
+  text-align: left;
+  color: $color-white;
+
+}
+
+.content {
+  &-1 {
+    @extend %content;
+  }
+    &-2 {
+    @extend %content;
+  }
+    &-3 {
+    @extend %content;
+  }
+    &-4 {
+    @extend %content;
+  }
+    &-5 {
+    @extend %content;
+  }
+    &-6 {
+    @extend %content;
+  }
+}
+
+/*Flexbox css*/
+
+%flexbox {
+  display: flex;
+  flex-direction: row;
+  background-color: $color-background;
+  color: $color-white;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+}
+
+.opening {
+  &-1 {
+    @extend %flexbox;
+    grid-area: c;
+  }
+  &-2 {
+    @extend %flexbox;
+    grid-area: d;
+  }
+  &-3 {
+    @extend %flexbox;
+    grid-area: e;
+  }
+  &-content {
+    text-align: left;
+    display: inline-block;
+    margin-left: 8%;
+    width: 60%;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+.icon {
+  display: inline-block;
+  width: 30%;
+  height: 100%;
+  font-size: 15px;
+  padding-right: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.fa-mobile-phone:before, .fa-mobile:before {
+    content: "\f10b";
+    font-size: 1.25em;
+}
+
+.liner {
+  display: inline-block;
+  border-right: 1px solid white;
+  height: 100%;
+  width: 1%;
+}
