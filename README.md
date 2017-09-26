@@ -15,7 +15,7 @@ Do you spend more time browsing Netflix than watching its wealth of movies and t
 ## Cast 📽️
 
 * Ruby on Rails
-* CSS3
+* SCSS/CSS3
 * HTML5
 * PostgreSQL
 * [OMDB API](http://www.omdbapi.com)
