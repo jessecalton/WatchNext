@@ -23,6 +23,11 @@ class UsersController < ApplicationController
   end
 
   def show
+    if !logged_in?
+      redirect_to root_path
+      return
+    end
+
     current_user
 
     make_sorted_genre_array
