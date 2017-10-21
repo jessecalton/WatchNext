@@ -8,6 +8,7 @@
     <div id="button-wrapper">
     <%=button_to "Delete From List", movie_path(movie.id), data: {confirm: "Are you sure you want to delete #{movie.title}?"}, :method => :delete, remote: true %>
     <%=button_to "Details", movie_path(movie.id), method: :get, remote: true, class: "opener" %>
+    
     </div>
     <div id="movie-deets<%=movie.id%>" title="Movie Details" style="display:none">
         <p><b>Runtime:</b> <%=movie.runtime%></p>
