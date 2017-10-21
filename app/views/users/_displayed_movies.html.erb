@@ -9,8 +9,7 @@
     <%=button_to "Delete", movie_path(movie.id), data: {confirm: "Are you sure you want to delete #{movie.title}?"}, :method => :delete, remote: true %>
     <%=button_to "Details", movie_path(movie.id), method: :get, remote: true, class: "opener" %>
     <a class="twitter-share-button"
-  href="https://twitter.com/intent/tweet?text=I%20am%20watching%20<%=movie.title%>"
-  data-size="large">
+  href="https://twitter.com/intent/tweet?text=I%20am%20watching%20<%=movie.title%>">
 Tweet</a>
     </div>
     <div id="movie-deets<%=movie.id%>" title="Movie Details" style="display:none">
