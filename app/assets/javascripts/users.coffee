@@ -29,3 +29,4 @@ $(document).ready ->
     $('form.search-form.advanced').toggle()
     return
   return
+
