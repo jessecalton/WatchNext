@@ -25,3 +25,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 - Begin working with Twitter API
 - Adds Twitter widget to movie display on user page, allows user to tweet "I am watching #{movie}"
 - Get twitter API keys, storing them privately
+
+# 10-5-2017
+### Changed
+- Finishes refactor of CSS into SCSS
