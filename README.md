@@ -21,6 +21,7 @@ Do you spend more time browsing Netflix than watching its wealth of movies and t
 * [OMDB API](http://www.omdbapi.com)
 * [Twilio API](https://www.twilio.com)
 * jQuery/AJAX
+* Travis CI
 
 ## Sneak Preview 🍿
 
