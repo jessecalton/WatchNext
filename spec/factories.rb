@@ -1,15 +1,5 @@
 FactoryBot.define do
-  factory :user do
-    email "tom@tomtom.com"
-    username "tomtom"
-    password "tomtom"
-  end
-end
 
-
-
-
-FactoryBot.define do
   factory :movie_1, class: Movie do
     title "WALL-E"
     runtime 98
@@ -46,5 +36,21 @@ FactoryBot.define do
     poster_url "https://images-na.ssl-images-amazon.com/images/M/MV5BMjM2MDE4OTQwOV5BMl5BanBnXkFtZTgwNjgxMTg2NzE@._V1_SX300.jpg"
     rotten_tomatoes 68
     user
+  end
+
+  factory :user do
+    email "tom@tomtom.com"
+    username "tomtom"
+    password "tomtom"
+
+
+    factory :user_with_movies do
+
+      after(:create) do |user|
+        create(:movie_1, user: user)
+        create(:movie_2, user: user)
+        create(:movie_3, user: user)
+      end
+    end
   end
 end

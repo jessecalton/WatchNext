@@ -13,10 +13,10 @@ require 'rails_helper'
 # end
 RSpec.describe MoviesHelper, type: :helper do
   before(:context) do
-    @user = FactoryBot.build(:user)
-    @movie_1 = FactoryBot.build(:movie_1)
-    @movie_2 = FactoryBot.build(:movie_2)
-    @movie_3 = FactoryBot.build(:movie_3)
+    @user = FactoryBot.create(:user_with_movies)
+    @movie_1 = FactoryBot.create(:movie_1)
+    @movie_2 = FactoryBot.create(:movie_2)
+    @movie_3 = FactoryBot.create(:movie_3)
   end
 
 
@@ -26,13 +26,14 @@ RSpec.describe MoviesHelper, type: :helper do
       params[:runtime] = "120"
       expect(helper.runtime_match).to match_array([@movie_1, @movie_3])
     end
-    # it 'creates a new movie array if none exists' do
-    #   assign(:current_user, user)
-    #   puts user.movies.to_yaml
-    #   params[:runtime] = "120"
-    #   expect(helper.runtime_match).to be_an(Array)
-    #   expect(helper.runtime_match).to include(movie_1)
-    # end
+    it 'creates a new movie array if none exists' do
+      assign(:current_user, @user)
+
+      params[:runtime] = "100"
+      matched_movie = @user.movies.find_by(title: "WALL-E")
+      expect(helper.runtime_match).to be_an(Array)
+      expect(helper.runtime_match).to include(matched_movie)
+    end
   end
 
 end
