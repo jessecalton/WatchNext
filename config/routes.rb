@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :movies
 
   post '/messaging', to: 'messaging#create'
+  post '/tweets', to: 'tweets#create'
 
   get     '/login',   to: 'sessions#new'
   post    '/login',   to: 'sessions#create'
