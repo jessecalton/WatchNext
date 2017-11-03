@@ -1,3 +1,5 @@
+require 'open-uri'
+
 class MovieSearch
   include HTTParty
   # base_uri 'http://www.omdbapi.com/?t='
@@ -12,9 +14,11 @@ class MovieSearch
       movie_url = "i=" + imdb_id
     end
     api_key = ENV["API_KEY"]
+
+    @movie_data = JSON.load(open("http://www.omdbapi.com/?#{movie_url}&apikey=#{api_key}"))
     
-    uri = URI.parse("http://www.omdbapi.com/?#{movie_url}&apikey=#{api_key}")
-    uri.open {|f| @movie_data = self.class.get(uri) }
+    # uri = URI.parse("http://www.omdbapi.com/?#{movie_url}&apikey=#{api_key}")
+    # uri.open {|f| @movie_data = self.class.get(uri) }
     
   end
 
