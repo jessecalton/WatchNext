@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/jessecalton/WatchNext.svg?branch=master)](https://travis-ci.org/jessecalton/WatchNext)
+
 # 🎞 Now Playing at a Web Browser Near You 🎞
 
 Do you spend more time browsing Netflix than watching its wealth of movies and television shows? Do you look at your watch list and wonder when you'll finally get around to watching Lawrence of Arabia? If this sounds like you, then you've come to the right place.
