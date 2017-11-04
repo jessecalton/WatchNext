@@ -26,13 +26,17 @@ RSpec.describe MoviesHelper, type: :helper do
       params[:runtime] = "120"
       expect(helper.runtime_match).to match_array([@movie_1, @movie_3])
     end
-    it 'creates a new movie array if none exists' do
+    it 'creates a new instance of @movie_array if none exists' do
       assign(:current_user, @user)
-
       params[:runtime] = "100"
       matched_movie = @user.movies.find_by(title: "WALL-E")
       expect(helper.runtime_match).to be_an(Array)
       expect(helper.runtime_match).to include(matched_movie)
+    end
+    it 'returns no movies if user-inputted runtime is less than any movie runtimes' do
+      assign(:current_user, @user)
+      params[:runtime] = "60"
+      expect(helper.runtime_match.length).to eq(0)
     end
   end
 
@@ -41,6 +45,13 @@ RSpec.describe MoviesHelper, type: :helper do
       assign(:movie_array, [@movie_1, @movie_2, @movie_3])
       params[:director] = "Stanley Kubrick"
       expect(helper.director_match).to match_array([@movie_2])
+    end
+    it 'creates a new instance of @movie_array if none exists' do
+      assign(:current_user, @user)
+      params[:director] = "Stanley Kubrick"
+      matched_movie = @user.movies.find_by(director: "Stanley Kubrick")
+      expect(helper.director_match).to be_an(Array)
+      expect(helper.director_match).to include(matched_movie)
     end
   end
 
