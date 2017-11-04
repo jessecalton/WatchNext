@@ -111,4 +111,20 @@ RSpec.describe MoviesHelper, type: :helper do
     end
   end
 
+  describe '#rotten_tomatoes_range' do
+    it 'returns all movies with an RT score greater than or equal to the user\'s selection' do
+      assign(:movie_array, [@movie_1, @movie_2, @movie_3])
+      params[:tomatoes] = "> 90"
+      expect(helper.rotten_tomatoes_range).to match_array([@movie_1, @movie_2])
+    end
+    it 'creates a new instance of @movie_array if none exists' do
+      assign(:current_user, @user)
+      params[:tomatoes] = "> 50"
+      matched_movies = []
+      @user.movies.each {|movie| matched_movies << movie}
+      expect(helper.rotten_tomatoes_range).to be_an(Array)
+      expect(helper.rotten_tomatoes_range).to match_array(matched_movies)
+    end
+  end
+
 end
