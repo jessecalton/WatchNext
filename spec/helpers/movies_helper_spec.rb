@@ -77,4 +77,14 @@ RSpec.describe MoviesHelper, type: :helper do
     end
   end
 
+  describe '#actor_match' do
+    it 'returns all movies featuring a chosen actor' do
+      dbl = double("Movie", :title => "The Man Who Fell To Earth", :actors => "David Bowie")
+      expect(dbl.actors).to eq("David Bowie")
+      assign(:movie_array, [dbl, @movie_1, @movie_2, @movie_3])
+      params[:actors] = "David Bowie"
+      expect(helper.actor_match).to match_array([dbl, @movie_3])
+    end
+  end
+
 end
