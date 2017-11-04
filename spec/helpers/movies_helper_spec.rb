@@ -55,4 +55,26 @@ RSpec.describe MoviesHelper, type: :helper do
     end
   end
 
+  describe '#decade_match' do
+    it 'returns all movies from 1950s or earlier' do
+      dbl = double("Movie", :title => "Wings", :decade => "1920")
+      expect(dbl.decade).to eq("1920")
+      assign(:movie_array, [dbl])
+      params[:decade] = "1950s or earlier"
+      expect(helper.decade_match).to match_array([dbl])
+    end
+    it 'returns all movies from a user-selected decade' do
+      assign(:current_user, @user)
+      params[:decade] = "2000s"
+      matched_movie = @user.movies.find_by(decade: "2000")
+      expect(helper.decade_match).to be_an(Array)
+      expect(helper.decade_match).to include(matched_movie)
+    end
+    it 'returns no movies if user-selected decade matches no movies' do
+      assign(:current_user, @user)
+      params[:decade] = "2010s"
+      expect(helper.decade_match.length).to eq(0)
+    end
+  end
+
 end
