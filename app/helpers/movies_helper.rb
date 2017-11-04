@@ -157,7 +157,11 @@ module MoviesHelper
   private
 
   def sanitize_integer_params
-    params[:tomatoes] = params[:tomatoes].delete!("> ").to_i
+    if params[:tomatoes].class != Fixnum
+      params[:tomatoes] = params[:tomatoes].delete!("> ").to_i
+    else
+      return params[:tomatoes]
+    end
   end
 
 end
