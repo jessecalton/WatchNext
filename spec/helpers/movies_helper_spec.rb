@@ -63,7 +63,7 @@ RSpec.describe MoviesHelper, type: :helper do
       params[:decade] = "1950s or earlier"
       expect(helper.decade_match).to match_array([dbl])
     end
-    it 'returns all movies from a user-selected decade' do
+    it 'returns all movies from a user-selected decade and creates new instance of @movie_array if none exists' do
       assign(:current_user, @user)
       params[:decade] = "2000s"
       matched_movie = @user.movies.find_by(decade: "2000")
@@ -84,6 +84,13 @@ RSpec.describe MoviesHelper, type: :helper do
       assign(:movie_array, [dbl, @movie_1, @movie_2, @movie_3])
       params[:actors] = "David Bowie"
       expect(helper.actor_match).to match_array([dbl, @movie_3])
+    end
+    it 'creates a new instance of @movie_array if none exists' do
+      assign(:current_user, @user)
+      params[:actors] = "David Bowie"
+      matched_movie = @user.movies.find_by(title: "Labyrinth")
+      expect(helper.actor_match).to be_an(Array)
+      expect(helper.actor_match).to include(matched_movie)
     end
   end
 
