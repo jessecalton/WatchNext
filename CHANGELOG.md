@@ -2,9 +2,17 @@
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
+
+# 11-4-2017
+### Added
+- More tests for MoviesHelper spec
+### Changed
+- Removed .titleize methods from MoviesHelper methods, as they were not returning movies with hyphens like expected
+
 # 11-3-2017
 ### Added
 - [FactoryBot](https://github.com/thoughtbot/factory_bot) gem
+- Adds database_cleaner gem to tests
 - Set up factories and dependencies
 - Write passing tests for MoviesHelper spec and Movies spec
 - Integrates with Travis CI
