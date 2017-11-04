@@ -94,4 +94,14 @@ RSpec.describe MoviesHelper, type: :helper do
     end
   end
 
+  describe '#genre_match' do
+    it 'returns all movies that match a chosen genre' do
+      dbl = double("Movie", :title => "Rogue One", :genre => "Sci-Fi, Adventure")
+      expect(dbl.genre).to include("Sci-Fi")
+      assign(:movie_array, [dbl, @movie_1, @movie_2, @movie_3])
+      params[:genre] = "Sci-Fi"
+      expect(helper.genre_match).to match_array([dbl, @movie_2])
+    end
+  end
+
 end
