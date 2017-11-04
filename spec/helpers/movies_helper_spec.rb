@@ -102,6 +102,13 @@ RSpec.describe MoviesHelper, type: :helper do
       params[:genre] = "Sci-Fi"
       expect(helper.genre_match).to match_array([dbl, @movie_2])
     end
+    it 'creates a new instance of @movie_array if none exists' do
+      assign(:current_user, @user)
+      params[:genre] = "Fantasy"
+      matched_movie = @user.movies.find_by(title: "Labyrinth")
+      expect(helper.genre_match).to be_an(Array)
+      expect(helper.genre_match).to include(matched_movie)
+    end
   end
 
 end
