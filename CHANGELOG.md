@@ -5,9 +5,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 # 11-4-2017
 ### Added
-- More tests for MoviesHelper spec
+- Finishes tests for MoviesHelper spec (for now...)
 ### Changed
 - Removed .titleize methods from MoviesHelper methods, as they were not returning movies with hyphens like expected
+- Refactored methods for grabbing duplicate entries of actors, genres, and directors (single responsibility ftw)
 
 # 11-3-2017
 ### Added
