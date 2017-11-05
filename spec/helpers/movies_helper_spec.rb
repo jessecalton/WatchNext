@@ -127,4 +127,34 @@ RSpec.describe MoviesHelper, type: :helper do
     end
   end
 
+  describe '#make_sorted_genre_array' do
+    it 'sorts all of a user\'s movie genres alphabetically' do
+      assign(:current_user, @user)
+      sorted_array = helper.make_sorted_genre_array
+      expect(sorted_array).to start_with("Adventure")
+      expect(sorted_array).to end_with("Sci-Fi")
+    end
+  end
+
+  describe '#make_sorted_actors_array' do
+    it 'sorts all of a user\'s movie actors alphabetically' do
+      assign(:current_user, @user)
+      sorted_array = helper.make_sorted_actors_array
+      expect(sorted_array).to start_with("Ben Burtt")
+      expect(sorted_array).to end_with("William Sylvester")
+    end
+  end
+
+  describe '#make_sorted_directors_array' do
+    it 'sorts all of a user\'s movie directors alphabetically' do
+      assign(:current_user, @user)
+      sorted_array = helper.make_sorted_directors_array
+      expect(sorted_array).to start_with("Andrew Stanton")
+      expect(sorted_array).to end_with("Stanley Kubrick")      
+    end
+  end
+
+  describe '#delete_from_duplicates' do
+  end
+
 end
