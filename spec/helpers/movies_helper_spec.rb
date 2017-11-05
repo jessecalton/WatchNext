@@ -17,7 +17,6 @@ RSpec.describe MoviesHelper, type: :helper do
     @movie_1 = FactoryBot.create(:movie_1) # WALL-E
     @movie_2 = FactoryBot.create(:movie_2) # 2001 A Space Odyssey
     @movie_3 = FactoryBot.create(:movie_3) # Labyrinth
-    @fake_movie = FactoryBot.build(:fake_movie)
   end
 
   describe '#runtime_match' do
@@ -156,31 +155,29 @@ RSpec.describe MoviesHelper, type: :helper do
 
   context 'getting arrays of duplicate entries' do
     before(:context) do
-      @user.movies << @fake_movie
+      @new_user = FactoryBot.create(:user_with_movies)
+      @fake_movie = FactoryBot.build(:fake_movie)
+      @new_user.movies << @fake_movie
     end
     describe '#get_director_duplicates' do
       it 'gets an array of directors who have more than one movie in a user\'s movie list' do
-        assign(:current_user, @user)
+        assign(:current_user, @new_user)
         expect(helper.get_director_duplicates).to match_array(["Stanley Kubrick"])
       end
     end
 
     describe '#get_actor_duplicates' do
       it 'gets an array of actors who are in more than one movie in a user\'s movie list' do
-        assign(:current_user, @user)
+        assign(:current_user, @new_user)
         expect(helper.get_actor_duplicates).to match_array(["David Bowie"])
       end
     end
 
     describe '#get_genre_duplicates' do
       it 'gets an array of genres that describe more than one movie in a user\'s movie list' do
-        assign(:current_user, @user)
+        assign(:current_user, @new_user)
         expect(helper.get_genre_duplicates).to match_array(["Adventure", "Family"])
       end
     end
-  end
-
-  describe '#actor_match again' do
-    
   end
 end
