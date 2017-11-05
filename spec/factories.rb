@@ -37,6 +37,12 @@ FactoryBot.define do
     rotten_tomatoes 68
     user
   end
+  factory :fake_movie, class: Movie do
+    title "A Clockwork Station To Station"
+    actors "Alan Alda, David Bowie"
+    genre "Music"
+    director "Stanley Kubrick"
+  end
 
   factory :user do
     email "tom@tomtom.com"
