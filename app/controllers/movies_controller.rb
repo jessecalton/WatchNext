@@ -60,8 +60,9 @@ class MoviesController < ApplicationController
 
   def destroy
 
-    delete_from_duplicates
-    p @genre_doubles
+    get_director_duplicates
+    get_actor_duplicates
+    get_genre_duplicates
     @movie = current_user.movies.find(params[:id])
     respond_to do |format|
       format.html {

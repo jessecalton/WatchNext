@@ -154,7 +154,25 @@ RSpec.describe MoviesHelper, type: :helper do
     end
   end
 
-  describe '#delete_from_duplicates' do
+  describe '#get_director_duplicates' do
+    it 'gets an array of directors who have more than one movie in a user\'s movie list' do
+      assign(:current_user, @user)
+      expect(helper.get_director_duplicates).to be_empty
+    end
+  end
+
+    describe '#get_actor_duplicates' do
+    it 'gets an array of actors who are in more than one movie in a user\'s movie list' do
+      assign(:current_user, @user)
+      expect(helper.get_actor_duplicates).to be_empty
+    end
+  end
+
+    describe '#get_genre_duplicates' do
+    it 'gets an array of genres that describe more than one movie in a user\'s movie list' do
+      assign(:current_user, @user)
+      expect(helper.get_genre_duplicates).to match_array(["Adventure", "Family"])
+    end
   end
 
 end
