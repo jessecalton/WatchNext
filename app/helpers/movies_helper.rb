@@ -148,9 +148,15 @@ module MoviesHelper
     @directors_array.sort!
   end
 
-  def delete_from_duplicates
+  def get_director_duplicates
     @director_doubles = make_sorted_directors_array.group_by{ |e| e }.select { |k, v| v.size > 1 }.map(&:first) 
+  end
+
+  def get_actor_duplicates
     @actor_doubles = make_sorted_actors_array.group_by{ |e| e }.select { |k, v| v.size > 1 }.map(&:first) 
+  end
+
+  def get_genre_duplicates
     @genre_doubles = make_sorted_genre_array.group_by{ |e| e }.select { |k, v| v.size > 1 }.map(&:first)
   end
 
