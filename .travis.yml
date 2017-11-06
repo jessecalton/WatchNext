@@ -1,10 +1,13 @@
 language: ruby
 rvm:
-  - 2.3.1
+- 2.3.1
 before_script:
-  - bundle exec rake db:create --all
-  - bundle exec rake db:migrate
+- bundle exec rake db:create --all
+- bundle exec rake db:migrate
 services:
-  - postgresql
+- postgresql
 notifications:
   email: false
+env:
+  global:
+    secure: YxicCql6FRhLFqGvMjO8PuFULlIXBgv5mur4EB81aS8KgRFqXV4ZIoC3/lVJUJD7i3PF0wTYRJ8+pa78bRaYoJ6YASkUrK/hGaPYHb86yZM9QaCvZFXyZTXmgIIg2Rhq7zBKqUYAqSTwehYrIvrv6Ou0Dif6LUS+9FNNBzD5m4RAwKDyVuCSoTdA7dFM9u6uCSWpwJ0lg8dR3f8MkF8XGmE0n7irLu53zJwj3VBmZ8rvuo0OWFPWrSPzw5NiRJgn/6Y7Zn5y6y0FT9ZGpMXWdFKEII/htkHCau5+BM9qqk6GOgEMqNsGETUoWclspk6Cp+qJLNDWzBrPks3KnFq5PpsbIi2WwAazglZ7db8/xp1fP6SHXBFIkgcPvlGPA5DrF20CMzxFo6pxHD66zJcV/DKNU9pxhMQMOREdq3dwWtxgPWsZoHzxqU/dFPnhzAaCld5SGOZPE383lXzTDEAM+3aJyhO3PeLXEVn1cFwJsrA5TP2vbjFbvTMx7wePxQPG3ooH46itVP8TwNBchpGYqDcW/R/SUkOIPp404ZfcsuktKT3pkYhSrsbVFx0lYngaBbgXw0D2qAFPJs22euGbVGTjOpWAhnxhio0OueTPpAqEuUEegK45dpgs3zFp0hSb1ilKuJ32RotzfzqG0grUnOr6vJXb/+qTOtrmGqmfruY=

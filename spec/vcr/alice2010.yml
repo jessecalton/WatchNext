@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 06 Nov 2017 07:54:18 GMT
+      - Mon, 06 Nov 2017 08:00:35 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -27,12 +27,12 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d5b716a303b657a358217cf282a2b82be1509954858; expires=Tue, 06-Nov-18
-        07:54:18 GMT; path=/; domain=.omdbapi.com; HttpOnly
+      - __cfduid=d41777f643a6b63b1beb2022165ccb8741509955235; expires=Tue, 06-Nov-18
+        08:00:35 GMT; path=/; domain=.omdbapi.com; HttpOnly
       Cache-Control:
       - public, max-age=86400
       Expires:
-      - Tue, 07 Nov 2017 07:54:18 GMT
+      - Tue, 07 Nov 2017 08:00:35 GMT
       Last-Modified:
       - Mon, 06 Nov 2017 07:51:47 GMT
       Vary:
@@ -48,7 +48,7 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Cf-Ray:
-      - 3b967bec75529408-SJC
+      - 3b96851f234e92a6-SJC
     body:
       encoding: ASCII-8BIT
       string: '{"Title":"Alice in Wonderland","Year":"2010","Rated":"PG","Released":"05
@@ -62,5 +62,5 @@ http_interactions:
         Movie Database","Value":"6.5/10"},{"Source":"Rotten Tomatoes","Value":"52%"},{"Source":"Metacritic","Value":"53/100"}],"Metascore":"53","imdbRating":"6.5","imdbVotes":"332,817","imdbID":"tt1014759","Type":"movie","DVD":"01
         Jun 2010","BoxOffice":"$319,323,000","Production":"Walt Disney Pictures","Website":"http://disney.go.com/disneypictures/aliceinwonderland/","Response":"True"}'
     http_version: 
-  recorded_at: Mon, 06 Nov 2017 07:54:18 GMT
+  recorded_at: Mon, 06 Nov 2017 08:00:35 GMT
 recorded_with: VCR 3.0.3

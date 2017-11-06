@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 06 Nov 2017 07:54:18 GMT
+      - Mon, 06 Nov 2017 08:00:35 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -27,12 +27,12 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d6ee425650161365bb72903efe8a775de1509954858; expires=Tue, 06-Nov-18
-        07:54:18 GMT; path=/; domain=.omdbapi.com; HttpOnly
+      - __cfduid=d27865d7d9fb36939157fd7833170f7371509955235; expires=Tue, 06-Nov-18
+        08:00:35 GMT; path=/; domain=.omdbapi.com; HttpOnly
       Cache-Control:
       - public, max-age=86400
       Expires:
-      - Tue, 07 Nov 2017 07:54:18 GMT
+      - Tue, 07 Nov 2017 08:00:35 GMT
       Last-Modified:
       - Mon, 06 Nov 2017 07:40:43 GMT
       Vary:
@@ -48,7 +48,7 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Cf-Ray:
-      - 3b967bec14585134-SJC
+      - 3b96851ec3046d9c-SJC
     body:
       encoding: ASCII-8BIT
       string: '{"Title":"Alice in Wonderland","Year":"1951","Rated":"G","Released":"12
@@ -64,5 +64,5 @@ http_interactions:
         Movie Database","Value":"7.4/10"},{"Source":"Rotten Tomatoes","Value":"79%"}],"Metascore":"N/A","imdbRating":"7.4","imdbVotes":"105,358","imdbID":"tt0043274","Type":"movie","DVD":"01
         Feb 2011","BoxOffice":"N/A","Production":"Film Chest","Website":"N/A","Response":"True"}'
     http_version: 
-  recorded_at: Mon, 06 Nov 2017 07:54:18 GMT
+  recorded_at: Mon, 06 Nov 2017 08:00:35 GMT
 recorded_with: VCR 3.0.3

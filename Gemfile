@@ -38,7 +38,9 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'twilio-ruby'
 gem 'twitter'
 gem 'webmock'  
-gem 'vcr' 
+gem 'vcr'
+
+gem 'travis'
 
 
 
