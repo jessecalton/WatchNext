@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.omdbapi.com/?apikey=<API_KEY>&t=chinatown
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 06 Nov 2017 07:23:30 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d9fa059fe915f538dcc8d75a7bbd9c27f1509953010; expires=Tue, 06-Nov-18
+        07:23:30 GMT; path=/; domain=.omdbapi.com; HttpOnly
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Tue, 07 Nov 2017 07:23:30 GMT
+      Last-Modified:
+      - Mon, 06 Nov 2017 07:23:30 GMT
+      Vary:
+      - Accept-Encoding
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - MISS
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 3b964ece15ca2840-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Title":"Chinatown","Year":"1974","Rated":"R","Released":"20 Jun 1974","Runtime":"130
+        min","Genre":"Drama, Mystery, Thriller","Director":"Roman Polanski","Writer":"Robert
+        Towne","Actors":"Jack Nicholson, Faye Dunaway, John Huston, Perry Lopez","Plot":"A
+        private detective hired to expose an adulterer finds himself caught up in
+        a web of deceit, corruption, and murder.","Language":"English, Cantonese,
+        Spanish","Country":"USA","Awards":"Won 1 Oscar. Another 20 wins & 24 nominations.","Poster":"https://images-na.ssl-images-amazon.com/images/M/MV5BYWRkNGJhMmEtMWM3Ni00MDc3LThhMTQtMWI2OTMxYmE5MTZhXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg","Ratings":[{"Source":"Internet
+        Movie Database","Value":"8.2/10"},{"Source":"Rotten Tomatoes","Value":"98%"},{"Source":"Metacritic","Value":"86/100"}],"Metascore":"86","imdbRating":"8.2","imdbVotes":"238,347","imdbID":"tt0071315","Type":"movie","DVD":"23
+        Nov 1999","BoxOffice":"N/A","Production":"Paramount Pictures","Website":"N/A","Response":"True"}'
+    http_version: 
+  recorded_at: Mon, 06 Nov 2017 07:23:30 GMT
+recorded_with: VCR 3.0.3
