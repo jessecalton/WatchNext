@@ -3,7 +3,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
-# 11-4-2017
+# 11-6-2017
+### Added
+- Adds testing gems to README
+### Changed
+- Updates intro to README, makes it more fun and adds more movie puns
+
+# 11-5-2017
 ### Added
 - Adds [VCR](https://github.com/vcr/vcr) gem to record OMDB API responses
 - Configures VCR
