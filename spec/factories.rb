@@ -1,7 +1,4 @@
 FactoryBot.define do
-  factory :movie_search do
-    
-  end
 
   factory :movie_1, class: Movie do
     title "WALL-E"

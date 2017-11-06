@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 # 11-4-2017
 ### Added
+- Adds [VCR](https://github.com/vcr/vcr) gem to record OMDB API responses
+- Configures VCR
+- Records VCR cassettes in MovieSearch model spec
+- Writes passing tests in MovieSearch model spec
+
+# 11-4-2017
+### Added
 - Finishes tests for MoviesHelper spec (for now...)
 ### Changed
 - Removed .titleize methods from MoviesHelper methods, as they were not returning movies with hyphens like expected
