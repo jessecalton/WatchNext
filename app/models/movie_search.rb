@@ -9,7 +9,6 @@ class MovieSearch
       movie_url = "t=" + title.gsub(/\s+/, "+")
     elsif title && year && imdb_id == ""
       movie_url = "t=" + title.gsub(/\s+/, "+") + "&y=" + year
-      p movie_url
     elsif imdb_id
       movie_url = "i=" + imdb_id
     end
