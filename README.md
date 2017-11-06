@@ -1,10 +1,10 @@
 [![Build Status](https://travis-ci.org/jessecalton/WatchNext.svg?branch=master)](https://travis-ci.org/jessecalton/WatchNext)
 
-# 🎞 Now Playing at a Web Browser Near You 🎞
+# ========== Now Playing at a Web Browser Near You ==========
 
-Do you spend more time browsing Netflix than watching its wealth of movies and television shows? Do you look at your watch list and wonder when you'll finally get around to watching Lawrence of Arabia? If this sounds like you, then you've come to the right place.
+Do you find yourself browsing Netflix more than watching net flicks? Does your list of new films to watch only grow as you pop in your VHS of Star Wars again? If this sounds like you, then you've come to the right place.
 
-# WatchNext 📺 
+# ---------- WatchNext ---------- 
 
 ### WatchNext will help you eliminate the time spent surfing Netflix and Hulu and get to what matters most - watching films! 
 
@@ -17,13 +17,19 @@ Do you spend more time browsing Netflix than watching its wealth of movies and t
 ## Cast 📽️
 
 * Ruby on Rails
-* SCSS/CSS3
-* HTML5
+* HTML5/SCSS/CSS3
+* JavaScript/jQuery
 * PostgreSQL
 * [OMDB API](http://www.omdbapi.com)
 * [Twilio API](https://www.twilio.com)
-* jQuery/AJAX
-* Travis CI
+
+## Crew
+
+* [Rspec](https://github.com/rspec/rspec-rails)
+* [FactoryBot](https://github.com/thoughtbot/factory_bot_rails)
+* [VCR](https://github.com/vcr/vcr)
+* [DatabaseCleaner](https://github.com/DatabaseCleaner/database_cleaner)
+* [Travis CI](https://github.com/travis-ci/travis.rb)
 
 ## Sneak Preview 🍿
 
@@ -42,6 +48,6 @@ Play with the demo account:
 
 ## Contact the Director 🎬
 
-Please send all inquiries to: 
+Please direct all inquiries to: 
 
-<jessecalton@gmail.com>
+<http://jesse-calton.com>
