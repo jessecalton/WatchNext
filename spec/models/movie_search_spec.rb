@@ -6,8 +6,13 @@ RSpec.describe MovieSearch, type: :model do
       VCR.use_cassette 'vertigo' do
         api_key = ENV["API_KEY"]
 
-        @movie_data = JSON.load(open("http://www.omdbapi.com/?t=vertigo&apikey=#{api_key}"))
+        @movie_data = JSON.load(open("http://www.omdbapi.com/?t=vertigo&apikey=#{<API_KEY>}"))
         expect(@movie_data["Title"]).to eq("Vertigo")
+      end
+    end
+    it 'has a runtime saved as an integer' do
+      VCR.use_cassette 'vertigo' do
+        expect(self.movie_runtime).to eq(128)
       end
     end
   end
