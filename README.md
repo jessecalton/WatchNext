@@ -1,10 +1,10 @@
 [![Build Status](https://travis-ci.org/jessecalton/WatchNext.svg?branch=master)](https://travis-ci.org/jessecalton/WatchNext)
 
-# ======= Now Playing at a Web Browser Near You =======
+# ------- Now Playing at a Web Browser Near You -------
 
 Do you find yourself browsing Netflix more than watching net flicks? Does your list of new films to watch only grow as you pop in your VHS of Star Wars again? If this sounds like you, then you've come to the right place.
 
-# ---------- WatchNext ---------- 
+# ----------------- WatchNext -----------------
 
 ### WatchNext will help you eliminate the time spent surfing Netflix and Hulu and get to what matters most - watching films! 
 
