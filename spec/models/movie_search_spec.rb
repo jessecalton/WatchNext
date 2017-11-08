@@ -29,6 +29,27 @@ RSpec.describe MovieSearch, type: :model do
           expect(new_movie.movie_genre).to eq("Drama, Mystery, Thriller")
         end
       end
+      it 'calls #movie_director to get a string of the film\'s directors' do
+        VCR.use_cassette('chinatown', :record => :once) do
+          new_movie = MovieSearch.new("chinatown","","")
+          expect(new_movie.movie_director).to be_a(String)
+          expect(new_movie.movie_director).to eq("Roman Polanski")
+        end
+      end
+      it 'calls #movie_actors to get a string of the film\'s main actors' do
+        VCR.use_cassette('chinatown', :record => :once) do
+          new_movie = MovieSearch.new("chinatown","","")
+          expect(new_movie.movie_actors).to be_a(String)
+          expect(new_movie.movie_actors).to eq("Jack Nicholson, Faye Dunaway, John Huston, Perry Lopez")
+        end
+      end
+      it 'calls #movie_poster to get a url string of a .jpg of the film\'s poster art' do
+        VCR.use_cassette('chinatown', :record => :once) do
+          new_movie = MovieSearch.new("chinatown","","")
+          expect(new_movie.movie_poster).to be_a(String)
+          expect(new_movie.movie_poster).to include(".jpg")
+        end
+      end
     end
     context 'advanced search' do
       it 'search with title and year to get specific film' do
