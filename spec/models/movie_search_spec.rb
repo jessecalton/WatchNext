@@ -15,11 +15,18 @@ RSpec.describe MovieSearch, type: :model do
           expect(new_movie.movie_decade).to eq(1970)
         end
       end
-      it 'calls #movie_runtime to get an integer of the film\s length in minutes' do
+      it 'calls #movie_runtime to get an integer of the film\'s length in minutes' do
         VCR.use_cassette('chinatown', :record => :once) do
           new_movie = MovieSearch.new("chinatown","","")
           expect(new_movie.movie_runtime).to be_an(Integer)
           expect(new_movie.movie_runtime).to eq(130)
+        end
+      end
+      it 'calls #movie_genre to get a string of the film\'s genres' do
+        VCR.use_cassette('chinatown', :record => :once) do
+          new_movie = MovieSearch.new("chinatown","","")
+          expect(new_movie.movie_genre).to be_a(String)
+          expect(new_movie.movie_genre).to eq("Drama, Mystery, Thriller")
         end
       end
     end
