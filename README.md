@@ -2,11 +2,11 @@
 
 # 🎞 Now Playing at a Web Browser Near You 🎞
 
-Do you spend more time browsing Netflix than watching its wealth of movies and television shows? Do you look at your watch list and wonder when you'll finally get around to watching Lawrence of Arabia? If this sounds like you, then you've come to the right place.
+Do you find yourself browsing Netflix more than watching net flicks? Does your list of new films to watch only grow as you pop in your VHS of Star Wars again? If this sounds like you, then you've come to the right place.
 
-# WatchNext 📺 
+# 📽 WatchNext 📽
 
-### WatchNext will help you eliminate the time spent surfing Netflix and Hulu and get to what matters most - watching films! 
+### WatchNext will help you eliminate the time spent surfing Netflix and Hulu and get to what matters most - watching films!
 
 * Add to and delete movies from a watch list with ease.
 * Uses AJAX for dynamic adding/deleting of movie titles.
@@ -14,22 +14,28 @@ Do you spend more time browsing Netflix than watching its wealth of movies and t
 * Send your watch list to your smart phone via SMS using the Twilio API to check your list on the go.
 * Just select the options you want to filter and you'll find tonight's movie!
 
-## Cast 📽️
+## 📽 Cast
 
 * Ruby on Rails
-* SCSS/CSS3
-* HTML5
+* HTML5/SCSS/CSS3
+* JavaScript/jQuery
 * PostgreSQL
 * [OMDB API](http://www.omdbapi.com)
 * [Twilio API](https://www.twilio.com)
-* jQuery/AJAX
-* Travis CI
 
-## Sneak Preview 🍿
+## 👩‍🎤 Crew 👨‍🎤
+
+* [Rspec](https://github.com/rspec/rspec-rails)
+* [FactoryBot](https://github.com/thoughtbot/factory_bot_rails)
+* [VCR](https://github.com/vcr/vcr)
+* [DatabaseCleaner](https://github.com/DatabaseCleaner/database_cleaner)
+* [Travis CI](https://github.com/travis-ci/travis.rb)
+
+## 🍿 Sneak Preview 🍿
 
 ![Demo](watch-next-demo.gif)
 
-## Test-Screenings 📼
+## 📼 Test-Screenings 📼
 
 The most recent deployment of WatchNext can be viewed at:
 
@@ -40,8 +46,8 @@ Play with the demo account:
   **Login:** demo@demo.com <br>
   **Password:** demo
 
-## Contact the Director 🎬
+## 🎬 Contact the Director 🎬
 
-Please send all inquiries to: 
+Please direct all inquiries to:
 
-<jessecalton@gmail.com>
+<http://jesse-calton.com>

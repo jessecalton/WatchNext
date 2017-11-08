@@ -27,11 +27,11 @@ module MoviesHelper
 
   def director_match
     if @movie_array
-      @movie_array.delete_if {|movie| movie.director.exclude?(params[:director].titleize)}
+      @movie_array.delete_if {|movie| movie.director.exclude?(params[:director])}
     else
       @movie_array = []
       current_user.movies.each do |movie|
-        if movie.director.include?(params[:director].titleize)
+        if movie.director.include?(params[:director])
           @movie_array << movie
         end
       end
@@ -63,11 +63,11 @@ module MoviesHelper
 
   def genre_match
     if @movie_array 
-      @movie_array.delete_if {|movie| movie.genre.exclude?(params[:genre].titleize)}
+      @movie_array.delete_if {|movie| movie.genre.exclude?(params[:genre])}
     else
       @movie_array = []
       current_user.movies.each do |movie|
-        if movie.genre.include?(params[:genre].titleize)
+        if movie.genre.include?(params[:genre])
           @movie_array << movie 
         end
       end
@@ -77,11 +77,11 @@ module MoviesHelper
 
   def actor_match
     if @movie_array 
-      @movie_array.delete_if {|movie| movie.actors.exclude?(params[:actors].titleize)}
+      @movie_array.delete_if {|movie| movie.actors.exclude?(params[:actors])}
     else
       @movie_array = []
       current_user.movies.each do |movie|
-        if movie.actors.include?(params[:actors].titleize)
+        if movie.actors.include?(params[:actors])
           @movie_array << movie 
         end
       end
@@ -148,16 +148,26 @@ module MoviesHelper
     @directors_array.sort!
   end
 
-  def delete_from_duplicates
+  def get_director_duplicates
     @director_doubles = make_sorted_directors_array.group_by{ |e| e }.select { |k, v| v.size > 1 }.map(&:first) 
+  end
+
+  def get_actor_duplicates
     @actor_doubles = make_sorted_actors_array.group_by{ |e| e }.select { |k, v| v.size > 1 }.map(&:first) 
+  end
+
+  def get_genre_duplicates
     @genre_doubles = make_sorted_genre_array.group_by{ |e| e }.select { |k, v| v.size > 1 }.map(&:first)
   end
 
   private
 
   def sanitize_integer_params
-    params[:tomatoes] = params[:tomatoes].delete!("> ").to_i
+    if params[:tomatoes].class != Fixnum
+      params[:tomatoes] = params[:tomatoes].delete!("> ").to_i
+    else
+      return params[:tomatoes]
+    end
   end
 
 end
