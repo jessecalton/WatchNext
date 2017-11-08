@@ -15,10 +15,10 @@ class MovieSearch
     api_key = ENV["API_KEY"]
 
     @movie_data = JSON.load(open("http://www.omdbapi.com/?#{movie_url}&apikey=#{api_key}"))
-    
+
     # uri = URI.parse("http://www.omdbapi.com/?#{movie_url}&apikey=#{api_key}")
     # uri.open {|f| @movie_data = self.class.get(uri) }
-    
+
   end
 
   def movie_decade
@@ -27,9 +27,9 @@ class MovieSearch
     return year.to_i
   end
 
-  def movie_data
-    @movie_data
-  end
+  # def movie_data
+  #   @movie_data
+  # end
 
   def movie_runtime
     @movie_data["Runtime"].to_i

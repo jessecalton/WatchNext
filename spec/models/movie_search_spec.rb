@@ -9,8 +9,21 @@ RSpec.describe MovieSearch, type: :model do
           expect(new_movie.movie_title).to eq("Chinatown")
         end
       end
+      it 'calls #movie_decade to get the decade of the film' do
+        VCR.use_cassette('chinatown', :record => :once) do
+          new_movie = MovieSearch.new("chinatown","","")
+          expect(new_movie.movie_decade).to eq(1970)
+        end
+      end
+      it 'calls #movie_runtime to get an integer of the film\s length in minutes' do
+        VCR.use_cassette('chinatown', :record => :once) do
+          new_movie = MovieSearch.new("chinatown","","")
+          expect(new_movie.movie_runtime).to be_an(Integer)
+          expect(new_movie.movie_runtime).to eq(130)
+        end
+      end
     end
-    context 'two movies with same title' do
+    context 'advanced search' do
       it 'search with title and year to get specific film' do
         VCR.use_cassette('alice', :record => :once) do
           new_movie = MovieSearch.new("alice in wonderland","1951","")
@@ -24,8 +37,6 @@ RSpec.describe MovieSearch, type: :model do
           expect(new_movie.movie_director).to eq("Tim Burton")
         end
       end
-    end
-    context 'search by unique IMDB ID' do
       it 'searches with a film\'s IMDB ID number' do
         VCR.use_cassette('spirited', :record => :once) do
           new_movie = MovieSearch.new("","","tt0245429")
