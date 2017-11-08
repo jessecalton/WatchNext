@@ -25,5 +25,14 @@ RSpec.describe MovieSearch, type: :model do
         end
       end
     end
+    context 'search by unique IMDB ID' do
+      it 'searches with a film\'s IMDB ID number' do
+        VCR.use_cassette('spirited', :record => :once) do
+          new_movie = MovieSearch.new("","","tt0245429")
+          expect(new_movie.movie_title).to eq("Spirited Away")
+          expect(new_movie.movie_decade).to eq(2000)
+        end
+      end
+    end
   end
 end
