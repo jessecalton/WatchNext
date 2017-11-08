@@ -6,7 +6,7 @@ Do you find yourself browsing Netflix more than watching net flicks? Does your l
 
 # 📽 WatchNext 📽
 
-### WatchNext will help you eliminate the time spent surfing Netflix and Hulu and get to what matters most - watching films! 
+### WatchNext will help you eliminate the time spent surfing Netflix and Hulu and get to what matters most - watching films!
 
 * Add to and delete movies from a watch list with ease.
 * Uses AJAX for dynamic adding/deleting of movie titles.
@@ -14,7 +14,7 @@ Do you find yourself browsing Netflix more than watching net flicks? Does your l
 * Send your watch list to your smart phone via SMS using the Twilio API to check your list on the go.
 * Just select the options you want to filter and you'll find tonight's movie!
 
-## 📽 Cast 📽️
+## 📽 Cast
 
 * Ruby on Rails
 * HTML5/SCSS/CSS3
@@ -48,6 +48,6 @@ Play with the demo account:
 
 ## 🎬 Contact the Director 🎬
 
-Please direct all inquiries to: 
+Please direct all inquiries to:
 
 <http://jesse-calton.com>
