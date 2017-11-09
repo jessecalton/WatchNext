@@ -41,6 +41,7 @@ gem 'webmock'
 gem 'vcr'
 
 gem 'travis'
+gem 'rails-controller-testing'
 
 
 
