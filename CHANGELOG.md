@@ -7,6 +7,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 ### Added
 - Added request spec tests for Users
 - Installed rails-controller-testing gem to transition from soon-to-be deprecated testing syntax
+- Added Capybara gem for feature testing
+- Adds tests for login feature using Capybara
 ### Deprecated
 - Controller tests are being deprecated in favor of request specs as of Rails 5
 - Use render_template instead of assert_template and redirect_to instead of assert_redirected_to in your request specs
