@@ -42,6 +42,7 @@ gem 'vcr'
 
 gem 'travis'
 gem 'rails-controller-testing'
+gem 'capybara'
 
 
 
