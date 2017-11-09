@@ -12,6 +12,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 ### Deprecated
 - Controller tests are being deprecated in favor of request specs as of Rails 5
 - Use render_template instead of assert_template and redirect_to instead of assert_redirected_to in your request specs
+### Changed
+- Realized that the login form partial on the login page was still "display: hidden". Changed that to an inline style as to not mess with the properly hidden ones.
 
 # 11-7-2017
 ### Added

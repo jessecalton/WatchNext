@@ -28,6 +28,7 @@ Do you find yourself browsing Netflix more than watching net flicks? Does your l
 * [Rspec](https://github.com/rspec/rspec-rails)
 * [FactoryBot](https://github.com/thoughtbot/factory_bot_rails)
 * [VCR](https://github.com/vcr/vcr)
+* [Capybara](http://teamcapybara.github.io/capybara/)
 * [DatabaseCleaner](https://github.com/DatabaseCleaner/database_cleaner)
 * [Travis CI](https://github.com/travis-ci/travis.rb)
 
