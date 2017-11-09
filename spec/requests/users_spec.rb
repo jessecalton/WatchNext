@@ -17,5 +17,12 @@ RSpec.describe "Users", type: :request do
 
       expect(response).to render_template(:show)
     end
+    it "throws an error if new User\'s password does not match password confirmation" do
+      get "/users/new"
+      expect(response).to render_template(:new)
+      post "/users", :params => { :user => {:username => "tim", :email => "tim@tim.com", :password => "timtim", :password_confirmation => "tomtom"} }
+      expect(response).to render_template(:new)
+      expect(response.body).to include("Password confirmation doesn&#39;t match Password")
+    end
   end
 end
