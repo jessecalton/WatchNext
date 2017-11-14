@@ -1,4 +1,4 @@
-<%= form_for(:search, url: movies_path, remote: true, :html => {:class => "search-form"}) do |f| %>
+<%= form_for(:search, url: movies_path, remote: true, :html => {:class => "search-form", :id => "main"}) do |f| %>
 
   <%= f.text_field :title, placeholder: "Movie Title" %>
 

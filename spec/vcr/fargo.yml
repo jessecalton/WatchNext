@@ -1,0 +1,80 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.omdbapi.com/?apikey=<API_KEY>&t=Fargo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 14 Nov 2017 07:49:26 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d9dde639fc2c03eb9e1dedb19f2b4ff181510645766; expires=Wed, 14-Nov-18
+        07:49:26 GMT; path=/; domain=.omdbapi.com; HttpOnly
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Wed, 15 Nov 2017 07:49:26 GMT
+      Last-Modified:
+      - Tue, 14 Nov 2017 07:49:26 GMT
+      Vary:
+      - Accept-Encoding
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - MISS
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 3bd85fc8822c6d2a-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJUaXRsZSI6IkZhcmdvIiwiWWVhciI6IjE5OTYiLCJSYXRlZCI6IlIiLCJS
+        ZWxlYXNlZCI6IjA1IEFwciAxOTk2IiwiUnVudGltZSI6Ijk4IG1pbiIsIkdl
+        bnJlIjoiQ3JpbWUsIERyYW1hLCBUaHJpbGxlciIsIkRpcmVjdG9yIjoiSm9l
+        bCBDb2VuLCBFdGhhbiBDb2VuIiwiV3JpdGVyIjoiRXRoYW4gQ29lbiwgSm9l
+        bCBDb2VuIiwiQWN0b3JzIjoiV2lsbGlhbSBILiBNYWN5LCBTdGV2ZSBCdXNj
+        ZW1pLCBQZXRlciBTdG9ybWFyZSwgS3Jpc3RpbiBSdWRyw7xkIiwiUGxvdCI6
+        IkplcnJ5IEx1bmRlZ2FhcmQncyBpbmVwdCBjcmltZSBmYWxscyBhcGFydCBk
+        dWUgdG8gaGlzIGFuZCBoaXMgaGVuY2htZW4ncyBidW5nbGluZyBhbmQgdGhl
+        IHBlcnNpc3RlbnQgcG9saWNlIHdvcmsgb2YgdGhlIHF1aXRlIHByZWduYW50
+        IE1hcmdlIEd1bmRlcnNvbi4iLCJMYW5ndWFnZSI6IkVuZ2xpc2giLCJDb3Vu
+        dHJ5IjoiVVNBLCBVSyIsIkF3YXJkcyI6IldvbiAyIE9zY2Fycy4gQW5vdGhl
+        ciA3OSB3aW5zICYgNjAgbm9taW5hdGlvbnMuIiwiUG9zdGVyIjoiaHR0cHM6
+        Ly9pbWFnZXMtbmEuc3NsLWltYWdlcy1hbWF6b24uY29tL2ltYWdlcy9NL01W
+        NUJNVGd4TnpZM016VXhPVjVCTWw1QmFuQm5Ya0Z0WlRjd01EQTBOak15TkFA
+        QC5fVjFfU1gzMDAuanBnIiwiUmF0aW5ncyI6W3siU291cmNlIjoiSW50ZXJu
+        ZXQgTW92aWUgRGF0YWJhc2UiLCJWYWx1ZSI6IjguMS8xMCJ9LHsiU291cmNl
+        IjoiUm90dGVuIFRvbWF0b2VzIiwiVmFsdWUiOiI5NCUifSx7IlNvdXJjZSI6
+        Ik1ldGFjcml0aWMiLCJWYWx1ZSI6Ijg1LzEwMCJ9XSwiTWV0YXNjb3JlIjoi
+        ODUiLCJpbWRiUmF0aW5nIjoiOC4xIiwiaW1kYlZvdGVzIjoiNTAzLDM3NiIs
+        ImltZGJJRCI6InR0MDExNjI4MiIsIlR5cGUiOiJtb3ZpZSIsIkRWRCI6IjI0
+        IEp1biAxOTk3IiwiQm94T2ZmaWNlIjoiTi9BIiwiUHJvZHVjdGlvbiI6Ik1H
+        TSIsIldlYnNpdGUiOiJodHRwOi8vd3d3Lm1nbS5jb20vdGl0bGVfdGl0bGUu
+        ZG8/dGl0bGVfc3Rhcj1GQVJHTyIsIlJlc3BvbnNlIjoiVHJ1ZSJ9
+    http_version: 
+  recorded_at: Tue, 14 Nov 2017 07:49:27 GMT
+recorded_with: VCR 3.0.3

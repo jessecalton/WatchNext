@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.omdbapi.com/?apikey=<API_KEY>&t=star%20wars&y=1983
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 14 Nov 2017 08:10:38 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=da33767e33eed3d6a64bc1a31583721dd1510647038; expires=Wed, 14-Nov-18
+        08:10:38 GMT; path=/; domain=.omdbapi.com; HttpOnly
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Wed, 15 Nov 2017 08:10:38 GMT
+      Last-Modified:
+      - Tue, 14 Nov 2017 08:10:38 GMT
+      Vary:
+      - Accept-Encoding
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - EXPIRED
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 3bd87ed545006d9c-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Title":"Star Wars: Episode VI - Return of the Jedi","Year":"1983","Rated":"PG","Released":"25
+        May 1983","Runtime":"131 min","Genre":"Action, Adventure, Fantasy","Director":"Richard
+        Marquand","Writer":"Lawrence Kasdan (screenplay by), George Lucas (screenplay
+        by), George Lucas (story by)","Actors":"Mark Hamill, Harrison Ford, Carrie
+        Fisher, Billy Dee Williams","Plot":"After a daring mission to rescue Han Solo
+        from Jabba the Hutt, the rebels dispatch to Endor to destroy a more powerful
+        Death Star. Meanwhile, Luke struggles to help Vader back from the dark side
+        without falling into the Emperor''s trap.","Language":"English","Country":"USA","Awards":"Nominated
+        for 4 Oscars. Another 20 wins & 16 nominations.","Poster":"https://images-na.ssl-images-amazon.com/images/M/MV5BODllZjg2YjUtNWEzNy00ZGY2LTgyZmQtYTkxNDYyOWM3OTUyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg","Ratings":[{"Source":"Internet
+        Movie Database","Value":"8.4/10"},{"Source":"Rotten Tomatoes","Value":"80%"},{"Source":"Metacritic","Value":"53/100"}],"Metascore":"53","imdbRating":"8.4","imdbVotes":"766,590","imdbID":"tt0086190","Type":"movie","DVD":"12
+        Sep 2006","BoxOffice":"N/A","Production":"Twentieth Century Fox","Website":"http://www.starwars.com/episode-vi/","Response":"True"}'
+    http_version: 
+  recorded_at: Tue, 14 Nov 2017 08:10:39 GMT
+recorded_with: VCR 3.0.3

@@ -15,7 +15,7 @@ RSpec.feature "Logins", type: :feature do
 
       
 
-      expect(page).to have_content("Hello")
+      expect(page).to have_content("Hello movie lover, #{@user.username}")
     end
   end
 end

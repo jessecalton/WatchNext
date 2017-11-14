@@ -12,6 +12,7 @@ require 'support/database_cleaner'
 require 'webmock/rspec'
 require 'support/vcr_setup'
 require 'capybara/rspec'
+require 'support/users_helper'
 WebMock.disable_net_connect!(allow_localhost: true)  
 # Add additional requires below this line. Rails is not loaded until this point!
 
@@ -54,6 +55,7 @@ RSpec.configure do |config|
     end
   end
 
+  config.include(UserHelper)
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and
   # `post` in specs under `spec/controllers`.
