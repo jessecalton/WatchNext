@@ -23,9 +23,25 @@ RSpec.feature "Users", type: :feature do
       VCR.use_cassette('jedi', :record => :once) do
           fill_in 'adv_search_title', with: "star wars"
           fill_in 'adv_search_year', with: "1983"
+
           within(:css, 'form.search-form.advanced') { click_button "Add Movie" }
       end
       expect(page).to have_content("Return of the Jedi")
+      
+    end
+  end
+
+  xdescribe 'movie filter function' do
+    xit 'allows a user to select movies based on Rotten Tomatoes score' do
+      login(@user)
+      # fill_in "runtime", with: "120"
+
+      within(:css, 'form#filter.search-form') { click_button "Search" }
+      wait_until { find(".movie-criteria", visible: true) }
+
+
+      expect(page).to have_content("Your search returned no movies")
+
       # save_and_open_page
     end
   end
