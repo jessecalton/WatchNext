@@ -6,7 +6,7 @@ RSpec.feature "Logins", type: :feature do
   end
 
   describe "GET /login" do
-    it "logs in a registered user" do
+    it "logs in and logs out a registered user" do
       visit "/login"
       fill_in "Email", with: "tom@tomtom.com"
       fill_in "Password", with: "tomtom"
@@ -16,6 +16,11 @@ RSpec.feature "Logins", type: :feature do
       
 
       expect(page).to have_content("Hello movie lover, #{@user.username}")
+
+      click_link "Logout"
+
+      expect(current_path).to eq '/'
+      expect(page).to have_content "Login"
     end
   end
 end
