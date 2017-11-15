@@ -2,10 +2,10 @@ class Messager
   attr_reader :error
   attr_reader :client
 
-  def initialize
-    @account_sid = ENV['ACCOUNT_SID']
-    @auth_token = ENV['AUTH_TOKEN']
-    @twilio_number = ENV['TWILIO_NUMBER']
+  def initialize(account_sid, auth_token, twilio_number)
+    @account_sid = account_sid
+    @auth_token = auth_token
+    @twilio_number = twilio_number
 
 
     @client = Twilio::REST::Client.new @account_sid, @auth_token

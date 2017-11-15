@@ -1,4 +1,7 @@
 FactoryBot.define do
+  factory :messager do
+    
+  end
 
   factory :movie_1, class: Movie do
     title "WALL-E"
