@@ -27,5 +27,12 @@ RSpec.feature "Homepage", type: :feature do
       end
       expect(page).to have_content("Hello movie lover, demo")
     end
+
+    it 'displays the About section of the page' do
+      visit '/'
+      click_button "About"
+      expect(page).to have_content("WatchNext will help you eliminate the time spent surfing Netflix and Hulu")
+      save_and_open_page
+    end
   end
 end
