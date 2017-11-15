@@ -3,6 +3,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
+# 11-14-2017
+### Added
+- Added feature spec for home page with passing tests
+- Added Messager model spec, testing Twilio API functionality with passing tests for valid and invalid phone numbers
+### Changed
+- Logins spec test has user logging in and logging out
+
 # 11-13-2017
 ### Added
 - Added feature spec for user page with passing tests
