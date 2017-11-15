@@ -13,8 +13,6 @@ RSpec.feature "Logins", type: :feature do
 
       click_button "Login"
 
-      
-
       expect(page).to have_content("Hello movie lover, #{@user.username}")
 
       click_link "Logout"
