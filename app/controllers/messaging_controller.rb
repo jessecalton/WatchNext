@@ -3,7 +3,7 @@ class MessagingController < ApplicationController
   include MoviesHelper
   def create
     current_user
-    messager = Messager.new
+    messager = Messager.new(ENV["ACCOUNT_SID"], ENV["AUTH_TOKEN"], ENV["TWILIO_NUMBER"])
 
     get_all_movie_titles
 
