@@ -16,12 +16,10 @@ RSpec.describe Messager, type: :model do
 
   describe '#send_message' do
     it 'sends an SMS message of a user\'s watch list to their smart phone' do
-      
-
       expect(@message.send_message("+15005550006", @movie_string, @user.username)).to be true
-
-     
-
+    end
+    it 'does not send an SMS message if the phone number is invalid' do
+      expect(@message.send_message("+15005550001", @movie_string, @user.username)).to be false
     end
   end
 end
