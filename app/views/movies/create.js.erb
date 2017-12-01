@@ -1,9 +1,9 @@
 var newButtons = $(
-  '<div id="button-wrapper"><form class="button_to" method="delete" action="/movies/<%=@new_movie.id%>"\
-   data-remote="true"><input data-confirm="Are you sure you want to delete <%=@new_movie.title%>?" type="submit" value="Delete From List">\
-   <input type="hidden"></form>\
-   <form class="button_to" method="get" action="/movies/<%=@new_movie.id%>"\
+  '<div id="button-wrapper"><form class="button_to" method="get" action="/movies/<%=@new_movie.id%>"\
    data-remote="true"><input class="opener" type="submit" value="Details"></form>\
+   <form class="button_to" method="delete" action="/movies/<%=@new_movie.id%>"\
+   data-remote="true"><input data-confirm="Are you sure you want to delete <%=@new_movie.title%>?" type="submit" value="Delete">\
+   <input type="hidden"></form>\
    </div>');
 
 var movieDeets = $(   '<div id="movie-deets<%=@new_movie.id%>" title="Movie Details" style="display:none">\

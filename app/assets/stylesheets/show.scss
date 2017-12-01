@@ -81,13 +81,7 @@ $font-secondary: 'Londrina Solid', cursive;
   max-height: 70%;
 }
 
-form.button_to {
-  display: flex;
-  justify-content: center;
-  /*padding: 2px;*/
-}
-
 #button-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }

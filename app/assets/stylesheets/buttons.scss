@@ -65,3 +65,12 @@ $button-color-red-hover: #fccfd3;
   text-align: center;
 }
 
+.delete_button {
+  padding: 0;
+  color: $button-color-red;
+  float: right;
+  top: 0;
+  left: 0;
+  font-size: 1em;
+}
+
