@@ -14,10 +14,28 @@ RSpec.describe SessionsHelper, type: :helper do
   before(:context) do
     @user = FactoryBot.create(:user_with_movies)
   end
+
   describe '#log_in' do
     it 'logs in a user' do
       helper.log_in(@user)
       expect(session[:user_id]).to be(@user.id)
     end
-  end 
+  end
+
+  describe '#current_user' do
+    it 'creates a @current_user variable if one does not already exist' do
+      helper.log_in(@user)
+      expect(helper.current_user.id).to be(@user.id)
+    end
+    it 'fails if no user is currently logged in' do
+      expect(helper.current_user.nil?).to be true
+    end
+  end
+
+  describe '#logged_in?' do
+    it 'returns true if user is logged in' do
+      helper.log_in(@user)
+      expect(helper.logged_in?).to be true
+    end
+  end
 end
