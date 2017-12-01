@@ -11,6 +11,7 @@ $font-secondary: 'Londrina Solid', cursive;
 
 .watch-list {
   overflow: hidden;
+  text-align: center;
   width: 100%;
   font-family: $font-primary;
 }
@@ -25,9 +26,6 @@ $font-secondary: 'Londrina Solid', cursive;
 
 #movie-title {
   font-family: $font-secondary;
-  /*display: flex;*/
-  justify-content: center;
-  text-align: center;
   padding: 5px;
   /*white-space: nowrap;*/
   font-size: 1em;
@@ -81,13 +79,7 @@ $font-secondary: 'Londrina Solid', cursive;
   max-height: 70%;
 }
 
-form.button_to {
-  display: flex;
-  justify-content: center;
-  /*padding: 2px;*/
-}
-
 #button-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }

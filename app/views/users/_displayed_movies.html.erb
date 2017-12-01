@@ -1,16 +1,17 @@
 
-<h2>Your Movie Watch List:</h2>
+<h2>Your Watch List With <span><%=current_user.movies.length%></span> Titles</h2>
 <% if current_user.movies.length != 0 %>
   <% current_user.movies.order('created_at ASC').each do |movie| %>
   <div class="movie-display <%=movie.id%>">
+    <%=button_to "&#10006;".html_safe, movie_path(movie.id), data: {confirm: "Are you sure you want to delete #{movie.title}?"}, :method => :delete, remote: true, class: "delete_button" %>
     <div id="movie-title"><%=movie.title%></div>
     <img src=<%=movie.poster_url%> alt="Movie Poster" class="movie-poster">
     <div id="button-wrapper">
-    <%=button_to "Delete", movie_path(movie.id), data: {confirm: "Are you sure you want to delete #{movie.title}?"}, :method => :delete, remote: true %>
     <%=button_to "Details", movie_path(movie.id), method: :get, remote: true, class: "opener" %>
-    <a class="twitter-share-button"
+    
+<!--     <a class="twitter-share-button"
   href="https://twitter.com/intent/tweet?text=I%20am%20watching%20<%=movie.title%>">
-Tweet</a>
+Tweet</a> -->
     </div>
     <div id="movie-deets<%=movie.id%>" title="Movie Details" style="display:none">
         <p><b>Runtime:</b> <%=movie.runtime%></p>
@@ -24,7 +25,7 @@ Tweet</a>
   <%end%>
 <%end%>
 
-<script>window.twttr = (function(d, s, id) {
+<!-- <script>window.twttr = (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],
     t = window.twttr || {};
   if (d.getElementById(id)) return t;
@@ -39,4 +40,4 @@ Tweet</a>
   };
 
   return t;
-}(document, "script", "twitter-wjs"));</script>
+}(document, "script", "twitter-wjs"));</script> -->

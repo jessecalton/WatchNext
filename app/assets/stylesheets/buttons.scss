@@ -65,3 +65,32 @@ $button-color-red-hover: #fccfd3;
   text-align: center;
 }
 
+.opener {
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 1em;
+  font-family: $font-secondary;
+  text-decoration: none;
+  margin: 1px;
+  color: black;
+  position: relative;
+  display: inline-block;
+  &:hover {
+    background-color: gray;
+  }
+}
+
+.delete_button {
+  padding: 0;
+  color: $button-color-red;
+  background-color: gray;
+  border: 0;
+  float: right;
+  top: 0;
+  left: 0;
+  font-size: 1em;
+    &:hover {
+    background-color: $button-color-red-hover;
+  }
+}
+

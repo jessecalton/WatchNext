@@ -1,10 +1,16 @@
+// delete the movie display
 $('form.button_to').closest('.movie-display.<%=@movie.id%>').remove();
 
+// subtract 1 from the total number of films
+var totalFilms = $('span').html()
+$('span').html(parseInt(totalFilms) - 1)
+
+// delete the movie details in the pulldown menus
+// unless a certain director/actor/genre appears more than once
 var genreArray = <%=raw @genre_doubles %>
 var directorArray = <%=raw @director_doubles %>
 var actorArray  = <%=raw @actor_doubles %>
-// var deletedFilm = "<%=@movie.title%>"
-// console.log(deletedFilm)
+
 
 var duplicateArray = new Map();
 duplicateArray.set('select#actors', actorArray)

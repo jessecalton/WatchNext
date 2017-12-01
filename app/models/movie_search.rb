@@ -1,8 +1,6 @@
 require 'open-uri'
 
 class MovieSearch
-  include HTTParty
-  # base_uri 'http://www.omdbapi.com/?t='
 
   def initialize(title, year, imdb_id)
     if title && year == "" && imdb_id == ""
@@ -16,9 +14,6 @@ class MovieSearch
 
     @movie_data = JSON.load(open("http://www.omdbapi.com/?#{movie_url}&apikey=#{api_key}"))
 
-    # uri = URI.parse("http://www.omdbapi.com/?#{movie_url}&apikey=#{api_key}")
-    # uri.open {|f| @movie_data = self.class.get(uri) }
-
   end
 
   def movie_decade
@@ -26,10 +21,6 @@ class MovieSearch
     year[-1] = "0"
     return year.to_i
   end
-
-  # def movie_data
-  #   @movie_data
-  # end
 
   def movie_runtime
     @movie_data["Runtime"].to_i
