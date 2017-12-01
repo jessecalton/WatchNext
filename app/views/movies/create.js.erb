@@ -1,6 +1,8 @@
+// First, update the heading right above the watch list
 var totalFilms = $('span').html()
 $('span').html(parseInt(totalFilms) + 1)
 
+// Create all the new movie details
 var newButtons = $(
   '<div id="button-wrapper"><form class="button_to" method="get" action="/movies/<%=@new_movie.id%>"\
    data-remote="true"><input class="opener" type="submit" value="Details"></form>\
