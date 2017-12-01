@@ -3,6 +3,18 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
+# 11-30-2017
+### Added
+- Added sessions helper spec with passing tests
+- Added test for check_duplicates for movies helper spec
+### Changed
+- Buttons on the movie display are way less of an eyesore
+- Delete button is now an "X" and sits in the top right corner
+- "Details" button is given a sleek new look and will no longer be confused with "Delete"
+- New heading above a user's watch list
+### Removed
+- Removed Twitter widget for the time being. Worked fine, but too extra
+
 # 11-14-2017
 ### Added
 - Added feature spec for home page with passing tests
