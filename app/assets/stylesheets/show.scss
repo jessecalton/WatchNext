@@ -11,6 +11,7 @@ $font-secondary: 'Londrina Solid', cursive;
 
 .watch-list {
   overflow: hidden;
+  text-align: center;
   width: 100%;
   font-family: $font-primary;
 }
@@ -25,9 +26,6 @@ $font-secondary: 'Londrina Solid', cursive;
 
 #movie-title {
   font-family: $font-secondary;
-  /*display: flex;*/
-  justify-content: center;
-  text-align: center;
   padding: 5px;
   /*white-space: nowrap;*/
   font-size: 1em;
