@@ -9,6 +9,15 @@ module MoviesHelper
     @movie_string
   end
 
+# Using this method to make sure same movie is not added again
+  def check_duplicates(str)
+    current_user.movies.each do |movie|
+      if movie.title == str
+        return false
+      end
+    end
+  end
+
 
 # These methods for searching through watch list
   def runtime_match
