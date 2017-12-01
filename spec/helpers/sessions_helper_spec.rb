@@ -37,5 +37,16 @@ RSpec.describe SessionsHelper, type: :helper do
       helper.log_in(@user)
       expect(helper.logged_in?).to be true
     end
+    it 'returns false if user is not logged in' do
+      expect(helper.logged_in?).to be false
+    end
+  end
+
+  describe '#log_out' do
+    it 'deletes the current session' do
+      helper.log_in(@user)
+      helper.log_out
+      expect(session[:user_id]).to be nil
+    end
   end
 end
