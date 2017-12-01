@@ -153,6 +153,14 @@ RSpec.describe MoviesHelper, type: :helper do
     end
   end
 
+  describe '#check_duplicates' do
+    it 'does not add a movie if it already exists in the user\'s watch list' do
+      assign(:current_user, @user)
+      expect(helper.check_duplicates("Labyrinth")).to be false
+      expect(helper.check_duplicates("Finding Dory")).to be_truthy
+    end
+  end
+
   context 'getting arrays of duplicate entries' do
     before(:context) do
       @new_user = FactoryBot.create(:user_with_movies)

@@ -16,12 +16,4 @@ module SessionsHelper
     session.delete(:user_id)
   end
 
-  def check_duplicates(str)
-    current_user.movies.each do |movie|
-      if movie.title == str
-        return false
-      end
-    end
-  end
-
 end
