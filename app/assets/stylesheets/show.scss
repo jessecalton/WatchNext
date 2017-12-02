@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $font-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif; // the Netflix font
 $font-secondary: 'Londrina Solid', cursive;
+$highlight-color: #ffd600;
 
 #hello-user {
   font-family: $font-secondary;
@@ -44,6 +45,12 @@ $font-secondary: 'Londrina Solid', cursive;
 
 #returned-movies {
   overflow: auto;
+  text-align: center;
+}
+
+#movie-case {
+  display: flex;
+  justify-content: center;
 }
 
 %search-form {
@@ -69,6 +76,24 @@ $font-secondary: 'Londrina Solid', cursive;
 
 #watch-movie-form {
   padding-bottom: 40px;
+  > h2 { text-align: center;}
+}
+
+#filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  
+}
+
+#filter-submit {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 0;
+  > input { width: 10%;}
 }
 
 .movie-poster {
@@ -82,4 +107,18 @@ $font-secondary: 'Londrina Solid', cursive;
 #button-wrapper {
   display: flex;
   justify-content: space-around;
+}
+
+@-webkit-keyframes yellow-fade {
+   0% {background: $highlight-color;}
+   100% {background: none;}
+}
+@keyframes yellow-fade {
+   0% {background: $highlight-color;}
+   100% {background: none;}
+}
+
+.highlight {
+   -webkit-animation: yellow-fade 2s ease-in 1;
+   animation: yellow-fade 2s ease-in 1;
 }

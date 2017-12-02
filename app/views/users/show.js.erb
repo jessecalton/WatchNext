@@ -44,12 +44,14 @@ function searchList() {
     }
 
   $('#returned-movies').append(
-    "<% if @movie_array.present? %>\
+    "<hr><% if @movie_array.present? %>\
       <% @movie_array.each do |movie| %>\
-      <div class='movie-display'>\
-        <div id='movie-title'><%= movie.title %></div>\
-        <img src=<%=movie.poster_url%> alt='Movie Poster' class='movie-poster'>\
+      <div id='movie-case'>\
+        <div class='movie-display'>\
+          <div id='movie-title'><%= movie.title %></div>\
+          <img src=<%=movie.poster_url%> alt='Movie Poster' class='movie-poster'>\
         </div>\
+      </div>\
       <%end%>\
     <%else%>\
       Your search returned no movies.\
