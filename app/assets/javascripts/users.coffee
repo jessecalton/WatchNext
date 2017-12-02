@@ -8,25 +8,38 @@ $(document).ready ->
     $('.login-form').toggle()
     $('.demo-form').hide()
     return
-  return
 
-$(document).ready ->
+
+
   $('button.btn.red').click ->
     $('.demo-form').toggle()
     $('.login-form').hide()
     return
-  return
 
-$(document).ready ->
+
+
   $('button.btn.black').click ->
     $('#about').toggle()
     $('html, body').scrollTop $('#about-button').offset().top
     return
-  return
 
-$(document).ready ->
+
+
   $('p#advanced-search').click ->
     $('form.search-form.advanced').toggle()
     return
-  return
 
+
+
+  $('button.btn.blue').click ->
+    $('#movie-search-form').addClass('highlight').delay(2300).queue ->
+      $(this).removeClass('highlight').dequeue()
+      return
+    return
+
+   $('button.btn.red').click ->
+    $('#watch-movie-form').addClass('highlight').delay(2300).queue ->
+      $(this).removeClass('highlight').dequeue()
+      return
+    return   
+  return  

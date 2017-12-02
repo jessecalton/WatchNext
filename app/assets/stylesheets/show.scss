@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $font-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif; // the Netflix font
 $font-secondary: 'Londrina Solid', cursive;
+$highlight-color: #ffd600;
 
 #hello-user {
   font-family: $font-secondary;
@@ -82,4 +83,18 @@ $font-secondary: 'Londrina Solid', cursive;
 #button-wrapper {
   display: flex;
   justify-content: space-around;
+}
+
+@-webkit-keyframes yellow-fade {
+   0% {background: $highlight-color;}
+   100% {background: none;}
+}
+@keyframes yellow-fade {
+   0% {background: $highlight-color;}
+   100% {background: none;}
+}
+
+.highlight {
+   -webkit-animation: yellow-fade 2s ease-in 1;
+   animation: yellow-fade 2s ease-in 1;
 }
