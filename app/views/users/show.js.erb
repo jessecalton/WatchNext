@@ -44,7 +44,7 @@ function searchList() {
     }
 
   $('#returned-movies').append(
-    "<% if @movie_array.present? %>\
+    "<hr><% if @movie_array.present? %>\
       <% @movie_array.each do |movie| %>\
       <div class='movie-display'>\
         <div id='movie-title'><%= movie.title %></div>\
