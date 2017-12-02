@@ -7,9 +7,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 ### Changed
 - Movie search form is much easier on the eyes, now menus are spaced apart using flexbox
 - Movie search's "Search" button sits below the form and is styled a cool blue
-- Returned movies from search sit in a centered flexbox div
+- User's Watch List and filtered movies are centered in a flexbox
 ### Added
 - Uses jQuery to Highlight the movie search form and add movie form when respective buttons are clicked on the user's show page
+- More responsiveness to screen sizes, using flexbox to wrap Watch List movies to the next row
 
 # 11-30-2017
 ### Added
