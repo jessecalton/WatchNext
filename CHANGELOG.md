@@ -3,6 +3,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
+# 12-1-2017
+### Changed
+- Movie search form is much easier on the eyes, now menus are spaced apart using flexbox
+- Movie search's "Search" button sits below the form and is styled a cool blue
+- Returned movies from search sit in a centered flexbox div
+### Added
+- Uses jQuery to Highlight the movie search form and add movie form when respective buttons are clicked on the user's show page
+
 # 11-30-2017
 ### Added
 - Added sessions helper spec with passing tests
