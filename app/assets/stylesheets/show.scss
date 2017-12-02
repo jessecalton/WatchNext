@@ -45,6 +45,12 @@ $highlight-color: #ffd600;
 
 #returned-movies {
   overflow: auto;
+  text-align: center;
+}
+
+#movie-case {
+  display: flex;
+  justify-content: center;
 }
 
 %search-form {
