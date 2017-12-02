@@ -15,11 +15,14 @@ $highlight-color: #ffd600;
   text-align: center;
   width: 100%;
   font-family: $font-primary;
+  display: flex;
+  justify-content: center;
 }
 
 .movie-display {
   background-color: gray;
   height: 290px;
+  flex-shrink: 0;
   width: 200px;
   margin: 5px;
   float: left;
@@ -33,10 +36,19 @@ $highlight-color: #ffd600;
   height: 20px;
 }
 
+#watch-list-heading {
+  text-align: center;
+}
+
+#twilio-form {
+  text-align: center;
+}
+
 /*Search Form*/
 
 #movie-search-form {
   display: flex;
+  justify-content: center;
   > form {
     padding: .83em;
     margin-left: 1em;  
@@ -48,11 +60,14 @@ $highlight-color: #ffd600;
   text-align: center;
 }
 
-#movie-case {
+.movie-case {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-flow: row wrap;
+  align-content: space-between;
   margin-bottom: 20px;
   margin-top: 20px;
+  width: 90%;
 }
 
 %search-form {

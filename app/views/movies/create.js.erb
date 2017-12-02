@@ -24,7 +24,7 @@ $("<div class='movie-display <%=@new_movie.id%>'>\
    <input type='hidden'></form>\
     <div id='movie-title'><%=@new_movie.title%></div>\
       <img src=<%=@new_movie.poster_url%> alt='Movie Poster' class='movie-poster'>\
-  </div>").appendTo('.watch-list').append(newButtons).append(movieDeets);
+  </div>").appendTo('.movie-case').append(newButtons).append(movieDeets);
 $('#movie-search-form form')[0].reset();
 $('#movie-search-form form')[1].reset();
 
