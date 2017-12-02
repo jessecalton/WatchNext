@@ -70,6 +70,24 @@ $highlight-color: #ffd600;
 
 #watch-movie-form {
   padding-bottom: 40px;
+  > h2 { text-align: center;}
+}
+
+#filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+#filter-submit {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 0;
+  > input { width: 10%;}
 }
 
 .movie-poster {

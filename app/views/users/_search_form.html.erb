@@ -10,5 +10,7 @@
     <%= select_tag "actors", options_for_select(@actors_array.uniq), include_blank: "Actors" %>
 
     <%= select_tag 'tomatoes', "<option>> 50</option><option>> 60</option><option>> 70</option><option>> 80</option><option>> 90</option>".html_safe, include_blank: "Rotten Tomatoes Score" %>
-    <%= submit_tag 'Search' %>
+    <div id="filter-submit">
+        <%= submit_tag 'Search' %>
+    </div>
   <% end %>

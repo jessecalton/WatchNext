@@ -94,3 +94,16 @@ $button-color-red-hover: #fccfd3;
   }
 }
 
+#filter-submit {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 0;
+  > input { width: 10%;
+    font-size: 1em;
+    font-family: $font-secondary;
+    &:hover {
+    background-color: gray;
+  }}
+}
