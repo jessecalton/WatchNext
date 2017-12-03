@@ -27,17 +27,18 @@ body {
 
 #login-form {
   display: none;
-  > form input[type="submit"] { 
+  > form input { 
     @include normal-button;
-    font-size: .5em;
+    font-size: .65em;
   }
+
 }
 
 #demo-form {
   display: none;
-  > form input[type="submit"] { 
+  > form input { 
     @include normal-button;
-    font-size: .5em;
+    font-size: .65em;
   }
 }
 
