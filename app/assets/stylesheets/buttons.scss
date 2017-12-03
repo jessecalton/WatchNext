@@ -18,20 +18,7 @@ $button-color-red: #F45B69;
 $button-color-red-shadow: #EA4866;
 $button-color-red-hover: #fccfd3;
 
-%normal-button {
-  border-radius: 5px;
-  padding: 5px 10px;
-  font-size: 1em;
-  font-family: $font-secondary;
-  text-decoration: none;
-  margin: 1px;
-  color: black;
-  position: relative;
-  display: inline-block;
-  &:hover {
-    background-color: gray;
-  }
-}
+@import 'button.scss';
 
 .btn {
   border-radius: 5px;
@@ -80,7 +67,7 @@ $button-color-red-hover: #fccfd3;
 }
 
 .opener {
-  @extend %normal-button
+  @include normal-button
 }
 
 .delete_button {
@@ -103,7 +90,7 @@ $button-color-red-hover: #fccfd3;
   justify-content: center;
   margin-top: 20px;
   margin-bottom: 0;
-  > input { @extend %normal-button;
+  > input { @include normal-button;
             background-color: $button-color-blue;
             font-size: 1.5em; 
                 &:hover {
@@ -111,3 +98,8 @@ $button-color-red-hover: #fccfd3;
   }
   }
 }
+
+// #messager-form {
+//   > input[type="submit"] { @extend %normal-button}
+// }
+

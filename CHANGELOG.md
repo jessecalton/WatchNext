@@ -3,7 +3,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
-# 12-1-2017
+# 12-3-2017
+### Changed
+- All buttons are consistently styled
+- Login forms on home page are bigger, sleeker
+- SCSS updated to accommodate updated styles
+
+# 12-1-2017 - 12-2--2017
 ### Changed
 - Movie search form is much easier on the eyes, now menus are spaced apart using flexbox
 - Movie search's "Search" button sits below the form and is styled a cool blue

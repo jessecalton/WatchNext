@@ -5,15 +5,15 @@
 # for login button
 $(document).ready ->
   $('button.btn.blue').click ->
-    $('.login-form').toggle()
-    $('.demo-form').hide()
+    $('#login-form').toggle()
+    $('#demo-form').hide()
     return
 
 
 
   $('button.btn.red').click ->
-    $('.demo-form').toggle()
-    $('.login-form').hide()
+    $('#demo-form').toggle()
+    $('#login-form').hide()
     return
 
 

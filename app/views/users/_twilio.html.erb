@@ -1,6 +1,6 @@
 <h2>Send your Watch List to your smart phone!</h2>
 
-<%= form_tag(messaging_path, method: :post, remote: true, class: "search-form") do %>
+<%= form_tag(messaging_path, method: :post, remote: true, class: "search-form", id: "messager-form") do %>
   <%= text_field_tag :number, nil, placeholder: 'Ex: 5551234567' %>
-  <%= submit_tag 'Send' %>
+    <%= submit_tag 'Send' %>
 <% end %>
