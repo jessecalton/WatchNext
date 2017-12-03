@@ -20,7 +20,7 @@ RSpec.feature "Homepage", type: :feature do
                                 password: "demo")
       visit '/'
       click_button "Demo"
-      within(".demo-form") do
+      within("#demo-form") do
         fill_in "Email", :with => "demo@demo.com"
         fill_in "Password", :with => "demo"
         click_button "Login"

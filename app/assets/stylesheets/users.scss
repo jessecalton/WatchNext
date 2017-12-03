@@ -25,12 +25,20 @@ body {
 
 // Login forms
 
-.login-form {
+#login-form {
   display: none;
+  > form input[type="submit"] { 
+    @include normal-button;
+    font-size: .5em;
+  }
 }
 
-.demo-form {
+#demo-form {
   display: none;
+  > form input[type="submit"] { 
+    @include normal-button;
+    font-size: .5em;
+  }
 }
 
 // Nav bar
