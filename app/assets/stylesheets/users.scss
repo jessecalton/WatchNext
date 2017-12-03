@@ -10,6 +10,8 @@ $color-background: #456990; // slightly lighter blue-ish
 $color-nav: #114B5F; // nav-bar color
 $color-font-primary: #E4FDE1; // the lime-yellow color
 
+@import 'button.scss';
+
 body {
   font-family: $font-primary;
 }

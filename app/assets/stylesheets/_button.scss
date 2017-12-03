@@ -1,0 +1,16 @@
+$font-secondary: 'Londrina Solid', cursive;
+
+@mixin normal-button{
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 1em;
+  font-family: $font-secondary;
+  text-decoration: none;
+  margin: 1px;
+  color: black;
+  position: relative;
+  display: inline-block;
+  &:hover {
+    background-color: gray;
+  }
+}
