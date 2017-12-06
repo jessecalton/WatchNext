@@ -67,7 +67,7 @@ Play with the demo account:
 
 ## Environment
 
-To access all of WatchNext's features, you will need an [OMDB API](http://www.omdbapi.com) account and a Twilio phone number for the SMS functionality
+To access all of WatchNext's features, you will need an [OMDB API](http://www.omdbapi.com) account and a [Twilio phone number]https://www.twilio.com/sms for the SMS functionality.
 
 Create a `.env` file in the WatchNext directory.
 Put the following keys and values in your `.env` file:
@@ -83,6 +83,7 @@ To run the tests involving SMS messaging, include the [Twilio test variables](ht
     TEST_ACCOUNT_SID: [Your Twilio Test Account SID]
     TEST_AUTH_TOKEN: [Your Twilio Test Auth Token]
 
+Don't forget to put '.env' in your `.gitignore` file!
 
 ## 🎬 Contact the Director 🎬
 
