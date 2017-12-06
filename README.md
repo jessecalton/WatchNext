@@ -46,6 +46,25 @@ Play with the demo account:
 
   **Login:** demo@demo.com <br>
   **Password:** demo
+  
+## Installation
+
+1. [Install Ruby on Rails and Postgres](https://gorails.com/setup/osx/10.13-high-sierra)
+
+2. Fork and clone WatchNext locally
+
+3. Install bundler with `gem install bundler`.
+
+4. Install the bundle with `bundle install`.
+
+5. Create the database with `rake db:create`.
+
+6. Migrate the database with `rake db:migrate`.
+
+7. Run local server with `rails server`
+
+8. View locally at http://localhost:3000
+
 
 ## 🎬 Contact the Director 🎬
 
