@@ -72,16 +72,16 @@ To locally access all of WatchNext's features, you will need an [OMDB API](http:
 Create a `.env` file in the WatchNext directory.
 Put the following keys and values in your `.env` file:
 
-    API_KEY: [Your OMDB API key]
+    API_KEY: Your_OMDB_API_Key
 
-    TWILIO_NUMBER: [Your Twilio phone number in a '+12345678900' format]
-    ACCOUNT_SID: [Your Twilio Account SID]
-    AUTH_TOKEN: [Your Twilio Auth Token]
+    TWILIO_NUMBER: Your_Twilio_Phone_Number_in_a_+12345678900_Format
+    ACCOUNT_SID: Your_Twilio_Account_SID
+    AUTH_TOKEN: Your_Twilio_Auth_Token
 
 To run the tests involving SMS messaging, include the [Twilio test variables](https://www.twilio.com/docs/api/rest/test-credentials) as well
 
-    TEST_ACCOUNT_SID: [Your Twilio Test Account SID]
-    TEST_AUTH_TOKEN: [Your Twilio Test Auth Token]
+    TEST_ACCOUNT_SID: Your_Twilio_Test_Account_SID
+    TEST_AUTH_TOKEN: Your_Twilio_Test_Auth_Token
 
 Don't forget to put '.env' in your `.gitignore` file!
 
