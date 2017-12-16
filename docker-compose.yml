@@ -3,15 +3,16 @@ services:
   app:
     build: .
     command: bundle exec puma -C config/puma.rb
+    env_file: .env
     volumes:
       - /home/jesse/WatchNext
-    expose:
-      - "3000"
+    ports:
+      - "3000:3000"
   web:
     build:
       context: .
       dockerfile: Dockerfile-nginx
     links:
       - app
-    ports:
-      - "80:80"
+    expose:
+      - "3000"

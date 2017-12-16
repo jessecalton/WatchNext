@@ -44,7 +44,7 @@ gem 'travis'
 gem 'rails-controller-testing'
 gem 'capybara'
 
-
+gem 'unicorn'
 
 
 # Use Capistrano for deployment
