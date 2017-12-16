@@ -1,10 +1,11 @@
-
+version: '3'
+services:
   # service configuration for our dockerized Rails app
   app:
     # use the Dockerfile next to this file
     build: .
 
-    dockerfile: Dockerfile
+
    
     # sources environment variable configuration for our app
     env_file: .env
@@ -12,6 +13,7 @@
     # rely on the RAILS_ENV value of the host machine
     environment:
       RAILS_ENV: $RAILS_ENV
+
    
     # makes the app container aware of the DB container
     links:
@@ -29,17 +31,21 @@
     image: postgres:latest
    
     # persist the database between containers by storing it in a volume
-    volumes:
-      - /home/jesse/WatchNext/lib/postgresql/data
+    # volumes:
+    #   - /Users/jessecalton/WatchNext/lib/postgresql/data
 
   # service configuration for our web server
   web:
    
     # set the build context to the root of the Rails app
     build: .
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+
+    volumes:
+      - /Users/jessecalton/WatchNext/
    
     # build with a different Dockerfile
-    dockerfile: /home/jesse/WatchNext/config/containers/Dockerfile-nginx
+    # dockerfile: /Users/jessecalton/WatchNext/config/containers/Dockerfile-nginx
     
     # makes the web container aware of the app container
     links:
@@ -47,4 +53,6 @@
     
     # expose the port we configured Nginx to bind to
     ports:
-      - "80:80"
+      - "3000:3000"
+    depends_on:
+      - db
