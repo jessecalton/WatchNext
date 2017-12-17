@@ -45,8 +45,6 @@ gem 'rails-controller-testing'
 gem 'capybara'
 
 
-
-
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
