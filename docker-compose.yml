@@ -33,9 +33,10 @@ services:
     image: postgres:latest
     env_file: .env
    
+    # change this for local directory
     # persist the database between containers by storing it in a volume
     volumes:
-      - /Users/jessecalton/WatchNext/lib/postgresql/db-data
+      - /home/jesse/WatchNext/lib/postgresql/db-data
 
   # service configuration for our web server
   web:
@@ -44,8 +45,9 @@ services:
     build: .
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
 
+    # Change this for local directory
     volumes:
-      - /Users/jessecalton/WatchNext/
+      - /home/jesse/WatchNext/
    
     # build with a different Dockerfile
     # dockerfile: /Users/jessecalton/WatchNext/config/containers/Dockerfile-nginx
