@@ -3,6 +3,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
+# 12-20-2017
+### Added
+- WatchNext is officially Dockerized!
+- As such, a Dockerfile and a docker-compose.yml file has been added to the repo
+### Changed
+- Changes to database.yml file to make both Docker and Rspec happy
+- Due to conflicts with my Linux machine, Postgres will need an authorized user name, which I have stored in my .env file
+
 # 12-5-2017
 ### Added
 - Installation and environment setup instructions on README
