@@ -77,6 +77,7 @@ Put the following keys and values in your `.env` file:
     TWILIO_NUMBER: Your_Twilio_Phone_Number_in_a_+12345678900_Format
     ACCOUNT_SID: Your_Twilio_Account_SID
     AUTH_TOKEN: Your_Twilio_Auth_Token
+    POSTGRES_USERNAME: Your_Postgres_Superuser_Name
 
 To run the tests involving SMS messaging, include the [Twilio test variables](https://www.twilio.com/docs/api/rest/test-credentials) as well
 
