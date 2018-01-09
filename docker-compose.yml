@@ -25,6 +25,8 @@ services:
     depends_on:
       - db
 
+
+
   # service configuration for our database
   db:
    
@@ -36,7 +38,7 @@ services:
     # change this for local directory
     # persist the database between containers by storing it in a volume
     volumes:
-      - /home/jesse/WatchNext/lib/postgresql/db-data
+      - /Users/jessecalton/WatchNext/lib/postgresql/db-data
 
   # service configuration for our web server
   web:
@@ -47,7 +49,7 @@ services:
 
     # Change this for local directory
     volumes:
-      - /home/jesse/WatchNext/
+      - /Users/jessecalton/WatchNext/
    
     # build with a different Dockerfile
     # dockerfile: /Users/jessecalton/WatchNext/config/containers/Dockerfile-nginx
