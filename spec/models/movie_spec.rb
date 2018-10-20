@@ -20,5 +20,13 @@ RSpec.describe Movie, type: :model do
     it "has a runtime that is an integer" do
       expect(movie.runtime).to be_an(Integer)
     end
+    
+    it "has a Rotten Tomatoes score that is an integer" do
+      expect(movie.rotten_tomatoes).to be_an(Integer)
+    end
+
+    it "has a Rotten Tomatoes score that is between 0 and 100" do
+      expect(movie.rotten_tomatoes).to be_between(0, 100).inclusive
+    end
   end
 end
