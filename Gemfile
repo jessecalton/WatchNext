@@ -72,4 +72,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'awesome_print'
 gem 'font-awesome-rails'
 
-ruby "2.3.1"
+ruby "2.5.1"
