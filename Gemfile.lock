@@ -148,7 +148,7 @@ GEM
     nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
     pg (0.21.0)
-    puma (3.12.1)
+    puma (3.12.3)
     pusher-client (0.6.2)
       json
       websocket (~> 1.0)
@@ -303,7 +303,7 @@ DEPENDENCIES
   jquery-ui-rails
   listen (~> 3.0.5)
   pg (~> 0.18)
-  puma (~> 3.0)
+  puma (~> 3.12)
   rails (~> 5.0.2)
   rails-controller-testing
   rspec-rails (~> 3.6)
