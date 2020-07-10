@@ -1,4 +1,4 @@
-# Base image:
+# Base image: 
 FROM ruby:2.3.1
 
 # Install dependencies
